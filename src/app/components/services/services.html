@@ -1,0 +1,30 @@
+<section id="services" class="section-padding">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <div class="chapter-mark">
+        <span class="roman">V.</span>
+        <span class="chapter-line"></span>
+        <span class="chapter-name">{{ 'services.chapter' | translate }}</span>
+      </div>
+      <h2 class="section-title">
+        {{ 'services.title1' | translate }} <span class="serif-em">{{ 'services.title_em' | translate }}</span><br>
+        <span class="gradient-text">{{ 'services.title2' | translate }}</span>
+      </h2>
+    </div>
+
+    <div class="services-grid">
+      @for (svc of services; track svc.title; let i = $index) {
+        <div class="service-card glass glass-hover reveal" [class.highlight]="svc.highlight" [style.transition-delay]="(i * 0.08) + 's'">
+          <div class="svc-icon"><svg [lucideIcon]="svc.icon"></svg></div>
+          <h3 class="svc-title">{{ svc.title }}</h3>
+          <p class="svc-desc">{{ svc.desc }}</p>
+          <div class="svc-tags">
+            @for (tag of svc.tags; track tag) {
+              <span class="skill-pill">{{ tag }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

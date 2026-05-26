@@ -1,0 +1,31 @@
+<section id="education" class="section-padding">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <div class="chapter-mark">
+        <span class="roman">VII.</span>
+        <span class="chapter-line"></span>
+        <span class="chapter-name">{{ 'education.chapter' | translate }}</span>
+      </div>
+      <h2 class="section-title">
+        {{ 'education.title1' | translate }} <span class="serif-em">{{ 'education.title_em' | translate }}</span><br>
+        <span class="gradient-text">{{ 'education.title2' | translate }}</span>
+      </h2>
+    </div>
+
+    <div class="edu-grid">
+      @for (c of courses; track c.degree; let i = $index) {
+        <div class="edu-card glass glass-hover reveal" [style.transition-delay]="(i * 0.1) + 's'">
+          <div class="edu-icon-wrap" [style.background]="c.color + '18'" [style.color]="c.color">
+            <svg class="edu-icon" [lucideIcon]="c.icon"></svg>
+          </div>
+          <div class="edu-content">
+            <div class="edu-period" [style.color]="c.color">{{ c.period }}</div>
+            <div class="edu-degree">{{ c.degree }}</div>
+            <div class="edu-institution">{{ c.institution }}</div>
+            <p class="edu-desc">{{ c.desc }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

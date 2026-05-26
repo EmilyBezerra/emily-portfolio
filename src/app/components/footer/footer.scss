@@ -1,0 +1,257 @@
+.footer {
+  position: relative;
+  padding-top: 0;
+}
+
+/* Gradient glow line — shimmer contínuo na paleta */
+.footer-glow-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(165,180,252,0.35) 30%,
+    rgba(196,181,253,0.5) 50%,
+    rgba(165,180,252,0.35) 70%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: footer-shimmer 8s linear infinite;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -2px 15% -2px;
+    background: inherit;
+    background-size: 200% 100%;
+    filter: blur(8px);
+    opacity: 0.5;
+    animation: footer-shimmer 8s linear infinite;
+  }
+}
+
+@keyframes footer-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  gap: 2rem;
+}
+
+/* Brand */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.4s var(--ease-out-soft);
+
+  &:hover .logo-mark {
+    transform: rotate(-6deg) scale(1.06);
+    box-shadow: 0 8px 24px rgba(165,180,252,0.35);
+  }
+
+  .logo-mark {
+    width: 36px; height: 36px;
+    background: linear-gradient(135deg, #a5b4fc, #a7f3d0);
+    border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; color: #0d0c1d;
+    letter-spacing: -0.4px;
+    flex-shrink: 0;
+    transition: transform 0.4s var(--ease-out-back),
+                box-shadow 0.4s var(--ease-out-soft);
+  }
+
+  .brand-name {
+    font-size: 14px; font-weight: 700; color: var(--text-primary);
+    letter-spacing: -0.01em;
+  }
+
+  .brand-sub {
+    font-size: 11.5px; color: var(--text-muted);
+    margin-top: 1px;
+  }
+}
+
+/* Nav */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+
+  a {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    position: relative;
+    transition: color 0.25s var(--ease-out-soft);
+
+    /* Sublinhado pastel que cresce do meio */
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      bottom: -4px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+      transition: left 0.35s var(--ease-out-soft),
+                  right 0.35s var(--ease-out-soft);
+    }
+
+    &:hover {
+      color: var(--text-primary);
+      &::after { left: 0; right: 0; }
+    }
+  }
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 6px;
+}
+
+.social-link {
+  width: 34px; height: 34px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s var(--ease-out-soft),
+              border-color 0.3s var(--ease-out-soft),
+              background 0.3s var(--ease-out-soft),
+              transform 0.4s var(--ease-out-back),
+              box-shadow 0.4s var(--ease-out-soft);
+
+  /* Halo pastel que aparece no hover */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      circle at center,
+      rgba(196,181,253,0.35),
+      transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.35s var(--ease-out-soft);
+    pointer-events: none;
+  }
+
+  svg { position: relative; z-index: 1; }
+
+  &:hover {
+    color: var(--accent-secondary);
+    border-color: rgba(165,180,252,0.5);
+    background: rgba(165,180,252,0.1);
+    transform: translateY(-3px);
+    box-shadow:
+      0 8px 22px rgba(165,180,252,0.28),
+      0 0 0 1px rgba(196,181,253,0.18) inset;
+
+    &::before { opacity: 1; }
+  }
+
+  &:active { transform: translateY(-1px); }
+}
+
+/* Bottom bar */
+.footer-bottom {
+  border-top: 1px solid var(--border-subtle);
+  padding: 1rem 0;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Nome completo destacado — herda .gradient-text + serif italic editorial */
+.copy-name {
+  font-family: 'Instrument Serif', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  padding-left: 0.15em;
+  transition: filter 0.3s var(--ease-out-soft);
+
+  &:hover {
+    filter: drop-shadow(0 0 8px rgba(196,181,253,0.5));
+  }
+}
+
+.back-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.25s var(--ease-out-soft);
+
+  svg {
+    transition: transform 0.4s var(--ease-out-back);
+  }
+
+  &:hover {
+    color: var(--accent-secondary);
+    svg { transform: translateY(-3px); }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 1.5rem;
+  }
+
+  .footer-right { align-items: center; }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-inner { padding-top: 1.75rem; padding-bottom: 1.75rem; gap: 1.25rem; }
+  .footer-links { gap: 1rem; }
+  .footer-links a { font-size: 12px; }
+  .brand-name { font-size: 13px; }
+  .copy-name { font-size: 13px; }
+}

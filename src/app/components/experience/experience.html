@@ -1,0 +1,60 @@
+<section id="experience" class="section-padding">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <div class="chapter-mark">
+        <span class="roman">III.</span>
+        <span class="chapter-line"></span>
+        <span class="chapter-name">{{ 'experience.chapter' | translate }}</span>
+      </div>
+      <h2 class="section-title">
+        {{ 'experience.title1' | translate }} <span class="serif-em">{{ 'experience.title_em' | translate }}</span><br>
+        <span class="gradient-text">{{ 'experience.title2' | translate }}</span>
+      </h2>
+    </div>
+
+    <div class="timeline">
+      @for (job of jobs; track job.role; let i = $index) {
+        <div class="timeline-item reveal" [style.transition-delay]="(i * 0.15) + 's'">
+          <div class="timeline-dot" [class.current]="job.current">
+            @if (job.current) { <span class="dot-pulse"></span> }
+          </div>
+          <div class="timeline-line" [class.last]="jobs.length - 1 === i"></div>
+
+          <div class="job-card glass glass-hover">
+            <span class="job-inner-glow"></span>
+            <div class="job-header">
+              <div class="job-meta">
+                <div class="job-role">{{ job.role }}</div>
+                <div class="job-company-row">
+                  <span class="job-company">{{ job.company }}</span>
+                  <span class="job-badge" [class.current-badge]="job.current">{{ job.type }}</span>
+                  @if (job.current) { <span class="job-badge current-badge">● Atual</span> }
+                </div>
+              </div>
+              <div class="job-period">{{ job.period }}</div>
+            </div>
+
+            <p class="job-desc">{{ job.description }}</p>
+
+            <ul class="job-achievements">
+              @for (ach of job.achievements; track ach) {
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  {{ ach }}
+                </li>
+              }
+            </ul>
+
+            <div class="job-stack">
+              @for (tech of job.stack; track tech) {
+                <span class="skill-pill">{{ tech }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

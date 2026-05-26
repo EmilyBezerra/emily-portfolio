@@ -1,0 +1,52 @@
+<section id="skills" class="section-padding">
+  <div class="section-container">
+    <div class="section-header reveal">
+      <div class="chapter-mark">
+        <span class="roman">IV.</span>
+        <span class="chapter-line"></span>
+        <span class="chapter-name">{{ 'skills.chapter' | translate }}</span>
+      </div>
+      <h2 class="section-title">
+        {{ 'skills.title1' | translate }} <span class="serif-em">{{ 'skills.title_em' | translate }}</span><br>
+        <span class="gradient-text">{{ 'skills.title2' | translate }}</span>
+      </h2>
+    </div>
+
+    <div class="skills-grid">
+      @for (cat of categories; track cat.name; let i = $index) {
+        <div
+          class="skill-category glass glass-hover reveal"
+          [class.bento-feature]="i === 0"
+          [class.bento-wide]="i === categories.length - 1"
+          [style.transition-delay]="(i * 0.08) + 's'"
+        >
+          <div class="cat-header" [style.--cat-color]="cat.color">
+            <span class="cat-icon" [style.background]="cat.color + '1a'" [style.color]="cat.color" [style.box-shadow]="'inset 0 0 16px ' + cat.color + '22'">
+              <svg [lucideIcon]="cat.icon"></svg>
+            </span>
+            <span class="cat-name">{{ cat.name }}</span>
+            @if (i === 0) {
+              <span class="cat-tag">{{ cat.tag }}</span>
+            }
+          </div>
+          <div class="pills-wrap">
+            @for (skill of cat.skills; track skill) {
+              <span class="skill-pill">{{ skill }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="marquee-wrap reveal" aria-hidden="true">
+    <div class="marquee-track">
+      @for (tech of marqueeTechs; track tech + '-1') {
+        <span class="marquee-pill">{{ tech }}</span>
+      }
+      @for (tech of marqueeTechs; track tech + '-2') {
+        <span class="marquee-pill">{{ tech }}</span>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,183 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "stack": "Stack",
+    "services": "Services",
+    "contact": "Contact",
+    "cta": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "roles": ["Full Stack Developer", ".NET + Angular", "Software Engineer"],
+    "bio": "Full Stack Developer focused on <strong>.NET</strong> and <strong>Angular</strong>. I work on a multi-tenant SaaS ERP in production — from backend architecture to interface polish — focused on scalability, readability, and attention to every detail.",
+    "location": "Santos — SP, Brazil",
+    "education": "Software Engineering",
+    "btn_profile": "View profile",
+    "btn_contact": "Get in touch",
+    "badge_stack": "Full Stack",
+    "badge_erp": "In production",
+    "ticker": ["Full Stack Dev", ".NET + Angular", "ERP SaaS", "TypeScript", "SQL Server", "Azure", "Modular Monolith", "C#", "Code with Purpose"]
+  },
+  "manifesto": {
+    "label": "Work Philosophy",
+    "quote_p1": "I build software the way I conducted",
+    "quote_experiments": "experiments",
+    "quote_p2": "for five years in the lab: with",
+    "quote_method": "method",
+    "quote_p3": ", patience, and rigorous attention to every variable.",
+    "quote_dim": "The difference is that now, the reaction happens in production.",
+    "author": "Emily Bezerra",
+    "role": "Full Stack Developer"
+  },
+  "code_preview": {
+    "chapter": "In code",
+    "title": "Mastery in the two core <em>frameworks</em>.",
+    "desc": "Coding is more than typing — it's a way of thinking.",
+    "meta": [
+      { "label": "Backend", "value": "C# · .NET 10" },
+      { "label": "Frontend", "value": "TypeScript · Angular 21" }
+    ]
+  },
+  "about": {
+    "chapter": "The journey",
+    "title1": "More than",
+    "title_em": "code",
+    "title2": "journey and background.",
+    "intro_lead": "I'm Emily Bezerra, 26, a Full Stack Developer and Software Engineering student at <strong>Universidade Cesumar</strong>. I grew up on the coast of São Paulo and learned early on that opportunities rarely come ready-made — they are built with effort, discipline, and persistence.",
+    "intro_p1": "My journey began long before technology. As a teenager, I completed technical courses in <strong>Chemistry</strong> and <strong>Environmental Science</strong>, then started my career at the <strong>Catholic University of Santos</strong>, where I worked for five years as a <strong>Laboratory Technician</strong>. It was in that environment — surrounded by research, innovation, and problem-solving — that I had my first real encounter with technology, and learned that every chance to learn is an opportunity not to waste.",
+    "intro_p2": "Curiosity quickly turned into passion — and then into a life decision. In 2023 I started my career transition: I joined <strong>Cubos Academy</strong> to deepen my web development skills and began a <strong>Software Engineering</strong> degree, balancing intensive evening studies with my work routine. In September 2024 I got my first tech opportunity as an intern at <strong>Boneside</strong> and, a few months later, was promoted to <strong>Junior Developer</strong>.",
+    "intro_p3": "Today I develop a <strong>multi-tenant SaaS ERP</strong> in Modular Monolith architecture, with <strong>.NET 10</strong> on the backend and <strong>Angular 21</strong> on the frontend — working daily with C#, Entity Framework Core, SQL Server, Azure, Docker, TypeScript, PrimeNG, and Tailwind CSS. I have a strong interest in modern interfaces that unite development, performance, and design. I use AI tools strategically to accelerate delivery and elevate technical quality. More than writing code, I believe in technology as a tool for transformation — and my journey proves that curiosity and the courage to start over can open entirely new paths.",
+    "badges": ["Analytical thinking", "Product focus", "UI attention to detail", "Daily discipline"],
+    "journey_title": "My journey",
+    "journey": [
+      { "year": "Apr/2025", "title": "Junior Developer — Boneside", "desc": "Promoted internally to Junior Developer. Took full ownership of ERP modules, architecture of new features, and technical leadership of deliveries." },
+      { "year": "Sep/2024", "title": "IT Intern — Boneside", "desc": "Joined Boneside as a software development intern. First exposure to a real product environment — a multi-tenant SaaS ERP built with .NET and Angular." },
+      { "year": "2023", "title": "Career transition — Cubos Academy + Cesumar", "desc": "Joined Cubos Academy for intensive web development training, alongside starting a Software Engineering degree at Cesumar. Studied at night after full shifts in the lab." },
+      { "year": "2019–2024", "title": "Laboratory Technician — UNISANTOS / Ipeci", "desc": "Five years of technical work in a university laboratory. It was during this period that curiosity about technology matured into a decision — alongside self-taught programming parallel to the job." },
+      { "year": "2017–2021", "title": "B.Sc. in Technological Chemistry — UNISANTOS", "desc": "Enrolled in the Technological Chemistry bachelor's program at the Catholic University of Santos. Four years of rigorous scientific training focused on quantitative analysis and experimental methodology." },
+      { "year": "2015–2018", "title": "Technical courses — Escola Municipal 1º de Maio", "desc": "Completed technical courses in Chemistry and Environmental Science as a teenager. A period that shaped analytical thinking, process rigor, and hypothesis validation — the methodological foundation applied today in every software decision." }
+    ]
+  },
+  "experience": {
+    "chapter": "Experience",
+    "title1": "Professional",
+    "title_em": "experience",
+    "title2": "built in practice.",
+    "jobs": [
+      {
+        "role": "Junior Developer",
+        "company": "Boneside",
+        "period": "April 2025 — Present",
+        "type": "Full-time · Promoted from intern",
+        "current": true,
+        "description": "Responsible for developing a new multi-tenant SaaS ERP in a Modular Monolith architecture, with .NET 10 on the backend and Angular 21 on the frontend. I work from architecture design to interface detail, respecting boundaries between business modules.",
+        "stack": [".NET 10", "Angular 21", "EF Core", "SQL Server", "PrimeNG", "Tailwind CSS", "Azure DevOps", "Azure Blob Storage", "SendGrid"],
+        "achievements": [
+          "Structured the system into independent business modules with clear boundaries to ensure scalability and maintainability",
+          "Data modeling, querying, and maintenance in SQL Server, supporting ERP operation and evolution",
+          "Integration with Azure DevOps, Blob Storage, and SendGrid for versioning, file storage, and email delivery",
+          "Developed features for a pharmaceutical e-commerce system, with email marketing campaign automation via stored procedures",
+          "Incident analysis and resolution, supporting continuous product improvement"
+        ]
+      },
+      {
+        "role": "IT Intern",
+        "company": "Boneside",
+        "period": "September 2024 — April 2025",
+        "type": "Internship",
+        "current": false,
+        "description": "Development and maintenance of a multi-tenant ERP with .NET 8, SignalR, and Angular 18+, using PostgreSQL and deployed on Azure Functions and App Services. Containerized the local environment with Docker and Docker Compose.",
+        "stack": [".NET 8", "Angular 18+", "SignalR", "PostgreSQL", "Azure Functions", "App Services", "Docker", "Docker Compose"],
+        "achievements": [
+          "Development and improvement of web applications and internal systems",
+          "Local development environment containerization with Docker and Docker Compose",
+          "Task and deadline tracking for the team in ClickUp",
+          "Effective transition from laboratory technical background to professional software development"
+        ]
+      },
+      {
+        "role": "Laboratory Technician",
+        "company": "Catholic University of Santos / Ipeci",
+        "period": "2019 — 2024",
+        "type": "5 years · Bridge to tech",
+        "current": false,
+        "description": "Technical work in a laboratory within the university ecosystem. A period where curiosity about technology matured into a concrete decision to transition careers.",
+        "stack": ["Lab analysis", "Technical documentation", "Teamwork", "Discipline & method"],
+        "achievements": [
+          "Five consecutive years on the same team, recognized for organization and process rigor",
+          "Scientific discipline and method applied today to every technical software decision",
+          "Last two years balanced with Cubos Academy bootcamp and the start of Software Engineering degree"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "chapter": "Tech stack",
+    "title1": "Tools I",
+    "title_em": "use",
+    "title2": "every single day.",
+    "categories": [
+      { "name": "Backend", "tag": "Core" },
+      { "name": "Frontend", "tag": "Core" },
+      { "name": "Databases", "tag": "Daily" },
+      { "name": "Cloud & DevOps", "tag": "Active" },
+      { "name": "Architecture & Practices", "tag": "Applied" },
+      { "name": "Tools", "tag": "Workflow" }
+    ]
+  },
+  "services": {
+    "chapter": "What I do",
+    "title1": "Areas of",
+    "title_em": "technical",
+    "title2": "expertise.",
+    "items": [
+      { "title": "Web Apps & SaaS", "desc": "Full web application development with .NET on the backend and Angular on the frontend. Multi-tenant architecture, authentication, business modules, and integrations.", "highlight": true, "tags": [".NET", "Angular", "Azure", "SQL Server"] },
+      { "title": "Software Architecture", "desc": "Applying clean architecture, domain modeling, and separation of concerns. Structuring modular monoliths and defining boundaries between business modules.", "highlight": false, "tags": ["Clean Arch", "DDD", "SOLID", ".NET"] },
+      { "title": "Dashboards & Panels", "desc": "Building real-time dashboards with SignalR, data visualization, and BI components for internal management systems.", "highlight": false, "tags": ["Angular", "PrimeNG", "SignalR", "Charts"] },
+      { "title": "Advanced Frontend", "desc": "Building modern, responsive, and accessible interfaces with Angular and TypeScript. Custom design systems, animations, and reusable components.", "highlight": false, "tags": ["TypeScript", "SCSS", "Animations", "UI/UX"] },
+      { "title": "Landing Pages & Sites", "desc": "Building modern, performant pages with careful attention to visual experience — from layout to final animation.", "highlight": false, "tags": ["Angular", "React", "Tailwind", "Animations"] },
+      { "title": "APIs & Integrations", "desc": "Building robust REST APIs with .NET, Swagger documentation, and integrations with external services via Azure and third-party APIs.", "highlight": false, "tags": ["REST API", "Swagger", "JWT", "Azure"] }
+    ]
+  },
+  "contact": {
+    "chapter": "Contact",
+    "title1": "Let's",
+    "title_em": "talk",
+    "title2": "Available for contact.",
+    "desc": "Always up for a good conversation about technology, architecture, or interesting projects — feel free to reach out. I reply within 24 hours.",
+    "form_title": "Send a message",
+    "name": "Name",
+    "name_ph": "Your name",
+    "email": "Email",
+    "email_ph": "your@email.com",
+    "subject": "Subject",
+    "subject_ph": "What would you like to talk about",
+    "message": "Message",
+    "message_ph": "Share the context of your message.",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success_title": "Message sent successfully",
+    "success_desc": "I'll get back to you within 24 hours. Thanks for reaching out."
+  },
+  "education": {
+    "chapter": "Education",
+    "title1": "Academic",
+    "title_em": "background",
+    "title2": "and technical training.",
+    "items": [
+      { "degree": "B.Sc. in Software Engineering", "institution": "Universidade Cesumar", "period": "2023 — 2027 · In progress", "desc": "Ongoing undergraduate degree focused on software architecture, data structures, requirements engineering, and scalable systems development." },
+      { "degree": "Intensive Software Development Course", "institution": "Cubos Academy", "period": "2023 — 2024", "desc": "Intensive full stack web development training focused on JavaScript, TypeScript, React, Node.js, and software engineering best practices." },
+      { "degree": "B.Sc. in Technological Chemistry", "institution": "Catholic University of Santos", "period": "2017 — 2021", "desc": "Four years of scientific training. Where I learned to think with method, validate hypotheses, and care about detail — principles that became pillars of how I write code." },
+      { "degree": "Environmental Science Technician", "institution": "Escola Municipal 1º de Maio", "period": "2016 — 2018", "desc": "Technical training alongside high school, focused on environmental analysis and sustainable processes. Discipline and organization ingrained from an early age." },
+      { "degree": "Chemistry Technician", "institution": "Escola Municipal 1º de Maio", "period": "2015 — 2017", "desc": "My first technical qualification. Where I learned to break problems into parts and follow processes with precision — a skill I now apply in software architecture." }
+    ]
+  },
+  "footer": {
+    "role": "Full Stack Developer · Software Engineer",
+    "signature_name": "Emily de Jesus Bezerra",
+    "copyright_lead": "© {{year}}",
+    "copyright_tail": "Built with Angular and attention to detail.",
+    "back_top": "↑ Back to top"
+  }
+}

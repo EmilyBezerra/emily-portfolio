@@ -1,0 +1,183 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "stack": "Stack",
+    "services": "Atuação",
+    "contact": "Contato",
+    "cta": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, sou",
+    "roles": ["Full Stack Developer", ".NET + Angular", "Engenheira de Software"],
+    "bio": "Desenvolvedora Full Stack com foco em <strong>.NET</strong> e <strong>Angular</strong>. Atuo no desenvolvimento de um ERP SaaS multi-tenant em produção, da arquitetura do backend ao polimento da interface — com foco em escalabilidade, legibilidade e cuidado com cada detalhe.",
+    "location": "Santos — SP, Brasil",
+    "education": "Engenharia de Software",
+    "btn_profile": "Conhecer perfil",
+    "btn_contact": "Entrar em contato",
+    "badge_stack": "Full Stack",
+    "badge_erp": "Em produção",
+    "ticker": ["Full Stack Dev", ".NET + Angular", "ERP SaaS", "TypeScript", "SQL Server", "Azure", "Monólito Modular", "C#", "Código com Propósito"]
+  },
+  "manifesto": {
+    "label": "Filosofia de trabalho",
+    "quote_p1": "Construo software como conduzi",
+    "quote_experiments": "experimentos",
+    "quote_p2": "por cinco anos no laboratório: com",
+    "quote_method": "método",
+    "quote_p3": ", paciência e atenção rigorosa a cada variável.",
+    "quote_dim": "A diferença é que, agora, a reação acontece em produção.",
+    "author": "Emily Bezerra",
+    "role": "Full Stack Developer"
+  },
+  "code_preview": {
+    "chapter": "Em código",
+    "title": "Domínio nos dois <em>frameworks</em> principais.",
+    "desc": "Programar é mais que digitar — é uma forma de pensar.",
+    "meta": [
+      { "label": "Backend", "value": "C# · .NET 10" },
+      { "label": "Frontend", "value": "TypeScript · Angular 21" }
+    ]
+  },
+  "about": {
+    "chapter": "A trajetória",
+    "title1": "Mais que",
+    "title_em": "código",
+    "title2": "trajetória e formação.",
+    "intro_lead": "Sou Emily Bezerra, tenho 26 anos e sou Desenvolvedora Full Stack e estudante de Engenharia de Software na <strong>Universidade Cesumar</strong>. Cresci no litoral de São Paulo e aprendi cedo que oportunidades raramente aparecem prontas — elas são construídas com esforço, disciplina e persistência.",
+    "intro_p1": "Minha trajetória começou muito antes da tecnologia. Ainda adolescente, concluí formações técnicas em <strong>Química</strong> e <strong>Meio Ambiente</strong> na Escola Municipal 1º de Maio e, logo depois, iniciei minha carreira na <strong>Universidade Católica de Santos</strong>, onde atuei durante cinco anos como <strong>Técnica de Laboratório</strong>. Foi nesse ambiente, cercado por pesquisa, inovação e resolução de problemas, que tive meu primeiro contato real com tecnologia — e aprendi que cada aprendizado é uma oportunidade que não se deve desperdiçar.",
+    "intro_p2": "A curiosidade rapidamente virou paixão — e depois, uma decisão de vida. Em 2023 comecei minha transição de carreira: entrei na <strong>Cubos Academy</strong> para aprofundar meus conhecimentos em desenvolvimento web e iniciei minha graduação em <strong>Engenharia de Software</strong>, conciliando estudos intensivos à noite com minha rotina de trabalho. Em setembro de 2024 conquistei minha primeira oportunidade como estagiária na <strong>Boneside</strong> e, poucos meses depois, fui promovida a <strong>Desenvolvedora Júnior</strong>.",
+    "intro_p3": "Hoje atuo no desenvolvimento de um <strong>ERP SaaS multi-tenant</strong> em arquitetura de Monólito Modular, com <strong>.NET 10</strong> no backend e <strong>Angular 21</strong> no frontend — utilizando diariamente C#, Entity Framework Core, SQL Server, Azure, Docker, TypeScript, PrimeNG e Tailwind CSS. Tenho grande interesse pela criação de interfaces modernas que unem desenvolvimento, performance e design. Uso ferramentas de IA de forma estratégica para acelerar entregas e elevar a qualidade técnica. Mais do que escrever código, acredito em tecnologia como ferramenta de transformação — e minha trajetória prova que curiosidade e coragem para recomeçar abrem caminhos completamente novos.",
+    "badges": ["Pensamento analítico", "Foco em produto", "Detalhe na UI", "Disciplina diária"],
+    "journey_title": "Minha trajetória",
+    "journey": [
+      { "year": "Abr/2025", "title": "Desenvolvedora Júnior — Boneside", "desc": "Promoção interna a Desenvolvedora Júnior. Assumiu responsabilidade integral pelo módulo de ERP, arquitetura de novas features e liderança técnica das entregas." },
+      { "year": "Set/2024", "title": "Estagiária em TI — Boneside", "desc": "Ingresso na Boneside como estagiária em desenvolvimento de software. Primeiro contato com ambiente profissional de produto real — ERP SaaS multi-tenant em .NET e Angular." },
+      { "year": "2023", "title": "Transição de carreira — Cubos Academy + Cesumar", "desc": "Ingresso na Cubos Academy para formação intensiva em desenvolvimento web, concomitante ao início da graduação em Engenharia de Software na Cesumar. Estudava à noite após o expediente no laboratório." },
+      { "year": "2019–2024", "title": "Técnica de Laboratório — UNISANTOS / Ipeci", "desc": "Cinco anos de atuação técnica em laboratório universitário. Foi nesse período que a curiosidade pela tecnologia amadureceu em decisão — com estudo autônomo de programação em paralelo ao trabalho." },
+      { "year": "2017–2021", "title": "Bacharelado em Química Tecnológica — UNISANTOS", "desc": "Ingresso no bacharelado em Química Tecnológica pela Universidade Católica de Santos. Quatro anos de formação científica rigorosa, com foco em análise quantitativa e metodologia experimental." },
+      { "year": "2015–2018", "title": "Cursos técnicos — Escola Municipal 1º de Maio", "desc": "Conclusão dos cursos técnicos em Química e Meio Ambiente durante a adolescência. Período de formação do pensamento analítico, rigor de processos e validação de hipóteses — base metodológica aplicada hoje em cada decisão técnica de software." }
+    ]
+  },
+  "experience": {
+    "chapter": "Experiência",
+    "title1": "Experiência",
+    "title_em": "profissional",
+    "title2": "construída na prática.",
+    "jobs": [
+      {
+        "role": "Desenvolvedora Júnior",
+        "company": "Boneside",
+        "period": "Abril 2025 — Presente",
+        "type": "Full-time · Promovida do estágio",
+        "current": true,
+        "description": "Responsável pelo desenvolvimento de um novo ERP SaaS multi-tenant em arquitetura Monólito Modular, com .NET 10 no backend e Angular 21 no frontend. Atuo do design da arquitetura até o detalhe da interface, respeitando boundaries entre módulos de negócio.",
+        "stack": [".NET 10", "Angular 21", "EF Core", "SQL Server", "PrimeNG", "Tailwind CSS", "Azure DevOps", "Azure Blob Storage", "SendGrid"],
+        "achievements": [
+          "Estruturação do sistema em módulos de negócio independentes, com boundaries claros para garantir escalabilidade e manutenibilidade",
+          "Modelagem, consultas e manutenção de dados em SQL Server, dando suporte à operação e à evolução do ERP",
+          "Integração com Azure DevOps, Blob Storage e SendGrid para versionamento, armazenamento de arquivos e envio de e-mails",
+          "Desenvolvimento de funcionalidades para um sistema de e-commerce farmacêutico, com automação de campanhas de e-mail marketing via stored procedures",
+          "Análise e resolução de incidentes, apoiando a melhoria contínua do produto"
+        ]
+      },
+      {
+        "role": "Estagiária em Tecnologia da Informação",
+        "company": "Boneside",
+        "period": "Setembro 2024 — Abril 2025",
+        "type": "Estágio",
+        "current": false,
+        "description": "Desenvolvimento e manutenção de um ERP multi-tenant em .NET 8, SignalR e Angular 18+, com banco PostgreSQL e deploy em Azure Functions e App Services. Containerização do ambiente local com Docker e Docker Compose.",
+        "stack": [".NET 8", "Angular 18+", "SignalR", "PostgreSQL", "Azure Functions", "App Services", "Docker", "Docker Compose"],
+        "achievements": [
+          "Desenvolvimento e aprimoramento de aplicações web e sistemas internos",
+          "Containerização de ambientes de desenvolvimento com Docker e Docker Compose",
+          "Organização e acompanhamento de demandas e prazos do time no ClickUp",
+          "Transição efetiva entre formação técnica de laboratório e desenvolvimento profissional de software"
+        ]
+      },
+      {
+        "role": "Técnica de Laboratório",
+        "company": "Universidade Católica de Santos / Ipeci",
+        "period": "2019 — 2024",
+        "type": "5 anos · Bridge para tecnologia",
+        "current": false,
+        "description": "Atuação técnica em laboratório dentro do ecossistema universitário. Período em que a curiosidade pela tecnologia amadureceu em decisão concreta de transição.",
+        "stack": ["Análise laboratorial", "Documentação técnica", "Trabalho em equipe", "Disciplina e método"],
+        "achievements": [
+          "Cinco anos consecutivos no mesmo time, com reconhecimento em organização e rigor de processos",
+          "Disciplina e método científico aplicados hoje em cada decisão técnica de software",
+          "Nos últimos dois anos, conciliação com bootcamp na Cubos Academy e início da graduação em Engenharia de Software"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "chapter": "Stack técnica",
+    "title1": "Ferramentas que",
+    "title_em": "uso",
+    "title2": "todos os dias.",
+    "categories": [
+      { "name": "Backend", "tag": "Principal" },
+      { "name": "Frontend", "tag": "Principal" },
+      { "name": "Banco de Dados", "tag": "Diário" },
+      { "name": "Cloud & DevOps", "tag": "Em uso" },
+      { "name": "Arquitetura & Práticas", "tag": "Aplicado" },
+      { "name": "Ferramentas", "tag": "Fluxo" }
+    ]
+  },
+  "services": {
+    "chapter": "O que faço",
+    "title1": "Áreas de",
+    "title_em": "atuação",
+    "title2": "técnica.",
+    "items": [
+      { "title": "Aplicações Web & SaaS", "desc": "Desenvolvimento de aplicações web completas com .NET no backend e Angular no frontend. Arquitetura multi-tenant, autenticação, módulos de negócio e integrações.", "highlight": true, "tags": [".NET", "Angular", "Azure", "SQL Server"] },
+      { "title": "Arquitetura de Software", "desc": "Aplicação de arquitetura limpa, modelagem de domínio e separação de responsabilidades. Estruturação de monólitos modulares e definição de boundaries entre módulos.", "highlight": false, "tags": ["Clean Arch", "DDD", "SOLID", ".NET"] },
+      { "title": "Dashboards & Painéis", "desc": "Construção de painéis com gráficos em tempo real via SignalR, visualização de dados e componentes de BI para sistemas internos de gestão.", "highlight": false, "tags": ["Angular", "PrimeNG", "SignalR", "Charts"] },
+      { "title": "Frontend Avançado", "desc": "Desenvolvimento de interfaces modernas, responsivas e acessíveis com Angular e TypeScript. Design system próprio, animações e componentes reutilizáveis.", "highlight": false, "tags": ["TypeScript", "SCSS", "Animations", "UI/UX"] },
+      { "title": "Landing Pages & Páginas", "desc": "Construção de páginas e interfaces modernas, performáticas e com atenção cuidadosa à experiência visual — do layout à animação final.", "highlight": false, "tags": ["Angular", "React", "Tailwind", "Animações"] },
+      { "title": "APIs & Integrações", "desc": "Construção de APIs REST robustas com .NET, documentação com Swagger e integrações com serviços externos via Azure e third-party APIs.", "highlight": false, "tags": ["REST API", "Swagger", "JWT", "Azure"] }
+    ]
+  },
+  "contact": {
+    "chapter": "Contato",
+    "title1": "Vamos",
+    "title_em": "conversar",
+    "title2": "Disponível para contato.",
+    "desc": "Sempre aberta para uma boa conversa sobre tecnologia, arquitetura ou projetos interessantes — fique à vontade para enviar uma mensagem. Respondo dentro de 24 horas.",
+    "form_title": "Envie uma mensagem",
+    "name": "Nome",
+    "name_ph": "Seu nome",
+    "email": "Email",
+    "email_ph": "seu@email.com",
+    "subject": "Assunto",
+    "subject_ph": "Sobre o que gostaria de falar",
+    "message": "Mensagem",
+    "message_ph": "Compartilhe o contexto da sua mensagem.",
+    "send": "Enviar mensagem",
+    "sending": "Enviando...",
+    "success_title": "Mensagem enviada com sucesso",
+    "success_desc": "Retorno em até 24 horas. Obrigada pelo contato."
+  },
+  "education": {
+    "chapter": "Formação",
+    "title1": "Base",
+    "title_em": "acadêmica",
+    "title2": "e formação técnica.",
+    "items": [
+      { "degree": "Bacharelado em Engenharia de Software", "institution": "Universidade Cesumar", "period": "2023 — 2027 · Em andamento", "desc": "Graduação em andamento com foco em arquitetura de software, estruturas de dados, engenharia de requisitos e desenvolvimento de sistemas escaláveis." },
+      { "degree": "Curso Intensivo de Desenvolvimento de Software", "institution": "Cubos Academy", "period": "2023 — 2024", "desc": "Formação intensiva em desenvolvimento web full stack, com foco em JavaScript, TypeScript, React, Node.js e boas práticas de engenharia." },
+      { "degree": "Bacharelado em Química Tecnológica", "institution": "Universidade Católica de Santos", "period": "2017 — 2021", "desc": "Quatro anos de formação científica. Onde aprendi a pensar com método, validar hipóteses e cuidar do detalhe — princípios que viraram pilares do meu jeito de programar." },
+      { "degree": "Técnico em Meio Ambiente", "institution": "Escola Municipal 1º de Maio", "period": "2016 — 2018", "desc": "Formação técnica em paralelo ao ensino médio, com foco em análise ambiental e processos sustentáveis. Disciplina e organização na veia desde cedo." },
+      { "degree": "Técnico em Química", "institution": "Escola Municipal 1º de Maio", "period": "2015 — 2017", "desc": "Minha primeira formação técnica. Foi onde aprendi a desmontar problema em partes e a seguir processos com precisão — habilidade que hoje aplico em arquitetura de software." }
+    ]
+  },
+  "footer": {
+    "role": "Full Stack Developer · Software Engineer",
+    "signature_name": "Emily de Jesus Bezerra",
+    "copyright_lead": "© {{year}}",
+    "copyright_tail": "Desenvolvido com Angular e atenção aos detalhes.",
+    "back_top": "↑ Voltar ao topo"
+  }
+}

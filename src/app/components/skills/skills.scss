@@ -1,0 +1,207 @@
+.section-header { margin-bottom: 4rem; }
+
+.section-title {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-top: 0.75rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.skill-category {
+  padding: 1.75rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s var(--ease-out-soft);
+
+  /* Featured: Backend — visual destaque sem span extra */
+  &.bento-feature {
+    background: linear-gradient(145deg,
+      rgba(165,180,252,0.09) 0%,
+      rgba(167,243,208,0.03) 100%
+    );
+    border: 1px solid rgba(165,180,252,0.28);
+    position: relative;
+    overflow: hidden;
+
+    /* Ambient glow orb */
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50px; right: -40px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(165,180,252,0.22), transparent 70%);
+      filter: blur(35px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .cat-name { font-size: 16px; }
+    .cat-icon { width: 44px; height: 44px; svg { width: 21px; height: 21px; } }
+
+    /* Ensure content above orb */
+    .cat-header, .pills-wrap { position: relative; z-index: 1; }
+
+    /* Gradient border top */
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(165,180,252,0.65), transparent);
+    }
+  }
+
+  /* Tools — regular col, next to Arquitetura */
+  &.bento-wide {
+    flex-direction: column;
+  }
+}
+
+.cat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cat-tag {
+  margin-left: auto;
+  padding: 3px 10px;
+  background: rgba(165,180,252,0.1);
+  border: 1px solid rgba(165,180,252,0.28);
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--accent-secondary);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.cat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.4s var(--ease-out-soft);
+
+  svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 1.85;
+  }
+}
+
+@media (hover: hover) {
+  .skill-category:hover .cat-icon {
+    transform: rotate(-6deg) scale(1.1);
+  }
+}
+
+.cat-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* ──────── Marquee ──────── */
+.marquee-wrap {
+  margin-top: 4rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  background: linear-gradient(180deg,
+    rgba(165,180,252,0.03) 0%,
+    transparent 50%,
+    rgba(167,243,208,0.02) 100%
+  );
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.marquee-track {
+  display: inline-flex;
+  gap: 12px;
+  white-space: nowrap;
+  animation: marquee-scroll 40s linear infinite;
+  animation-duration: var(--marquee-duration, 40s);
+  will-change: transform;
+  transition: animation-duration 0.6s var(--ease-out-soft);
+}
+
+/* Slow-down elegante em vez de pause completo (mais cinematográfico) */
+@media (hover: hover) {
+  .marquee-wrap:hover .marquee-track {
+    --marquee-duration: 120s;
+  }
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+  flex-shrink: 0;
+  transition: all 0.25s var(--ease-out-soft);
+
+  @media (hover: hover) {
+    &:hover {
+      background: rgba(165,180,252,0.1);
+      border-color: rgba(165,180,252,0.36);
+      color: var(--text-primary);
+      box-shadow: 0 4px 16px rgba(165,180,252,0.15);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .skills-grid { grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .marquee-wrap { margin-top: 2.5rem; }
+}
+
+@media (max-width: 480px) {
+  .skill-category { padding: 1.25rem; }
+  .cat-name { font-size: 14px; }
+  .cat-icon { width: 36px; height: 36px; svg { width: 17px; height: 17px; } }
+  .marquee-wrap { margin-top: 2rem; padding: 1rem 0; }
+}

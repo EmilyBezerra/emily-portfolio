@@ -1,0 +1,46 @@
+<nav class="navbar" [class.scrolled]="scrolled()" aria-label="Navegação principal">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" (click)="scroll($event, '#hero')">
+      <span class="logo-mark">EJB</span>
+      <span class="logo-text">Emily Bezerra</span>
+    </a>
+
+    <ul class="nav-links">
+      @for (link of navLinks; track link.href) {
+        <li>
+          <a [href]="link.href" class="nav-link" (click)="scroll($event, link.href)">
+            {{ link.key | translate }}
+          </a>
+        </li>
+      }
+    </ul>
+
+    <div class="nav-cta">
+      <app-lang-switcher />
+      <a appMagnetic [magneticStrength]="0.2" href="mailto:emily.bezerra9343&#64;gmail.com" class="btn-glow nav-btn">
+        {{ 'nav.cta' | translate }}
+      </a>
+      <button
+        class="hamburger"
+        (click)="mobileOpen.set(!mobileOpen())"
+        [class.open]="mobileOpen()"
+        [attr.aria-expanded]="mobileOpen()"
+        aria-controls="mobile-menu"
+        aria-label="Abrir menu de navegação"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  @if (mobileOpen()) {
+    <div class="mobile-menu" id="mobile-menu">
+      @for (link of navLinks; track link.href) {
+        <a [href]="link.href" class="mobile-link" (click)="scroll($event, link.href)">
+          {{ link.key | translate }}
+        </a>
+      }
+      <a href="mailto:emily.bezerra9343&#64;gmail.com" class="btn-glow mobile-cta">{{ 'nav.cta' | translate }}</a>
+    </div>
+  }
+</nav>

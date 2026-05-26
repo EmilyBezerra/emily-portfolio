@@ -1,0 +1,61 @@
+<section id="about" class="section-padding">
+  <div class="section-container">
+
+    <!-- header -->
+    <div class="about-header reveal">
+      <div class="chapter-mark">
+        <span class="roman">II.</span>
+        <span class="chapter-line"></span>
+        <span class="chapter-name">{{ 'about.chapter' | translate }}</span>
+      </div>
+      <h2 class="about-title">
+        {{ 'about.title1' | translate }} <span class="serif-em">{{ 'about.title_em' | translate }}</span><br>
+        <span class="gradient-text">{{ 'about.title2' | translate }}</span>
+      </h2>
+    </div>
+
+    <!-- intro pessoal -->
+    <div class="about-intro reveal">
+      <div class="intro-photo-col">
+        <div class="intro-photo-frame">
+          <img src="emily-evento.jpg" alt="Emily Bezerra em evento de tecnologia" class="intro-photo" loading="lazy" decoding="async">
+          <div class="intro-photo-glow"></div>
+        </div>
+      </div>
+      <div class="intro-text-col">
+        <p class="intro-lead" [innerHTML]="'about.intro_lead' | translate"></p>
+        <p class="intro-body" [innerHTML]="'about.intro_p1' | translate"></p>
+        <p class="intro-body" [innerHTML]="'about.intro_p2' | translate"></p>
+        <p class="intro-body" [innerHTML]="'about.intro_p3' | translate"></p>
+        <div class="intro-badges">
+          @for (badge of badges; track badge.label) {
+            <span class="intro-badge"><svg [lucideIcon]="badge.icon"></svg> {{ badge.label }}</span>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- jornada / timeline -->
+    <div class="journey-section reveal">
+      <h3 class="journey-title">{{ 'about.journey_title' | translate }}</h3>
+      <div class="journey-timeline">
+        @for (step of journey; track step.year; let i = $index) {
+          <div class="journey-step reveal" [style.transition-delay]="(i * 0.12) + 's'">
+            <div class="step-left">
+              <div class="step-icon" [style.background]="step.color + '18'" [style.border-color]="step.color + '30'" [style.color]="step.color">
+                <svg [lucideIcon]="step.icon"></svg>
+              </div>
+              <div class="step-connector" [class.last]="i === journey.length - 1"></div>
+            </div>
+            <div class="step-right glass">
+              <div class="step-year" [style.color]="step.color">{{ step.year }}</div>
+              <div class="step-title">{{ step.title }}</div>
+              <p class="step-desc">{{ step.desc }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+</section>

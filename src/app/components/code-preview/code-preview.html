@@ -1,0 +1,43 @@
+<section id="code-preview" class="code-section">
+  <div class="section-container">
+    <div class="code-wrap">
+      <div class="code-aside">
+        <div class="chapter-mark">
+          <span class="roman">I.</span>
+          <span class="chapter-line"></span>
+          <span class="chapter-name">{{ 'code_preview.chapter' | translate }}</span>
+        </div>
+        <h3 class="code-headline" [innerHTML]="'code_preview.title' | translate"></h3>
+        <p class="code-desc">{{ 'code_preview.desc' | translate }}</p>
+        <ul class="code-meta">
+          <li><span class="dot indigo"></span> Backend — .NET 10, Minimal APIs, EF Core</li>
+          <li><span class="dot teal"></span> Frontend — Angular 21, TypeScript, Signals</li>
+        </ul>
+      </div>
+
+      <div class="code-window glass">
+        <div class="window-head">
+          <div class="dots">
+            <span class="dot-mac red"></span>
+            <span class="dot-mac yellow"></span>
+            <span class="dot-mac green"></span>
+          </div>
+          <div class="tabs">
+            @for (t of tabs; track t.label; let i = $index) {
+              <button
+                class="tab"
+                [class.active]="activeTab() === i"
+                (click)="selectTab(i)"
+                type="button"
+              >
+                {{ t.label }}
+              </button>
+            }
+          </div>
+        </div>
+
+        <pre class="code-body"><code><div class="line-gutter">@for (line of visibleLines(); track $index; let i = $index) {<span class="ln">{{ (i + 1).toString().padStart(2, '0') }}</span>}</div><div class="code-lines">@for (line of visibleLines(); track $index; let i = $index; let last = $last) {<div class="code-line">@for (t of tokenize(line, tabs[activeTab()].language); track $index) {<span [class]="t.cls">{{ t.text }}</span>}@if (last) {<span class="caret">▍</span>}</div>}</div></code></pre>
+      </div>
+    </div>
+  </div>
+</section>

@@ -6,7 +6,11 @@
     aria-haspopup="listbox"
     [attr.aria-expanded]="open()"
   >
-    <span class="fi" [class]="'fi-' + current.flag"></span>
+    @switch (current.flag) {
+      @case ('br') { <svg class="fi" viewBox="0 0 16 12" aria-hidden="true"><rect width="16" height="12" fill="#009c3b"/><polygon points="8,1.6 14.4,6 8,10.4 1.6,6" fill="#ffdf00"/><circle cx="8" cy="6" r="2.4" fill="#002776"/></svg> }
+      @case ('us') { <svg class="fi" viewBox="0 0 16 12" aria-hidden="true"><rect width="16" height="12" fill="#bf0a30"/><rect y="0.92" width="16" height="0.92" fill="#fff"/><rect y="2.77" width="16" height="0.92" fill="#fff"/><rect y="4.62" width="16" height="0.92" fill="#fff"/><rect y="6.46" width="16" height="0.92" fill="#fff"/><rect y="8.31" width="16" height="0.92" fill="#fff"/><rect y="10.15" width="16" height="0.92" fill="#fff"/><rect width="6.4" height="6.46" fill="#002868"/></svg> }
+      @case ('es') { <svg class="fi" viewBox="0 0 16 12" aria-hidden="true"><rect width="16" height="12" fill="#aa151b"/><rect y="3" width="16" height="6" fill="#f1bf00"/></svg> }
+    }
     <span class="lang-label">{{ current.label }}</span>
     <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
       <polyline points="6 9 12 15 18 9"/>
@@ -22,7 +26,11 @@
           [attr.aria-selected]="lang.code === translate.currentLang"
           (click)="select(lang)"
         >
-          <span class="fi" [class]="'fi-' + lang.flag"></span>
+          @switch (lang.flag) {
+            @case ('br') { <svg class="fi" viewBox="0 0 16 12" aria-hidden="true"><rect width="16" height="12" fill="#009c3b"/><polygon points="8,1.6 14.4,6 8,10.4 1.6,6" fill="#ffdf00"/><circle cx="8" cy="6" r="2.4" fill="#002776"/></svg> }
+            @case ('us') { <svg class="fi" viewBox="0 0 16 12" aria-hidden="true"><rect width="16" height="12" fill="#bf0a30"/><rect y="0.92" width="16" height="0.92" fill="#fff"/><rect y="2.77" width="16" height="0.92" fill="#fff"/><rect y="4.62" width="16" height="0.92" fill="#fff"/><rect y="6.46" width="16" height="0.92" fill="#fff"/><rect y="8.31" width="16" height="0.92" fill="#fff"/><rect y="10.15" width="16" height="0.92" fill="#fff"/><rect width="6.4" height="6.46" fill="#002868"/></svg> }
+            @case ('es') { <svg class="fi" viewBox="0 0 16 12" aria-hidden="true"><rect width="16" height="12" fill="#aa151b"/><rect y="3" width="16" height="6" fill="#f1bf00"/></svg> }
+          }
           <span>{{ lang.label }}</span>
         </button>
       }

@@ -32,7 +32,9 @@
   },
   "code_preview": {
     "chapter": "En código",
-    "title": "Dominio en los dos <em>frameworks</em> principales.",
+    "title1": "Dominio en los dos",
+    "title_em": "frameworks",
+    "title2": "principales.",
     "desc": "Programar es más que escribir — es una forma de pensar.",
     "meta": [
       { "label": "Backend", "value": "C# · .NET 10" },

@@ -1,6 +1,6 @@
 import { Component, DestroyRef, OnDestroy, OnInit, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import {
   LucideDynamicIcon,
   LucideSparkles,
@@ -17,7 +17,7 @@ import { scrollToAnchor } from '../../shared/scroll.util';
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule, LucideDynamicIcon, MagneticDirective, TranslateModule],
+  imports: [CommonModule, NgOptimizedImage, LucideDynamicIcon, MagneticDirective, TranslateModule],
   templateUrl: './hero.html',
   styleUrl: './hero.scss'
 })

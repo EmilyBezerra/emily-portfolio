@@ -19,11 +19,17 @@
   <div class="divider"></div>
   <app-services />
   <div class="divider"></div>
-  <app-education />
+  @defer (hydrate on viewport) {
+    <app-education />
+  }
   <div class="divider"></div>
-  <app-contact />
+  @defer (hydrate on viewport) {
+    <app-contact />
+  }
 </main>
-<app-footer />
+@defer (hydrate on viewport) {
+  <app-footer />
+}
 
 <a
   href="https://wa.me/5513991941321?text=Ol%C3%A1%2C%20Emily!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20%F0%9F%98%8A"

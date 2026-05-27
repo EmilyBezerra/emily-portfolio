@@ -32,7 +32,9 @@
   },
   "code_preview": {
     "chapter": "In code",
-    "title": "Mastery in the two core <em>frameworks</em>.",
+    "title1": "Mastery in the two core",
+    "title_em": "frameworks",
+    "title2": "that ship.",
     "desc": "Coding is more than typing — it's a way of thinking.",
     "meta": [
       { "label": "Backend", "value": "C# · .NET 10" },

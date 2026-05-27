@@ -1,6 +1,6 @@
 import { Component, DestroyRef, ElementRef, OnDestroy, OnInit, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import {
   LucideDynamicIcon,
   LucideFlaskConical,
@@ -28,7 +28,7 @@ interface JourneyTranslation {
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, LucideDynamicIcon, TranslateModule],
+  imports: [CommonModule, NgOptimizedImage, LucideDynamicIcon, TranslateModule],
   templateUrl: './about.html',
   styleUrl: './about.scss'
 })

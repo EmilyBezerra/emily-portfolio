@@ -7,7 +7,10 @@
           <span class="chapter-line"></span>
           <span class="chapter-name">{{ 'code_preview.chapter' | translate }}</span>
         </div>
-        <h3 class="code-headline" [innerHTML]="'code_preview.title' | translate"></h3>
+        <h2 class="code-headline">
+          {{ 'code_preview.title1' | translate }} <span class="serif-em">{{ 'code_preview.title_em' | translate }}</span><br>
+          <span class="gradient-text">{{ 'code_preview.title2' | translate }}</span>
+        </h2>
         <p class="code-desc">{{ 'code_preview.desc' | translate }}</p>
         <ul class="code-meta">
           <li><span class="dot indigo"></span> Backend — .NET 10, Minimal APIs, EF Core</li>

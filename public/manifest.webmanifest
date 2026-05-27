@@ -9,8 +9,7 @@
   "theme_color": "#0d0d18",
   "lang": "pt-BR",
   "icons": [
-    { "src": "favicon.ico", "sizes": "48x48", "type": "image/x-icon" },
-    { "src": "emily.jpg", "sizes": "800x800", "type": "image/jpeg", "purpose": "any" },
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
     { "src": "emily.jpg", "sizes": "800x800", "type": "image/jpeg", "purpose": "maskable" }
   ]
 }

@@ -10,14 +10,14 @@
   "hero": {
     "greeting": "Hola, soy",
     "roles": ["Desarrolladora Full Stack", ".NET + Angular", "Ingeniera de Software"],
-    "bio": "Desarrolladora Full Stack con foco en <strong>.NET</strong> y <strong>Angular</strong>. Trabajo en el desarrollo de un ERP SaaS multi-tenant en producción, desde la arquitectura del backend hasta el pulido de la interfaz — con foco en escalabilidad, legibilidad y atención a cada detalle.",
+    "bio": "Desarrolladora Full Stack con foco en <strong>.NET</strong> y <strong>Angular</strong>. Trabajo en el desarrollo de un ERP multi-tenant en producción, desde la arquitectura del backend hasta el pulido de la interfaz — con foco en escalabilidad, legibilidad y atención a cada detalle.",
     "location": "Santos — SP, Brasil",
     "education": "Ingeniería de Software",
     "btn_profile": "Ver perfil",
     "btn_contact": "Ponerse en contacto",
     "badge_stack": "Full Stack",
     "badge_erp": "En producción",
-    "ticker": ["Full Stack Dev", ".NET + Angular", "ERP SaaS", "TypeScript", "SQL Server", "Azure", "Monolito Modular", "C#", "Código con Propósito"]
+    "ticker": ["Full Stack Dev", ".NET + Angular", "ERP Multi-tenant", "TypeScript", "SQL Server", "Azure", "Monolito Modular", "C#", "Código con Propósito"]
   },
   "manifesto": {
     "label": "Filosofía de trabajo",

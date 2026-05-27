@@ -10,14 +10,14 @@
   "hero": {
     "greeting": "Hi, I'm",
     "roles": ["Full Stack Developer", ".NET + Angular", "Software Engineer"],
-    "bio": "Full Stack Developer focused on <strong>.NET</strong> and <strong>Angular</strong>. I work on a multi-tenant SaaS ERP in production — from backend architecture to interface polish — focused on scalability, readability, and attention to every detail.",
+    "bio": "Full Stack Developer focused on <strong>.NET</strong> and <strong>Angular</strong>. I work on a multi-tenant ERP in production — from backend architecture to interface polish — focused on scalability, readability, and attention to every detail.",
     "location": "Santos — SP, Brazil",
     "education": "Software Engineering",
     "btn_profile": "View profile",
     "btn_contact": "Get in touch",
     "badge_stack": "Full Stack",
     "badge_erp": "In production",
-    "ticker": ["Full Stack Dev", ".NET + Angular", "ERP SaaS", "TypeScript", "SQL Server", "Azure", "Modular Monolith", "C#", "Code with Purpose"]
+    "ticker": ["Full Stack Dev", ".NET + Angular", "Multi-tenant ERP", "TypeScript", "SQL Server", "Azure", "Modular Monolith", "C#", "Code with Purpose"]
   },
   "manifesto": {
     "label": "Work Philosophy",

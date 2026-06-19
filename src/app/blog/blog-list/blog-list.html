@@ -1,0 +1,49 @@
+<section class="blog-list section-padding">
+  <div class="section-container">
+
+    <header class="blog-list-header reveal">
+      <span class="chapter-mark">
+        <span class="roman">¶</span>
+        <span class="chapter-line"></span>
+        <span class="chapter-name">{{ 'blog.chapter' | translate }}</span>
+      </span>
+      <h1 class="blog-list-title">
+        {{ 'blog.title1' | translate }}
+        <span class="serif-em">{{ 'blog.title_em' | translate }}</span>
+        {{ 'blog.title2' | translate }}
+      </h1>
+      <p class="blog-list-subtitle">{{ 'blog.subtitle' | translate }}</p>
+    </header>
+
+    @if (posts().length) {
+      <div class="blog-grid">
+        @for (post of posts(); track post.slug) {
+          <a class="blog-card glass glass-hover reveal" [routerLink]="['/blog', post.slug]" [attr.aria-label]="post.title">
+            <div class="blog-card-cover">
+              <img [src]="post.cover" [alt]="post.coverAlt" loading="lazy" decoding="async" width="1200" height="600">
+              <span class="blog-card-category">{{ post.category }}</span>
+            </div>
+            <div class="blog-card-body">
+              <h2 class="blog-card-title">{{ post.title }}</h2>
+              <p class="blog-card-excerpt">{{ post.description }}</p>
+              <div class="blog-card-meta">
+                <span>{{ fmtDate(post.date, post.lang) }}</span>
+                <span class="dot">·</span>
+                <span>{{ post.readingMinutes }} {{ 'blog.read_suffix' | translate }}</span>
+              </div>
+              <span class="blog-card-cta">
+                {{ 'blog.read_more' | translate }}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </span>
+            </div>
+          </a>
+        }
+      </div>
+    } @else {
+      <p class="blog-empty reveal">{{ 'blog.empty' | translate }}</p>
+    }
+
+  </div>
+</section>

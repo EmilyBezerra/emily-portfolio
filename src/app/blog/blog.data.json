@@ -1,0 +1,80 @@
+[
+  {
+    "group": "angular-signals",
+    "lang": "pt",
+    "slug": "angular-signals-na-pratica",
+    "title": "Angular Signals na prática: entenda reatividade de uma vez por todas",
+    "description": "Um guia didático sobre Angular Signals: o que são, como signal(), computed() e effect() funcionam, e por que mudam a forma de lidar com estado e change detection.",
+    "date": "2026-06-10",
+    "category": "Angular",
+    "tags": ["Angular", "Signals", "Reatividade", "Frontend"],
+    "cover": "/blog-assets/angular-signals/cover.svg",
+    "coverAlt": "Ilustração de Angular Signals:nós reativos conectados por linhas de luz",
+    "readingMinutes": 9
+  },
+  {
+    "group": "angular-signals",
+    "lang": "en",
+    "slug": "angular-signals-in-practice",
+    "title": "Angular Signals in practice: understand reactivity once and for all",
+    "description": "A beginner-friendly guide to Angular Signals: what they are, how signal(), computed() and effect() work, and why they change the way you handle state and change detection.",
+    "date": "2026-06-10",
+    "category": "Angular",
+    "tags": ["Angular", "Signals", "Reactivity", "Frontend"],
+    "cover": "/blog-assets/angular-signals/cover.svg",
+    "coverAlt": "Illustration of Angular Signals:reactive nodes connected by light lines",
+    "readingMinutes": 9
+  },
+  {
+    "group": "angular-signals",
+    "lang": "es",
+    "slug": "angular-signals-en-la-practica",
+    "title": "Angular Signals en la práctica: entiende la reactividad de una vez por todas",
+    "description": "Una guía didáctica sobre Angular Signals: qué son, cómo funcionan signal(), computed() y effect(), y por qué cambian la forma de manejar el estado y la detección de cambios.",
+    "date": "2026-06-10",
+    "category": "Angular",
+    "tags": ["Angular", "Signals", "Reactividad", "Frontend"],
+    "cover": "/blog-assets/angular-signals/cover.svg",
+    "coverAlt": "Ilustración de Angular Signals:nodos reactivos conectados por líneas de luz",
+    "readingMinutes": 9
+  },
+  {
+    "group": "carreira-tech-2026",
+    "lang": "pt",
+    "slug": "carreira-em-tecnologia-2026",
+    "title": "Carreira em tecnologia em 2026: as áreas, os números reais e por onde começar",
+    "description": "Um guia honesto para quem quer entrar em tech em 2026: o impacto da IA nas vagas de entrada, o mapa de todas as áreas com dados de salário e demanda, e um plano prático para começar.",
+    "date": "2026-06-17",
+    "category": "Carreira",
+    "tags": ["Carreira", "Mercado de Trabalho", "Iniciantes", "Tecnologia"],
+    "cover": "/blog-assets/carreira-tech-2026/cover.svg",
+    "coverAlt": "Mapa de carreiras em tecnologia:caminhos ramificando para diferentes áreas da TI",
+    "readingMinutes": 12
+  },
+  {
+    "group": "carreira-tech-2026",
+    "lang": "en",
+    "slug": "tech-career-2026",
+    "title": "A tech career in 2026: the fields, the real numbers, and where to start",
+    "description": "An honest guide to breaking into tech in 2026: AI's impact on entry-level jobs, the map of every IT field with salary and demand data, and a practical plan to get started.",
+    "date": "2026-06-17",
+    "category": "Career",
+    "tags": ["Career", "Job Market", "Beginners", "Technology"],
+    "cover": "/blog-assets/carreira-tech-2026/cover.svg",
+    "coverAlt": "Tech career map:paths branching into different IT fields",
+    "readingMinutes": 12
+  },
+  {
+    "group": "carreira-tech-2026",
+    "lang": "es",
+    "slug": "carrera-en-tecnologia-2026",
+    "title": "Una carrera en tecnología en 2026: las áreas, los números reales y por dónde empezar",
+    "description": "Una guía honesta para entrar a tech en 2026: el impacto de la IA en los puestos de entrada, el mapa de todas las áreas con datos de salario y demanda, y un plan práctico para empezar.",
+    "date": "2026-06-17",
+    "category": "Carrera",
+    "tags": ["Carrera", "Mercado Laboral", "Principiantes", "Tecnología"],
+    "cover": "/blog-assets/carreira-tech-2026/cover.svg",
+    "coverAlt": "Mapa de carreras en tecnología:caminos ramificándose en distintas áreas de TI",
+    "readingMinutes": 12
+  }
+]

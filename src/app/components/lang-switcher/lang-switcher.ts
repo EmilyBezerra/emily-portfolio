@@ -1,6 +1,8 @@
 import { Component, PLATFORM_ID, inject, signal } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { BlogService } from '../../blog/blog.service';
 import type { Lang } from '../../shared/types';
 
 @Component({
@@ -12,6 +14,8 @@ import type { Lang } from '../../shared/types';
 })
 export class LangSwitcher {
   readonly translate = inject(TranslateService);
+  private readonly router = inject(Router);
+  private readonly blog = inject(BlogService);
   private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 
   readonly langs: Lang[] = [
@@ -27,11 +31,29 @@ export class LangSwitcher {
   }
 
   select(lang: Lang) {
+    this.open.set(false);
+
+    // Numa página de artigo, troca para a URL da versão naquele idioma (o
+    // BlogArticle aplica translate.use e o lang do documento ao carregar).
+    const slug = this.currentArticleSlug();
+    if (slug) {
+      const post = this.blog.getBySlug(slug);
+      const sibling = post && this.blog.getAlternates(post.group).find(p => p.lang === lang.code);
+      if (sibling) {
+        this.router.navigate(['/blog', sibling.slug]);
+        return;
+      }
+    }
+
     this.translate.use(lang.code);
     if (this.isBrowser) {
       document.documentElement.lang = lang.code === 'pt' ? 'pt-BR' : lang.code;
     }
-    this.open.set(false);
+  }
+
+  private currentArticleSlug(): string | null {
+    const match = this.router.url.split('?')[0].split('#')[0].match(/^\/blog\/(.+)$/);
+    return match ? decodeURIComponent(match[1]) : null;
   }
 
   toggle() {

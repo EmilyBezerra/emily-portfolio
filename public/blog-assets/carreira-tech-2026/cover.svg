@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="Carreira em tecnologia em 2026">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d0d18"/>
+      <stop offset="1" stop-color="#12121e"/>
+    </linearGradient>
+    <radialGradient id="orbC" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#a5b4fc" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#a5b4fc" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbD" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fde68a" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#fde68a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="path2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a5b4fc"/>
+      <stop offset="1" stop-color="#a7f3d0"/>
+    </linearGradient>
+    <filter id="glow2" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg2)"/>
+  <circle cx="220" cy="320" r="360" fill="url(#orbC)"/>
+  <circle cx="1010" cy="120" r="320" fill="url(#orbD)"/>
+
+  <!-- branching paths from a single start to four fields -->
+  <g stroke="url(#path2)" stroke-width="2.5" fill="none" opacity="0.5" stroke-linecap="round">
+    <path d="M250 300 C 470 300, 520 130, 760 130"/>
+    <path d="M250 300 C 470 300, 520 245, 760 245"/>
+    <path d="M250 300 C 470 300, 520 360, 760 360"/>
+    <path d="M250 300 C 470 300, 520 475, 760 475"/>
+  </g>
+
+  <!-- start node -->
+  <g filter="url(#glow2)">
+    <circle cx="250" cy="300" r="26" fill="#a5b4fc"/>
+    <circle cx="250" cy="300" r="26" fill="none" stroke="#ddd6fe" stroke-width="2" opacity="0.8">
+      <animate attributeName="r" values="26;42;26" dur="3.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="3.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <text x="250" y="356" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="16" fill="#b4b3cc">início</text>
+
+  <!-- field nodes + labels -->
+  <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="19">
+    <circle cx="780" cy="130" r="13" fill="#a5b4fc"/>
+    <text x="808" y="136" fill="#ecebf4">Desenvolvimento</text>
+
+    <circle cx="780" cy="245" r="13" fill="#c4b5fd"/>
+    <text x="808" y="251" fill="#ecebf4">Dados &amp; IA</text>
+
+    <circle cx="780" cy="360" r="13" fill="#a7f3d0"/>
+    <text x="808" y="366" fill="#ecebf4">Cibersegurança</text>
+
+    <circle cx="780" cy="475" r="13" fill="#fde68a"/>
+    <text x="808" y="481" fill="#ecebf4">Cloud &amp; DevOps</text>
+  </g>
+
+  <text x="90" y="545" font-family="'Instrument Serif', Georgia, serif" font-size="40" font-style="italic" fill="#7e7e9a">Carreira em tech · 2026</text>
+</svg>

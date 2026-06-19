@@ -5,7 +5,8 @@
     "stack": "Stack",
     "services": "Services",
     "contact": "Contact",
-    "cta": "Contact"
+    "cta": "Contact",
+    "blog": "Articles"
   },
   "hero": {
     "greeting": "Hi, I'm",
@@ -48,17 +49,18 @@
     "title2": "journey and background.",
     "intro_lead": "I'm Emily Bezerra, 26, a Full Stack Developer and Software Engineering student at <strong>Universidade Cesumar</strong>. I grew up on the coast of São Paulo and learned early on that opportunities rarely come ready-made — they are built with effort, discipline, and persistence.",
     "intro_p1": "My journey began long before technology. As a teenager, I completed technical courses in <strong>Chemistry</strong> and <strong>Environmental Science</strong>, then started my career at the <strong>Catholic University of Santos</strong>, where I worked for five years as a <strong>Laboratory Technician</strong>. It was in that environment — surrounded by research, innovation, and problem-solving — that I had my first real encounter with technology, and learned that every chance to learn is an opportunity not to waste.",
-    "intro_p2": "Curiosity quickly turned into passion — and then into a life decision. In 2023 I started my career transition: I joined <strong>Cubos Academy</strong> to deepen my web development skills and began a <strong>Software Engineering</strong> degree, balancing intensive evening studies with my work routine. In September 2024 I got my first tech opportunity as an intern at <strong>Boneside</strong> and, a few months later, was promoted to <strong>Junior Developer</strong>.",
-    "intro_p3": "Today I develop a <strong>multi-tenant SaaS ERP</strong> in Modular Monolith architecture, with <strong>.NET 10</strong> on the backend and <strong>Angular 21</strong> on the frontend — working daily with C#, Entity Framework Core, SQL Server, Azure, Docker, TypeScript, PrimeNG, and Tailwind CSS. I have a strong interest in modern interfaces that unite development, performance, and design. I use AI tools strategically to accelerate delivery and elevate technical quality. More than writing code, I believe in technology as a tool for transformation — and my journey proves that curiosity and the courage to start over can open entirely new paths.",
+    "intro_p2": "Curiosity quickly turned into passion and, later, into a life decision. In 2023 I started my career transition: I joined <strong>Cubos Academy</strong> to deepen my web development skills and began a <strong>Software Engineering</strong> degree, balancing intensive evening studies with my work routine. In September 2024 I got my first tech opportunity as an intern at <strong>Boneside</strong> and, a few months later, was promoted to <strong>Junior Developer</strong>. In early 2026, I was promoted to <strong>Mid-level Developer</strong>.",
+    "intro_p3": "Today, as a <strong>Mid-level Developer</strong>, I technically lead a <strong>multi-tenant SaaS ERP</strong> in a Modular Monolith architecture and work on other company projects, from architecture design to interface polish. Day to day I use <strong>.NET 10</strong>, C#, Entity Framework Core, SQL Server, and PostgreSQL on the backend, and <strong>Angular</strong> and <strong>React</strong> (TypeScript) on the frontend, always grounded in Clean Architecture, Azure, Docker, and Tailwind CSS. I use AI tools strategically to accelerate delivery and elevate technical quality. More than writing code, I believe in technology as a tool for transformation, and my journey proves that curiosity and the courage to start over can open entirely new paths.",
     "badges": ["Analytical thinking", "Product focus", "UI attention to detail", "Daily discipline"],
     "journey_title": "My journey",
     "journey": [
-      { "year": "Apr/2025", "title": "Junior Developer — Boneside", "desc": "Promoted internally to Junior Developer. Took full ownership of ERP modules, architecture of new features, and technical leadership of deliveries." },
-      { "year": "Sep/2024", "title": "IT Intern — Boneside", "desc": "Joined Boneside as a software development intern. First exposure to a real product environment — a multi-tenant SaaS ERP built with .NET and Angular." },
-      { "year": "2023", "title": "Career transition — Cubos Academy + Cesumar", "desc": "Joined Cubos Academy for intensive web development training, alongside starting a Software Engineering degree at Cesumar. Studied at night after full shifts in the lab." },
-      { "year": "2019–2024", "title": "Laboratory Technician — UNISANTOS / Ipeci", "desc": "Five years of technical work in a university laboratory. It was during this period that curiosity about technology matured into a decision — alongside self-taught programming parallel to the job." },
-      { "year": "2017–2021", "title": "B.Sc. in Technological Chemistry — UNISANTOS", "desc": "Enrolled in the Technological Chemistry bachelor's program at the Catholic University of Santos. Four years of rigorous scientific training focused on quantitative analysis and experimental methodology." },
-      { "year": "2015–2018", "title": "Technical courses — Escola Municipal 1º de Maio", "desc": "Completed technical courses in Chemistry and Environmental Science as a teenager. A period that shaped analytical thinking, process rigor, and hypothesis validation — the methodological foundation applied today in every software decision." }
+      { "year": "2026", "title": "Mid-level Developer · Boneside", "desc": "Promoted to Mid-level Developer. I technically lead the multi-tenant SaaS ERP and work on other company projects, from architecture design (Clean Architecture, Modular Monolith) to interface detail, in .NET and Angular/React." },
+      { "year": "Apr/2025", "title": "Junior Developer · Boneside", "desc": "Promoted internally to Junior Developer. Took full ownership of ERP modules, architecture of new features, and technical leadership of deliveries." },
+      { "year": "Sep/2024", "title": "IT Intern · Boneside", "desc": "Joined Boneside as a software development intern. First exposure to a real product environment: a multi-tenant SaaS ERP built with .NET and Angular." },
+      { "year": "2023", "title": "Career transition · Cubos Academy + Cesumar", "desc": "Joined Cubos Academy for intensive web development training, alongside starting a Software Engineering degree at Cesumar. Studied at night after full shifts in the lab." },
+      { "year": "2019–2024", "title": "Laboratory Technician · UNISANTOS / Ipeci", "desc": "Five years of technical work in a university laboratory. It was during this period that curiosity about technology matured into a decision, alongside self-taught programming parallel to the job." },
+      { "year": "2017–2021", "title": "B.Sc. in Technological Chemistry · UNISANTOS", "desc": "Enrolled in the Technological Chemistry bachelor's program at the Catholic University of Santos. Four years of rigorous scientific training focused on quantitative analysis and experimental methodology." },
+      { "year": "2015–2018", "title": "Technical courses · Escola Municipal 1º de Maio", "desc": "Completed technical courses in Chemistry and Environmental Science as a teenager. A period that shaped analytical thinking, process rigor, and hypothesis validation: the methodological foundation applied today in every software decision." }
     ]
   },
   "experience": {
@@ -68,14 +70,15 @@
     "title2": "built in practice.",
     "jobs": [
       {
-        "role": "Junior Developer",
+        "role": "Mid-level Developer",
         "company": "Boneside",
-        "period": "April 2025 — Present",
-        "type": "Full-time · Promoted from intern",
+        "period": "Since April 2025",
+        "type": "Full-time · Promoted to Mid-level",
         "current": true,
-        "description": "Responsible for developing a new multi-tenant SaaS ERP in a Modular Monolith architecture, with .NET 10 on the backend and Angular 21 on the frontend. I work from architecture design to interface detail, respecting boundaries between business modules.",
-        "stack": [".NET 10", "Angular 21", "EF Core", "SQL Server", "PrimeNG", "Tailwind CSS", "Azure DevOps", "Azure Blob Storage", "SendGrid"],
+        "description": "As a Mid-level Developer, I technically lead a multi-tenant SaaS ERP in a Modular Monolith architecture and work on other company projects. I go from architecture design (Clean Architecture) to interface detail, respecting boundaries between business modules, with .NET 10 on the backend and Angular and React on the frontend.",
+        "stack": [".NET 10", "Angular 21", "React", "EF Core", "SQL Server", "PostgreSQL", "Clean Architecture", "PrimeNG", "Tailwind CSS", "Azure DevOps", "SendGrid"],
         "achievements": [
+          "Technical leadership across more than one product in parallel, from architecture design (Clean Architecture) to delivery, on backend and frontend",
           "Structured the system into independent business modules with clear boundaries to ensure scalability and maintainability",
           "Data modeling, querying, and maintenance in SQL Server, supporting ERP operation and evolution",
           "Integration with Azure DevOps, Blob Storage, and SendGrid for versioning, file storage, and email delivery",
@@ -181,5 +184,26 @@
     "copyright_lead": "© {{year}}",
     "copyright_tail": "Built with Angular and attention to detail.",
     "back_top": "↑ Back to top"
+  },
+  "blog": {
+    "chapter": "Writing",
+    "title1": "I write about",
+    "title_em": "technology",
+    "title2": "in plain, practical terms.",
+    "subtitle": "Articles on development, architecture and the behind-the-scenes of building real software. No unnecessary jargon, with examples you can apply today.",
+    "meta_title": "Articles about technology · Emily Bezerra",
+    "meta_desc": "Beginner-friendly articles about software development, .NET, Angular and architecture, written by Emily Bezerra, full stack developer.",
+    "read_suffix": "min read",
+    "read_more": "Read article",
+    "empty": "New articles coming soon.",
+    "home": "Home",
+    "back": "Back to articles",
+    "toc": "In this article",
+    "share": "Share",
+    "section_link": "Copy section link",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "author_title": "About the author",
+    "author_bio": "Full Stack developer focused on .NET and Angular. Day to day, I build a multi-tenant SaaS ERP in production, from the backend to the smallest UI detail. I write to share what I learn in practice."
   }
 }

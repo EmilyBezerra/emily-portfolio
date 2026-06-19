@@ -15,6 +15,11 @@
           </a>
         </li>
       }
+      <li>
+        <a routerLink="/blog" routerLinkActive="active" class="nav-link" (click)="closeMobile()">
+          {{ 'nav.blog' | translate }}
+        </a>
+      </li>
     </ul>
 
     <div class="nav-cta">
@@ -42,6 +47,9 @@
           {{ link.key | translate }}
         </a>
       }
+      <a routerLink="/blog" routerLinkActive="active" class="mobile-link" (click)="closeMobile()">
+        {{ 'nav.blog' | translate }}
+      </a>
       <a href="mailto:emily.bezerra9343&#64;gmail.com" class="btn-glow mobile-cta">{{ 'nav.cta' | translate }}</a>
     </div>
   }

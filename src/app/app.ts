@@ -1,22 +1,14 @@
 import { Component, HostListener, OnInit, PLATFORM_ID, inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { Navbar } from './components/navbar/navbar';
-import { Hero } from './components/hero/hero';
-import { Manifesto } from './components/manifesto/manifesto';
-import { CodePreview } from './components/code-preview/code-preview';
-import { About } from './components/about/about';
-import { Experience } from './components/experience/experience';
-import { Skills } from './components/skills/skills';
-import { Services } from './components/services/services';
-import { Education } from './components/education/education';
-import { Contact } from './components/contact/contact';
 import { Footer } from './components/footer/footer';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Navbar, Hero, Manifesto, CodePreview, About, Experience, Skills, Services, Education, Contact, Footer],
+  imports: [RouterOutlet, Navbar, Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

@@ -1,5 +1,6 @@
-import { Component, HostListener, signal } from '@angular/core';
+import { Component, HostListener, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { MagneticDirective } from '../../shared/magnetic.directive';
 import { TranslateModule } from '@ngx-translate/core';
 import { LangSwitcher } from '../lang-switcher/lang-switcher';
@@ -9,11 +10,13 @@ import type { NavLink } from '../../shared/types';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, MagneticDirective, TranslateModule, LangSwitcher],
+  imports: [CommonModule, RouterLink, RouterLinkActive, MagneticDirective, TranslateModule, LangSwitcher],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss'
 })
 export class Navbar {
+  private readonly router = inject(Router);
+
   readonly scrolled = signal(false);
   readonly mobileOpen = signal(false);
 
@@ -30,9 +33,24 @@ export class Navbar {
     this.scrolled.set(window.scrollY > 40);
   }
 
+  // Âncoras apontam para seções da home. Se já estamos na home, faz scroll suave;
+  // caso contrário (ex.: numa página de artigo), navega para a home com o fragmento.
   scroll(e: Event, href: string) {
     e.preventDefault();
     this.mobileOpen.set(false);
-    scrollToAnchor(href);
+    const fragment = href.replace('#', '');
+    if (this.onHome()) {
+      scrollToAnchor(href);
+    } else {
+      this.router.navigate(['/'], { fragment });
+    }
+  }
+
+  closeMobile() {
+    this.mobileOpen.set(false);
+  }
+
+  private onHome(): boolean {
+    return this.router.url.split('#')[0].split('?')[0] === '/';
   }
 }

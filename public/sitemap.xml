@@ -4,10 +4,76 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ejbwebsites.online/</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ejbwebsites.online/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ejbwebsites.online/"/>
+  </url>
+  <url>
+    <loc>https://ejbwebsites.online/blog</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ejbwebsites.online/blog/angular-signals-na-pratica</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ejbwebsites.online/blog/angular-signals-na-pratica"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ejbwebsites.online/blog/angular-signals-in-practice"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ejbwebsites.online/blog/angular-signals-en-la-practica"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ejbwebsites.online/blog/angular-signals-na-pratica"/>
+  </url>
+  <url>
+    <loc>https://ejbwebsites.online/blog/angular-signals-in-practice</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ejbwebsites.online/blog/angular-signals-na-pratica"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ejbwebsites.online/blog/angular-signals-in-practice"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ejbwebsites.online/blog/angular-signals-en-la-practica"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ejbwebsites.online/blog/angular-signals-na-pratica"/>
+  </url>
+  <url>
+    <loc>https://ejbwebsites.online/blog/angular-signals-en-la-practica</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ejbwebsites.online/blog/angular-signals-na-pratica"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ejbwebsites.online/blog/angular-signals-in-practice"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ejbwebsites.online/blog/angular-signals-en-la-practica"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ejbwebsites.online/blog/angular-signals-na-pratica"/>
+  </url>
+  <url>
+    <loc>https://ejbwebsites.online/blog/carreira-em-tecnologia-2026</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ejbwebsites.online/blog/carreira-em-tecnologia-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ejbwebsites.online/blog/tech-career-2026"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ejbwebsites.online/blog/carrera-en-tecnologia-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ejbwebsites.online/blog/carreira-em-tecnologia-2026"/>
+  </url>
+  <url>
+    <loc>https://ejbwebsites.online/blog/tech-career-2026</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ejbwebsites.online/blog/carreira-em-tecnologia-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ejbwebsites.online/blog/tech-career-2026"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ejbwebsites.online/blog/carrera-en-tecnologia-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ejbwebsites.online/blog/carreira-em-tecnologia-2026"/>
+  </url>
+  <url>
+    <loc>https://ejbwebsites.online/blog/carrera-en-tecnologia-2026</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ejbwebsites.online/blog/carreira-em-tecnologia-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ejbwebsites.online/blog/tech-career-2026"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ejbwebsites.online/blog/carrera-en-tecnologia-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ejbwebsites.online/blog/carreira-em-tecnologia-2026"/>
   </url>
 </urlset>

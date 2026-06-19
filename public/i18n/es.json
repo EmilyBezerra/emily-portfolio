@@ -5,7 +5,8 @@
     "stack": "Stack",
     "services": "Servicios",
     "contact": "Contacto",
-    "cta": "Contacto"
+    "cta": "Contacto",
+    "blog": "Artículos"
   },
   "hero": {
     "greeting": "Hola, soy",
@@ -48,17 +49,18 @@
     "title2": "trayectoria y formación.",
     "intro_lead": "Soy Emily Bezerra, tengo 26 años y soy Desarrolladora Full Stack y estudiante de Ingeniería de Software en la <strong>Universidad Cesumar</strong>. Crecí en el litoral de São Paulo y aprendí desde joven que las oportunidades raramente aparecen listas — se construyen con esfuerzo, disciplina y perseverancia.",
     "intro_p1": "Mi trayectoria comenzó mucho antes de la tecnología. De adolescente, completé formaciones técnicas en <strong>Química</strong> y <strong>Medio Ambiente</strong> y, poco después, inicié mi carrera en la <strong>Universidad Católica de Santos</strong>, donde trabajé durante cinco años como <strong>Técnica de Laboratorio</strong>. Fue en ese entorno, rodeada de investigación e innovación, que tuve mi primer contacto real con la tecnología — y aprendí que cada aprendizaje es una oportunidad que no se debe desperdiciar.",
-    "intro_p2": "La curiosidad se convirtió rápidamente en pasión — y luego en una decisión de vida. En 2023 comencé mi transición de carrera: entré en <strong>Cubos Academy</strong> para profundizar en desarrollo web e inicié la carrera de <strong>Ingeniería de Software</strong>, compaginando estudios intensivos por la noche con mi rutina laboral. En septiembre de 2024 conseguí mi primera oportunidad como pasante en <strong>Boneside</strong> y, pocos meses después, fui promovida a <strong>Desarrolladora Junior</strong>.",
-    "intro_p3": "Hoy trabajo en el desarrollo de un <strong>ERP SaaS multi-tenant</strong> en arquitectura de Monolito Modular, con <strong>.NET 10</strong> en el backend y <strong>Angular 21</strong> en el frontend — utilizando diariamente C#, Entity Framework Core, SQL Server, Azure, Docker, TypeScript, PrimeNG y Tailwind CSS. Tengo gran interés por la creación de interfaces modernas que unen desarrollo, rendimiento y diseño. Uso herramientas de IA de forma estratégica para acelerar entregas y elevar la calidad técnica. Más que escribir código, creo en la tecnología como herramienta de transformación — y mi trayectoria demuestra que la curiosidad y el coraje para empezar de nuevo abren caminos completamente nuevos.",
+    "intro_p2": "La curiosidad se convirtió rápidamente en pasión y, luego, en una decisión de vida. En 2023 comencé mi transición de carrera: entré en <strong>Cubos Academy</strong> para profundizar en desarrollo web e inicié la carrera de <strong>Ingeniería de Software</strong>, compaginando estudios intensivos por la noche con mi rutina laboral. En septiembre de 2024 conseguí mi primera oportunidad como pasante en <strong>Boneside</strong> y, pocos meses después, fui promovida a <strong>Desarrolladora Junior</strong>. A principios de 2026, fui promovida a <strong>Desarrolladora Semi Senior</strong>.",
+    "intro_p3": "Hoy, como <strong>Desarrolladora Semi Senior</strong>, lidero técnicamente un <strong>ERP SaaS multi-tenant</strong> en arquitectura de Monolito Modular y trabajo en otros proyectos de la empresa, del diseño de la arquitectura al pulido de la interfaz. En el día a día uso <strong>.NET 10</strong>, C#, Entity Framework Core, SQL Server y PostgreSQL en el backend, y <strong>Angular</strong> y <strong>React</strong> (TypeScript) en el frontend, siempre apoyada en Clean Architecture, Azure, Docker y Tailwind CSS. Uso herramientas de IA de forma estratégica para acelerar entregas y elevar la calidad técnica. Más que escribir código, creo en la tecnología como herramienta de transformación, y mi trayectoria demuestra que la curiosidad y el coraje para empezar de nuevo abren caminos completamente nuevos.",
     "badges": ["Pensamiento analítico", "Enfoque en producto", "Detalle en UI", "Disciplina diaria"],
     "journey_title": "Mi trayectoria",
     "journey": [
-      { "year": "Abr/2025", "title": "Desarrolladora Junior — Boneside", "desc": "Promovida internamente a Desarrolladora Junior. Asumió la responsabilidad completa de los módulos de ERP, la arquitectura de nuevas funcionalidades y el liderazgo técnico de las entregas." },
-      { "year": "Sep/2024", "title": "Pasante de TI — Boneside", "desc": "Ingresé a Boneside como pasante de desarrollo de software. Primer contacto con un entorno de producto real — un ERP SaaS multi-tenant construido con .NET y Angular." },
-      { "year": "2023", "title": "Transición de carrera — Cubos Academy + Cesumar", "desc": "Ingresé a Cubos Academy para formación intensiva en desarrollo web, junto con el inicio de la carrera de Ingeniería de Software en Cesumar. Estudié de noche después de jornadas completas en el laboratorio." },
-      { "year": "2019–2024", "title": "Técnica de Laboratorio — UNISANTOS / Ipeci", "desc": "Cinco años de trabajo técnico en un laboratorio universitario. Fue durante este período que la curiosidad por la tecnología maduró en una decisión — con programación autodidacta en paralelo al trabajo." },
-      { "year": "2017–2021", "title": "Lic. en Química Tecnológica — UNISANTOS", "desc": "Ingresé al bachillerato en Química Tecnológica en la Universidad Católica de Santos. Cuatro años de formación científica rigurosa, enfocada en análisis cuantitativo y metodología experimental." },
-      { "year": "2015–2018", "title": "Cursos técnicos — Escola Municipal 1º de Maio", "desc": "Completé cursos técnicos en Química y Ciencias Ambientales durante la adolescencia. Un período que formó el pensamiento analítico, el rigor de procesos y la validación de hipótesis — base metodológica aplicada hoy en cada decisión técnica de software." }
+      { "year": "2026", "title": "Desarrolladora Semi Senior · Boneside", "desc": "Promoción a Desarrolladora Semi Senior. Lidero técnicamente el ERP SaaS multi-tenant y trabajo en otros proyectos de la empresa, del diseño de la arquitectura (Clean Architecture, Monolito Modular) al detalle de la interfaz, en .NET y Angular/React." },
+      { "year": "Abr/2025", "title": "Desarrolladora Junior · Boneside", "desc": "Promovida internamente a Desarrolladora Junior. Asumió la responsabilidad completa de los módulos de ERP, la arquitectura de nuevas funcionalidades y el liderazgo técnico de las entregas." },
+      { "year": "Sep/2024", "title": "Pasante de TI · Boneside", "desc": "Ingresé a Boneside como pasante de desarrollo de software. Primer contacto con un entorno de producto real: un ERP SaaS multi-tenant construido con .NET y Angular." },
+      { "year": "2023", "title": "Transición de carrera · Cubos Academy + Cesumar", "desc": "Ingresé a Cubos Academy para formación intensiva en desarrollo web, junto con el inicio de la carrera de Ingeniería de Software en Cesumar. Estudié de noche después de jornadas completas en el laboratorio." },
+      { "year": "2019–2024", "title": "Técnica de Laboratorio · UNISANTOS / Ipeci", "desc": "Cinco años de trabajo técnico en un laboratorio universitario. Fue durante este período que la curiosidad por la tecnología maduró en una decisión, con programación autodidacta en paralelo al trabajo." },
+      { "year": "2017–2021", "title": "Lic. en Química Tecnológica · UNISANTOS", "desc": "Ingresé al bachillerato en Química Tecnológica en la Universidad Católica de Santos. Cuatro años de formación científica rigurosa, enfocada en análisis cuantitativo y metodología experimental." },
+      { "year": "2015–2018", "title": "Cursos técnicos · Escola Municipal 1º de Maio", "desc": "Completé cursos técnicos en Química y Ciencias Ambientales durante la adolescencia. Un período que formó el pensamiento analítico, el rigor de procesos y la validación de hipótesis: base metodológica aplicada hoy en cada decisión técnica de software." }
     ]
   },
   "experience": {
@@ -68,14 +70,15 @@
     "title2": "construida en la práctica.",
     "jobs": [
       {
-        "role": "Desarrolladora Junior",
+        "role": "Desarrolladora Semi Senior",
         "company": "Boneside",
-        "period": "Abril 2025 — Presente",
-        "type": "Tiempo completo · Promovida desde pasantía",
+        "period": "Desde Abril 2025",
+        "type": "Tiempo completo · Promovida a Semi Senior",
         "current": true,
-        "description": "Responsable del desarrollo de un nuevo ERP SaaS multi-tenant en arquitectura de Monolito Modular, con .NET 10 en el backend y Angular 21 en el frontend. Trabajo desde el diseño de la arquitectura hasta el detalle de la interfaz, respetando los límites entre módulos de negocio.",
-        "stack": [".NET 10", "Angular 21", "EF Core", "SQL Server", "PrimeNG", "Tailwind CSS", "Azure DevOps", "Azure Blob Storage", "SendGrid"],
+        "description": "Como Desarrolladora Semi Senior, lidero técnicamente un ERP SaaS multi-tenant en arquitectura de Monolito Modular y trabajo en otros proyectos de la empresa. Voy del diseño de la arquitectura (Clean Architecture) al detalle de la interfaz, respetando los límites entre módulos de negocio, con .NET 10 en el backend y Angular y React en el frontend.",
+        "stack": [".NET 10", "Angular 21", "React", "EF Core", "SQL Server", "PostgreSQL", "Clean Architecture", "PrimeNG", "Tailwind CSS", "Azure DevOps", "SendGrid"],
         "achievements": [
+          "Liderazgo técnico en más de un producto en paralelo, del diseño de la arquitectura (Clean Architecture) a la entrega, en backend y frontend",
           "Estructuración del sistema en módulos de negocio independientes con límites claros para garantizar escalabilidad y mantenibilidad",
           "Modelado, consultas y mantenimiento de datos en SQL Server, dando soporte a la operación y evolución del ERP",
           "Integración con Azure DevOps, Blob Storage y SendGrid para versionado, almacenamiento de archivos y envío de correos",
@@ -181,5 +184,26 @@
     "copyright_lead": "© {{year}}",
     "copyright_tail": "Desarrollado con Angular y atención a los detalles.",
     "back_top": "↑ Volver arriba"
+  },
+  "blog": {
+    "chapter": "Contenido",
+    "title1": "Escribo sobre",
+    "title_em": "tecnología",
+    "title2": "de forma clara y práctica.",
+    "subtitle": "Artículos sobre desarrollo, arquitectura y el detrás de escena de quien construye software de verdad. Sin jerga innecesaria, con ejemplos que puedes aplicar hoy.",
+    "meta_title": "Artículos sobre tecnología · Emily Bezerra",
+    "meta_desc": "Artículos didácticos sobre desarrollo de software, .NET, Angular y arquitectura, escritos por Emily Bezerra, desarrolladora full stack.",
+    "read_suffix": "min de lectura",
+    "read_more": "Leer artículo",
+    "empty": "Pronto, nuevos artículos por aquí.",
+    "home": "Inicio",
+    "back": "Volver a los artículos",
+    "toc": "En este artículo",
+    "share": "Compartir",
+    "section_link": "Copiar enlace de la sección",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "author_title": "Sobre la autora",
+    "author_bio": "Desarrolladora Full Stack centrada en .NET y Angular. En el día a día construyo un ERP SaaS multi-tenant en producción, del backend al detalle de la interfaz. Escribo para compartir lo que aprendo en la práctica."
   }
 }

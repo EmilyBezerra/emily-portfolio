@@ -73,6 +73,15 @@
   ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-primary);
   }
+
+  /* Foco de teclado visível (especificidade 0 via :where, para não sobrepor
+     o anel próprio dos campos do formulário). */
+  :where(a, button, input, textarea, select, summary,
+    [tabindex]:not([tabindex="-1"]), [role="option"], [role="button"]):focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
 }
 
 /* ───── Cursor spotlight (global) — suave mas presente ───── */
@@ -482,6 +491,11 @@ body::before {
   transform: translateY(0);
 }
 
+/* Sem JavaScript o IntersectionObserver não roda; garante o conteúdo visível. */
+@media (scripting: none) {
+  .reveal { opacity: 1; transform: none; }
+}
+
 /* ───── Reduced motion ───── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -489,6 +503,7 @@ body::before {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  html { scroll-behavior: auto; }
   .orb { animation: none; }
   .cursor-spotlight { display: none; }
 }

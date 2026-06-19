@@ -11,6 +11,7 @@ import { formatDate } from '../blog.util';
 import type { ArticleMeta } from '../blog.types';
 
 const OG_LOCALE: Record<string, string> = { pt: 'pt_BR', en: 'en_US', es: 'es_ES' };
+const HREFLANG: Record<string, string> = { pt: 'pt-BR', en: 'en', es: 'es' };
 
 @Component({
   selector: 'app-blog-list',
@@ -74,7 +75,7 @@ export class BlogList implements OnInit, OnDestroy {
               url,
               name: t['blog.meta_title'],
               description: t['blog.meta_desc'],
-              inLanguage: lang,
+              inLanguage: HREFLANG[lang] ?? lang,
               author: { '@id': `${SITE_URL}/#emily` },
               blogPost: this.posts().map(p => ({
                 '@type': 'BlogPosting',

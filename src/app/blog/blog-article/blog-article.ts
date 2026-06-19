@@ -2,7 +2,7 @@ import {
   Component, DestroyRef, ElementRef, OnDestroy, OnInit, PLATFORM_ID,
   TransferState, makeStateKey, inject, signal
 } from '@angular/core';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -15,6 +15,7 @@ import { MarkdownService } from '../markdown.service';
 import { SeoService } from '../../shared/seo.service';
 import { RevealService } from '../../shared/reveal.service';
 import { SITE_URL } from '../../shared/site';
+import { prefersReducedMotion } from '../../shared/scroll.util';
 import { formatDate } from '../blog.util';
 import type { ArticleMeta } from '../blog.types';
 
@@ -48,6 +49,7 @@ export class BlogArticle implements OnInit, OnDestroy {
   private readonly el = inject(ElementRef<HTMLElement>);
   private readonly destroyRef = inject(DestroyRef);
   private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+  private readonly doc = inject(DOCUMENT);
 
   readonly post = signal<ArticleMeta | null>(null);
   readonly body = signal<SafeHtml | null>(null);
@@ -98,11 +100,16 @@ export class BlogArticle implements OnInit, OnDestroy {
 
     const anchor = target.closest('.heading-anchor') as HTMLElement | null;
     if (anchor) {
+      // Com <base href="/">, um link #id iria para a home. Rolamos por JS.
+      e.preventDefault();
       const id = anchor.getAttribute('href')?.slice(1) ?? '';
-      navigator.clipboard?.writeText(`${SITE_URL}/blog/${this.post()?.slug ?? ''}#${id}`);
+      const slug = this.post()?.slug ?? '';
+      this.el.nativeElement.querySelector(`[id="${id}"]`)?.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'start' });
+      history.replaceState(null, '', `/blog/${slug}#${id}`);
+      navigator.clipboard?.writeText(`${SITE_URL}/blog/${slug}#${id}`);
       anchor.classList.add('copied');
       setTimeout(() => anchor.classList.remove('copied'), 1500);
-      return; // sem preventDefault → navega para a âncora (scroll suave)
+      return;
     }
 
     const btn = target.closest('.code-block__copy') as HTMLElement | null;
@@ -114,14 +121,13 @@ export class BlogArticle implements OnInit, OnDestroy {
     });
   }
 
-  shareLink(network: 'linkedin' | 'x' | 'whatsapp'): string {
+  shareLink(network: 'linkedin' | 'whatsapp'): string {
     const post = this.post();
     if (!post) return '#';
     const url = encodeURIComponent(`${SITE_URL}/blog/${post.slug}`);
     const text = encodeURIComponent(post.title);
     const map = {
       linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
-      x: `https://twitter.com/intent/tweet?url=${url}&text=${text}`,
       whatsapp: `https://wa.me/?text=${text}%20${url}`
     };
     return map[network];
@@ -139,7 +145,7 @@ export class BlogArticle implements OnInit, OnDestroy {
 
   scrollToHeading(e: Event, id: string) {
     e.preventDefault();
-    this.el.nativeElement.querySelector(`[id="${id}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.el.nativeElement.querySelector(`[id="${id}"]`)?.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'start' });
     this.activeId.set(id);
   }
 
@@ -167,10 +173,25 @@ export class BlogArticle implements OnInit, OnDestroy {
     };
     this.body.set(this.sanitizer.bypassSecurityTrustHtml(this.markdown.render(md, labels)));
 
+    // Fora do guard de browser: roda também no prerender (SSG), garantindo
+    // <html lang> correto no HTML estático de cada idioma.
+    this.doc.documentElement.lang = post.lang === 'pt' ? 'pt-BR' : post.lang;
+
     if (this.isBrowser) {
-      document.documentElement.lang = post.lang === 'pt' ? 'pt-BR' : post.lang;
+      const fragment = this.route.snapshot.fragment;
       window.scrollTo({ top: 0, behavior: 'auto' });
-      setTimeout(() => this.buildToc(), 0);
+      setTimeout(() => {
+        this.buildToc();
+        // Deep-link para uma seção (/blog/slug#id): rola até o título depois
+        // que o corpo do markdown foi injetado no DOM.
+        if (fragment) {
+          const target = this.el.nativeElement.querySelector(`[id="${fragment}"]`) as HTMLElement | null;
+          if (target) {
+            target.scrollIntoView({ behavior: 'auto', block: 'start' });
+            this.activeId.set(fragment);
+          }
+        }
+      }, 0);
     }
     this.applySeo(post);
   }
@@ -215,7 +236,7 @@ export class BlogArticle implements OnInit, OnDestroy {
       description: post.description,
       url,
       type: 'article',
-      image: `${SITE_URL}/emily.jpg`,
+      image: `${SITE_URL}${post.cover}`,
       imageAlt: post.coverAlt,
       locale: OG_LOCALE[post.lang] ?? 'pt_BR',
       alternates,
@@ -232,7 +253,7 @@ export class BlogArticle implements OnInit, OnDestroy {
           url,
           headline: post.title,
           description: post.description,
-          inLanguage: post.lang,
+          inLanguage: HREFLANG[post.lang] ?? post.lang,
           datePublished: post.date,
           dateModified: post.updated ?? post.date,
           articleSection: post.category,

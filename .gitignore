@@ -46,10 +46,11 @@ __screenshots__/
 *.jpeg
 *.png
 *.webp
-# Mas mantém assets reais do public/
-!public/*.webp
-!public/*.png
-!public/*.jpeg
+# Mas mantém assets reais do public/ (em qualquer subpasta)
+!public/**/*.webp
+!public/**/*.png
+!public/**/*.jpeg
+!public/**/*.jpg
 
 # Guia privado de setup (apagar após uso)
 GITHUB-SETUP.md

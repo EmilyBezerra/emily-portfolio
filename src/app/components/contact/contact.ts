@@ -6,7 +6,7 @@ import {
   LucideMail,
   LucideCheckCircle2,
 } from '@lucide/angular';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { RevealService } from '../../shared/reveal.service';
 import { environment } from '../../../environments/environment';
 import type { ContactChannel } from '../../shared/types';
@@ -34,6 +34,7 @@ const FIELD_LIMITS = {
 export class Contact implements OnInit, OnDestroy {
   private readonly el = inject(ElementRef<HTMLElement>);
   private readonly reveal = inject(RevealService);
+  private readonly translate = inject(TranslateService);
 
   readonly SuccessIcon = LucideCheckCircle2.icon;
   readonly MailIcon = LucideMail.icon;
@@ -68,11 +69,11 @@ export class Contact implements OnInit, OnDestroy {
     const message = this.message.trim();
 
     if (!name || !email || !message) {
-      this.error.set('Preencha nome, e-mail e mensagem.');
+      this.error.set(this.translate.instant('contact.err_required'));
       return;
     }
     if (!EMAIL_REGEX.test(email)) {
-      this.error.set('E-mail inválido.');
+      this.error.set(this.translate.instant('contact.err_email'));
       return;
     }
     if (
@@ -81,7 +82,7 @@ export class Contact implements OnInit, OnDestroy {
       subject.length > FIELD_LIMITS.subject ||
       message.length > FIELD_LIMITS.message
     ) {
-      this.error.set('Um dos campos excede o tamanho permitido.');
+      this.error.set(this.translate.instant('contact.err_toolong'));
       return;
     }
 
@@ -112,10 +113,10 @@ export class Contact implements OnInit, OnDestroy {
       if (data.success) {
         this.sent.set(true);
       } else {
-        this.error.set('Não foi possível enviar. Tente pelo WhatsApp ou e-mail direto.');
+        this.error.set(this.translate.instant('contact.err_send'));
       }
     } catch {
-      this.error.set('Erro de conexão. Tente pelo WhatsApp ou e-mail direto.');
+      this.error.set(this.translate.instant('contact.err_network'));
     } finally {
       this.sending.set(false);
     }

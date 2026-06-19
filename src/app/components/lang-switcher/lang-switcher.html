@@ -3,7 +3,7 @@
     class="lang-trigger"
     (click)="toggle()"
     [attr.aria-label]="'Idioma: ' + current.label"
-    aria-haspopup="listbox"
+    aria-controls="lang-dropdown"
     [attr.aria-expanded]="open()"
   >
     @switch (current.flag) {
@@ -17,13 +17,12 @@
     </svg>
   </button>
   @if (open()) {
-    <div class="lang-dropdown" role="listbox" aria-label="Selecionar idioma">
+    <div class="lang-dropdown" id="lang-dropdown">
       @for (lang of langs; track lang.code) {
         <button
           class="lang-option"
-          role="option"
           [class.active]="lang.code === translate.currentLang"
-          [attr.aria-selected]="lang.code === translate.currentLang"
+          [attr.aria-current]="lang.code === translate.currentLang ? 'true' : null"
           (click)="select(lang)"
         >
           @switch (lang.flag) {

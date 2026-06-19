@@ -55,7 +55,7 @@ function slugify(s: string): string {
 }
 
 interface RendererThis {
-  parser: { parse(tokens: unknown[]): string };
+  parser: { parse(tokens: unknown[]): string; parseInline(tokens: unknown[]): string };
 }
 
 // Converte Markdown em HTML. O realce é feito por função pura (highlight.js,
@@ -108,11 +108,12 @@ export class MarkdownService {
           '</div>'
         );
       },
-      heading(token: { text: string; depth: number }) {
+      heading(this: RendererThis, token: { tokens: unknown[]; text: string; depth: number }) {
         const id = slugify(token.text);
+        const content = this.parser.parseInline(token.tokens);
         return (
           `<h${token.depth} id="${id}">` +
-            escapeHtml(token.text) +
+            content +
             `<a class="heading-anchor" href="#${id}" aria-label="${sectionLink}">#</a>` +
           `</h${token.depth}>`
         );

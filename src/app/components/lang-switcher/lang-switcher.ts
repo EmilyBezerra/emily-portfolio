@@ -1,4 +1,4 @@
-import { Component, PLATFORM_ID, inject, signal } from '@angular/core';
+import { Component, ElementRef, HostListener, PLATFORM_ID, inject, signal } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
@@ -16,6 +16,7 @@ export class LangSwitcher {
   readonly translate = inject(TranslateService);
   private readonly router = inject(Router);
   private readonly blog = inject(BlogService);
+  private readonly el = inject(ElementRef<HTMLElement>);
   private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 
   readonly langs: Lang[] = [
@@ -32,6 +33,7 @@ export class LangSwitcher {
 
   select(lang: Lang) {
     this.open.set(false);
+    if (this.isBrowser) localStorage.setItem('lang', lang.code);
 
     // Numa página de artigo, troca para a URL da versão naquele idioma (o
     // BlogArticle aplica translate.use e o lang do documento ao carregar).
@@ -58,5 +60,17 @@ export class LangSwitcher {
 
   toggle() {
     this.open.update(v => !v);
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape() {
+    if (this.open()) this.open.set(false);
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(e: MouseEvent) {
+    if (this.open() && !this.el.nativeElement.contains(e.target as Node)) {
+      this.open.set(false);
+    }
   }
 }

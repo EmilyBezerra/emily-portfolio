@@ -1,4 +1,4 @@
-import { Component, HostListener, inject, signal } from '@angular/core';
+import { Component, ElementRef, HostListener, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { MagneticDirective } from '../../shared/magnetic.directive';
@@ -16,6 +16,7 @@ import type { NavLink } from '../../shared/types';
 })
 export class Navbar {
   private readonly router = inject(Router);
+  private readonly el = inject(ElementRef<HTMLElement>);
 
   readonly scrolled = signal(false);
   readonly mobileOpen = signal(false);
@@ -48,6 +49,18 @@ export class Navbar {
 
   closeMobile() {
     this.mobileOpen.set(false);
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape() {
+    if (this.mobileOpen()) this.mobileOpen.set(false);
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(e: MouseEvent) {
+    if (this.mobileOpen() && !this.el.nativeElement.contains(e.target as Node)) {
+      this.mobileOpen.set(false);
+    }
   }
 
   private onHome(): boolean {

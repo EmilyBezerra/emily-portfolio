@@ -21,8 +21,12 @@ export class App implements OnInit {
   private pendingCursorY = 0;
 
   ngOnInit() {
-    this.translate.use('pt');
+    // Restaura o idioma escolhido pelo usuário; PT como padrão.
+    const saved = this.isBrowser ? localStorage.getItem('lang') : null;
+    const lang = saved && ['pt', 'en', 'es'].includes(saved) ? saved : 'pt';
+    this.translate.use(lang);
     if (this.isBrowser) {
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
       this.updateScrollProgress();
     }
   }

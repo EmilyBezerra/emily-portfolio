@@ -1,32 +1,34 @@
-Você já passou por aquele momento em que muda um dado no código, tem certeza de que está tudo certo, mas a tela **simplesmente não atualiza**? Você abre o console, espalha alguns `console.log`, confirma que o valor mudou de verdade... e a interface continua exibindo o número antigo, te encarando.
+Você troca um valor no código. Confere. Confere de novo. A tela continua mostrando o número velho, te encarando.
 
-Esse pequeno drama é, quase sempre, um problema de **reatividade**: como o framework descobre *o que* mudou e *o que* precisa ser redesenhado na tela. E é exatamente esse problema que os **Signals** resolvem, de um jeito tão direto que, depois de entender, é difícil voltar atrás.
+Já passou por isso? Eu já, várias vezes. E aqui vai uma coisa sobre mim: eu não consigo só dar um jeito e seguir. Preciso entender de onde vem. Sobrou da época em que eu trabalhava em laboratório, acho. Vejo uma engrenagem nova e quero abrir pra ver como gira.
 
-Neste artigo eu quero te dar um **modelo mental claro** de Signals: o que são, como `signal()`, `computed()` e `effect()` funcionam juntos, e por que eles mudaram a forma de lidar com estado no Angular. Sem mágica, sem jargão desnecessário, com exemplos que você pode rodar hoje.
+Foi essa curiosidade que me levou fundo nos Signals do Angular. Testei no ERP que eu construo no trabalho, li a documentação oficial, fiz uns experimentos só pra ver o que acontecia. Este texto é o resumo do que eu entendi, com foco no que importa de verdade: quando e como usar.
 
-## O problema: como o Angular sabe que algo mudou?
+## De onde vinha aquele bug da tela
 
-Por anos, o Angular dependeu do **Zone.js** para detectar mudanças. A ideia era engenhosa: o Zone.js "envolvia" praticamente tudo que poderia alterar o estado da aplicação (cliques, timers, requisições HTTP) e, sempre que algo desses acontecia, avisava o Angular: *"ei, talvez algo tenha mudado, é melhor verificar"*.
+Esse tipo de coisa raramente é distração sua. Quase sempre é o framework não sabendo **o que** mudou.
 
-O problema é o "**talvez**". Como o framework não sabia exatamente o que mudou, ele precisava percorrer a árvore de componentes e reavaliar tudo, por garantia. Funciona, mas é trabalho demais para uma informação de menos. É como tocar o alarme de incêndio do prédio inteiro toda vez que alguém acende o fogão.
+Por muito tempo o Angular resolveu isso na marra, com o Zone.js. A ideia era engenhosa. O Zone.js ficava de olho em tudo que pudesse mexer no estado (clique, timer, requisição) e, quando algo rolava, avisava o Angular: "olha, pode ter mudado alguma coisa, melhor conferir".
 
-Signals invertem essa lógica. Em vez de o framework *adivinhar* o que mudou, **o próprio valor avisa quem depende dele**. A informação que faltava passa a existir.
+Conferir o quê? Tudo. A árvore inteira de componentes, por garantia. Funciona, mas é desproporcional. É tipo disparar o alarme de incêndio do prédio porque alguém acendeu o fogão.
 
-## O que é um Signal (o modelo mental)
+Os Signals invertem isso. Em vez de o framework adivinhar, o próprio valor avisa quem depende dele. Aquela informação que faltava passou a existir. Parece pouco. Muda muita coisa.
 
-A analogia mais útil aqui é a de uma **planilha**.
+## A imagem que destravou tudo: planilha
 
-Numa planilha, você digita `10` na célula A1 e `5` na célula A2. Na célula A3, você escreve a fórmula `=A1+A2`, e ela mostra `15`. Agora, quando você troca o A1 para `20`, o que acontece? O A3 vira `25` **sozinho**. Você não precisou avisar a planilha para recalcular. Ela *sabia* que o A3 dependia do A1.
+Antes de qualquer código, deixa eu te dar a analogia que fez o conceito grudar na minha cabeça.
 
-Um Signal é exatamente isso: uma **caixinha que guarda um valor e conhece quem depende dele**. Quando o valor muda, todo mundo que o consome é notificado automaticamente, e só esse "todo mundo", ninguém mais.
+Pensa numa planilha. Você põe `10` na célula A1 e `5` na A2. Na A3 escreve `=A1+A2`, aparece `15`. Agora muda o A1 pra `20`. O A3 vira `25` na hora. Você não apertou recalcular. A planilha sabia que o A3 dependia do A1.
 
-> Pense em Signals como células de planilha para o seu código: você descreve as relações entre os dados uma vez, e o recálculo acontece sozinho, na hora certa.
+Um Signal é exatamente uma célula dessas. Uma caixinha que guarda um valor e conhece quem depende dele. Mudou, todo mundo que usa aquele valor recebe o aviso. Só quem usa. Mais ninguém.
 
-Com esse modelo na cabeça, o resto vira detalhe de sintaxe.
+> Pensa em Signal como célula de planilha pro seu código. Você descreve as relações uma vez, e o recálculo se vira sozinho, na hora certa.
 
-## signal(): criando e lendo estado
+Com essa imagem na cabeça, o resto vira sintaxe.
 
-Criar um signal é uma linha. Você passa o valor inicial:
+## signal(): criar e ler
+
+Uma linha. Você passa o valor inicial:
 
 ```ts
 import { signal } from '@angular/core';
@@ -34,31 +36,31 @@ import { signal } from '@angular/core';
 const contador = signal(0);
 ```
 
-Para **ler** o valor, você chama o signal como se fosse uma função:
+Pra ler, chama como função:
 
 ```ts
 console.log(contador()); // 0
 ```
 
-Esse par de parênteses não é decoração. Ele é o que permite ao Angular saber, no exato momento da leitura, que *aquele trecho de código depende daquele signal*. É assim que a "planilha" registra as dependências: na hora em que você lê.
+Esse par de parênteses me intrigou no começo, então fui atrás. Ele não é decoração. É no exato momento da leitura que o Angular registra "esse trecho aqui depende desse signal". É assim que a planilha monta o mapa de dependências: na hora em que você lê.
 
-## Mudando o valor: set() e update()
+## set() e update(): mudar o valor
 
-Existem duas formas de alterar um signal, e a diferença entre elas é simples:
+Dois jeitos, e a diferença é sutil:
 
 ```ts
-// set(): quando o novo valor não depende do anterior
+// set(): você já tem o valor novo
 contador.set(10);
 
-// update(): quando o novo valor é calculado a partir do atual
-contador.update(valor => valor + 1); // agora é 11
+// update(): o valor novo nasce do atual
+contador.update(valor => valor + 1); // virou 11
 ```
 
-Use `set()` quando você já tem o valor final em mãos. Use `update()` quando o novo valor é uma transformação do antigo, incrementar, alternar um booleano, adicionar um item a uma lista. É uma distinção pequena, mas que deixa a intenção do código clara para quem lê depois (inclusive você, daqui a três meses).
+`set` quando você já sabe o resultado. `update` quando precisa do valor anterior pra chegar no próximo: incrementar, inverter um booleano, adicionar item numa lista. Mínimo detalhe, mas deixa sua intenção legível pra quem abrir o código depois.
 
-## computed(): estado derivado de graça
+## computed(): a parte que eu achei mais elegante
 
-Aqui mora uma das partes mais bonitas. Lembra da célula A3 da planilha, com a fórmula `=A1+A2`? No Angular, ela é um `computed()`:
+Lembra do `=A1+A2` da célula A3? No Angular, isso é um `computed()`:
 
 ```ts
 import { signal, computed } from '@angular/core';
@@ -70,21 +72,21 @@ const total = computed(() => preco() * quantidade());
 
 console.log(total()); // 200
 quantidade.set(3);
-console.log(total()); // 300, recalculou sozinho
+console.log(total()); // 300
 ```
 
-Repare que eu **nunca** atualizei o `total` manualmente. Ele se atualiza porque, ao ler `preco()` e `quantidade()` lá dentro, o computed *registrou* que depende dos dois. Quando qualquer um deles muda, o total fica "sujo" e recalcula na próxima leitura.
+Olha que interessante: eu nunca atualizo o `total`. Ele se vira. Por quê? Porque, ao ler `preco()` e `quantidade()` lá dentro, ele anota que depende dos dois. Mudou um deles, o total fica "sujo" e recalcula na próxima leitura.
 
-E tem dois detalhes que fazem diferença na prática:
+Quando fui investigar o porquê de ser tão eficiente, achei dois detalhes que mudam o jogo no dia a dia:
 
-- **É lazy (preguiçoso):** o computed só calcula quando alguém lê o valor. Se ninguém usa o `total()` naquele momento, ele nem se dá ao trabalho.
-- **É memoizado:** se as dependências não mudaram, ele devolve o último valor calculado, sem refazer a conta.
+- Ele é preguiçoso. Só calcula quando alguém lê. Ninguém usando `total()` agora? Ele nem se mexe.
+- Ele é memoizado. Dependência não mudou, ele devolve o último resultado sem refazer a conta.
 
-Na prática, isso significa que você pode criar quantos `computed()` quiser para descrever seu estado derivado, sem medo de performance. Estado derivado deixa de ser algo que você sincroniza na mão e passa a ser algo que você simplesmente *declara*.
+O efeito prático disso é libertador. Pode criar quantos `computed()` quiser pra descrever estado derivado. Aquilo que antes eu sincronizava na mão (e às vezes esquecia de sincronizar, que é onde nascia metade dos meus bugs) virou uma relação que eu só declaro. Uma vez.
 
-## effect(): quando você precisa reagir ao mundo de fora
+## effect(): a primeira coisa que eu quis entender direito
 
-`signal` e `computed` cuidam de **dados que viram outros dados**. Mas às vezes você precisa reagir a uma mudança fazendo algo que está *fora* do mundo dos dados: gravar no `localStorage`, disparar um log, atualizar manualmente um gráfico de uma biblioteca de terceiros. Para isso existe o `effect()`:
+`signal` e `computed` cuidam de dado que vira outro dado. Mas e quando você precisa reagir fazendo algo fora desse mundo? Gravar no `localStorage`, mandar um log, atualizar um gráfico de uma biblioteca externa. Pra isso existe o `effect()`:
 
 ```ts
 import { signal, effect } from '@angular/core';
@@ -92,23 +94,22 @@ import { signal, effect } from '@angular/core';
 const tema = signal<'claro' | 'escuro'>('escuro');
 
 effect(() => {
-  // roda agora e sempre que `tema` mudar
   document.body.dataset['theme'] = tema();
 });
 ```
 
-Um `effect()` roda uma vez ao ser criado e, depois, **toda vez que algum signal que ele lê por dentro mudar**. As dependências são rastreadas automaticamente. Você não declara uma lista, igual fazia em outros frameworks.
+Roda uma vez ao nascer e depois sempre que algum signal lido lá dentro mudar. As dependências ele rastreia sozinho, sem você declarar lista.
 
-Aqui vai o conselho mais importante deste artigo:
+Quando comecei a estudar isso, a pergunta que mais me ajudou não foi "como uso effect", e sim "quando NÃO usar". A resposta vale ouro:
 
 > [!WARNING]
-> Não use `effect()` para calcular estado derivado. Se a sua reação é "quando A muda, atualize B", o que você quer é um `computed()`, não um `effect()`.
+> Não use `effect()` pra calcular estado derivado. Se a frase é "quando A mudar, atualiza o B", o que você quer é um `computed()`. Quase sempre.
 
-`effect()` é para **efeitos colaterais**: interações com o mundo externo. Usá-lo para manter um valor em sincronia com outro costuma levar a bugs sutis e loops difíceis de depurar. Guarde-o para quando você realmente precisa "sair" do grafo reativo.
+`effect()` é pra efeito colateral, pra falar com o mundo de fora. Usá-lo pra manter um valor em sincronia com outro é o atalho mais curto pros loops estranhos e pros bugs difíceis de rastrear. Por isso eu o trato como último recurso, não como primeiro.
 
-## Signals no template
+## E no template?
 
-No template, a leitura é igual: você chama o signal. O Angular passa a atualizar **só** as partes da tela que dependem daquele valor.
+Mesma lógica. Você chama o signal, e o Angular atualiza só os pedaços da tela que dependem daquele valor:
 
 ```html
 <button (click)="contador.update(v => v + 1)">
@@ -116,56 +117,42 @@ No template, a leitura é igual: você chama o signal. O Angular passa a atualiz
 </button>
 
 @if (total() > 250) {
-  <p>Frete grátis liberado! 🎉</p>
+  <p>Frete grátis! 🎉</p>
 }
 ```
 
-Combinando com o novo control flow (`@if`, `@for`, `@switch`), você tem um template que reage com precisão cirúrgica: quando `contador` muda, o Angular não reavalia a página inteira: ele atualiza aquele texto, e só.
+Com o control flow novo (`@if`, `@for`, `@switch`), a tela reage com precisão de bisturi. Mudou o `contador`, o Angular não reavalia a página toda. Mexe naquele texto, e para por aí.
 
-## input() e model(): signals na fronteira do componente
+## Até a fronteira do componente virou signal
 
-A ideia de Signals foi crescendo pelo framework. Hoje, até a comunicação entre componentes virou signal. Em vez do antigo decorador `@Input()`, você pode declarar entradas como signals:
+Conforme fui me aprofundando, percebi que a ideia se espalhou pelo framework inteiro. Hoje até a comunicação entre componentes é signal. No lugar do `@Input()`, você declara a entrada assim:
 
 ```ts
 import { Component, input, model } from '@angular/core';
 
 @Component({ /* ... */ })
 export class CardUsuario {
-  // entrada somente leitura, vira um signal
   nome = input.required<string>();
-
-  // entrada de mão dupla (substitui @Input + @Output do "banana in a box")
-  favorito = model(false);
+  favorito = model(false); // mão dupla, no lugar de @Input + @Output
 }
 ```
 
-Agora `nome()` é um signal como qualquer outro: dá para usar dentro de um `computed()`, reagir a ele num `effect()`, ler no template. A fronteira do componente deixou de ser um caso especial. É tudo o mesmo modelo reativo, de ponta a ponta. Vale notar que essa evolução veio se consolidando desde o Angular 17 até as versões mais recentes.
+E aí `nome()` é um signal como outro qualquer. Dá pra usar dentro de `computed()`, reagir num `effect()`, ler no template. A fronteira do componente deixou de ser exceção. Virou tudo o mesmo modelo, de ponta a ponta. Essa evolução foi se firmando do Angular 17 pra cá.
 
-## Por que isso muda o jogo
+## Por que vale a pena aprender isso agora
 
-Reunindo as peças, dá para ver o quadro maior:
+Reunindo o que entendi, o quadro grande aparece:
 
-1. **Detecção de mudança cirúrgica.** Como cada signal sabe exatamente quem depende dele, o Angular atualiza só o necessário, não a árvore inteira "por garantia".
-2. **O caminho para o *zoneless*.** Com Signals carregando a informação de "o que mudou", o Angular não precisa mais do Zone.js para adivinhar. Aplicações [sem Zone.js](https://angular.dev/guide/zoneless) ficam mais leves e com um stack trace bem mais limpo quando algo dá errado.
-3. **Menos bugs daquele tipo "a tela não atualizou".** Estado derivado declarado com `computed()` está sempre em sincronia, por construção. Aquele drama do começo do artigo simplesmente deixa de acontecer.
+1. Detecção de mudança cirúrgica. Cada signal sabe quem depende dele, então o Angular atualiza só o necessário.
+2. É o caminho pro *zoneless*. Com os Signals carregando o "o que mudou", o Angular não precisa mais do Zone.js pra adivinhar. App [sem Zone.js](https://angular.dev/guide/zoneless) fica mais leve, e o stack trace fica bem mais limpo quando algo quebra.
+3. Aquele bug da tela some. Estado derivado com `computed()` está sempre em dia, por construção.
 
-Não é uma mudança cosmética de sintaxe. É uma forma diferente (e mais honesta) de descrever como os dados da sua aplicação se relacionam.
+## O caminho que eu recomendo
 
-## Boas práticas (e algumas armadilhas)
+Se for levar uma frase só daqui, leva esta: estado é `signal`, o que deriva dele é `computed`, efeito colateral é `effect`. Esses três no lugar certo resolvem a maior parte das dúvidas.
 
-Depois de usar Signals no dia a dia, alguns princípios se repetem:
+O resto é mão na massa, e é aqui que a ficha cai de verdade. Abre um projeto vazio, cria um contador, põe um `computed` em cima, e fica olhando o negócio se atualizar sozinho. Foi assim que entendeu pra mim. Não foi lendo (nem mesmo lendo isto aqui).
 
-- **Estado derivado é `computed`, sempre.** Se um valor pode ser calculado a partir de outros, não o guarde num `signal` separado para "manter atualizado na mão". Isso é fonte de bug. Declare o `computed` e siga em frente.
-- **`effect()` é a exceção, não a regra.** A maior parte da sua lógica reativa cabe em `signal` + `computed`. Se você está alcançando `effect()` com frequência, vale parar e perguntar se não há um `computed` escondido ali.
-- **Mantenha os signals pequenos e específicos.** Vários signals focados reagem melhor (e mais finamente) do que um único objetão gigante que muda inteiro a cada alteração.
-- **Atualize objetos e listas de forma imutável.** Troque a referência (`update(lista => [...lista, novo])`) em vez de mutar no lugar, para o signal perceber a mudança de forma confiável.
+Pra ir além, a [documentação oficial de Signals](https://angular.dev/guide/signals) é ótima e tem exemplos que você edita ali na hora. E se o assunto te pegou, no próximo texto eu pretendo mostrar como conectar Signals com chamada assíncrona sem gambiarra.
 
-## Conclusão
-
-Signals trazem para o Angular um modelo de reatividade que sempre esteve à vista, mas que faltava sintaxe para expressar: o da **planilha**. Você descreve as relações entre os dados uma vez (com `signal()` para o estado, `computed()` para o que deriva dele, e `effect()` para falar com o mundo lá fora) e deixa o recálculo acontecer sozinho, na hora certa e no lugar certo.
-
-Se você só for guardar uma frase deste texto, que seja esta: **estado é `signal`, derivado é `computed`, efeito colateral é `effect`.** Com esses três no lugar certo, aquela tela que não atualizava vira história.
-
-Para se aprofundar, a [documentação oficial de Signals](https://angular.dev/guide/signals) é excelente e tem exemplos interativos. E se Signals te interessou, no próximo artigo eu pretendo mostrar como conectar Signals com chamadas assíncronas de forma elegante.
-
-Ficou com alguma dúvida, ou tem um caso de uso curioso? Me chama no [LinkedIn](https://linkedin.com/in/emilybezerra), adoro trocar ideia sobre isso.
+Travou em algum ponto, ou tem um caso curioso que te deixou pensando? Me chama no [LinkedIn](https://linkedin.com/in/emilybezerra). Curto demais trocar ideia sobre isso.

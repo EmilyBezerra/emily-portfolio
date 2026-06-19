@@ -91,7 +91,7 @@
               </div>
 
               @if (error()) {
-                <p class="form-error">{{ error() }}</p>
+                <p class="form-error" role="alert">{{ error() }}</p>
               }
 
               <button type="submit" class="btn-glow submit-btn" [disabled]="sending()">
@@ -106,7 +106,7 @@
               </button>
             </form>
           } @else {
-            <div class="form-success">
+            <div class="form-success" role="status" aria-live="polite">
               <svg class="success-icon" [lucideIcon]="SuccessIcon"></svg>
               <h3>{{ 'contact.success_title' | translate }}</h3>
               <p>{{ 'contact.success_desc' | translate }}</p>

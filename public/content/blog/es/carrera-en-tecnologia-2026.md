@@ -1,92 +1,98 @@
-Si has estado investigando cómo entrar al área de tecnología, seguramente ya viste titulares que se contradicen el mismo día. Por un lado, "la IA va a reemplazar a los programadores". Por el otro, "faltan más de 500.000 profesionales de tecnología en Brasil". Las dos cosas no pueden ser verdad al mismo tiempo... ¿o sí?
+El mismo día, en la misma semana, vi los dos titulares. Uno decía que la IA iba a acabar con los programadores. El otro, que faltan más de 500 mil profesionales de tecnología en Brasil. Los dos no pueden tener razón al mismo tiempo... ¿o sí?
 
-La realidad es que el mercado de 2026 es más interesante (y más lleno de oportunidades) que cualquier titular de susto. Cambió de verdad, pero cambió de una forma específica que se puede entender y usar a tu favor. En este artículo te traigo el **mapa honesto de las áreas de TI en 2026**, con datos actuales de salario y demanda, y termino con un plan práctico de por dónde empezar. Sin hype y sin terrorismo: solo lo que muestran los números.
+Yo hice la transición a tech viniendo de la química, estudiando de noche después de la jornada en el laboratorio. Así que cuando alguien me pregunta "¿todavía vale la pena entrar ahora?", me lo tomo en serio. La respuesta corta es sí. La larga es más interesante, y por eso estás aquí.
 
-## El elefante en la sala: la IA y los puestos de entrada
+Te voy a dar el mapa honesto: lo que cambió de verdad, dónde están las oportunidades, con números reales y fuentes que puedes verificar. Sin venderte un curso, sin asustarte.
 
-Empecemos por la parte incómoda, porque ignorarla sería deshonesto. Sí, la IA sacudió los puestos de entrada, en especial en programación. El empleo de desarrolladores entre 22 y 25 años cayó cerca de un **20% desde 2022**, según datos del Stanford AI Index comentados por [Stack Overflow](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/). La porción de júniores y recién graduados en el empleo de TI se redujo de aproximadamente 15% a 7% en tres años, a medida que [la demanda de júniores se ablandó](https://www.cio.com/article/4062024/demand-for-junior-developers-softens-as-ai-takes-over) y equipos pequeños produjeron más usando herramientas de IA.
+## El elefante en la sala: la IA sí movió cosas
 
-Listo, lo dije. Ahora la parte que los titulares olvidan contar.
+Voy a ser directa, porque fingir que no movió nada sería deshonesto contigo. Movió. Sobre todo en las vacantes de entrada de programación.
 
-Ese encogimiento **no es uniforme**. Áreas especializadas (seguridad, ingeniería de datos, infraestructura de ML) casi no sintieron la caída. Algunas de las mayores empresas de tecnología volvieron a aumentar la contratación de júniores. Y la propia IA creó categorías de trabajo que no existían: calidad de modelos, ingeniería de prompts, curaduría de datos, seguridad de IA.
+El empleo de gente de 22 a 25 años en dev cayó como un 20% desde 2022, según datos del Stanford AI Index comentados por [Stack Overflow](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/). La porción de júnior y recién egresado en el mercado de TI se encogió de un 15% a un 7% en tres años, con equipos chicos entregando más usando herramientas de IA. La [demanda por júnior se ablandó](https://www.cio.com/article/4062024/demand-for-junior-developers-softens-as-ai-takes-over), y no sirve de nada romantizarlo.
 
-Lo que cambió de verdad es el **tipo de júnior que el mercado quiere**. Ya no es la persona que memoriza algoritmos para escribir código repetitivo (eso lo hace la IA). Es la persona que sabe *trabajar junto a la IA*: que escribe prompts estructurados, valida críticamente lo que la herramienta genera y entiende lo suficiente para decir "esto está mal". Esa habilidad (el criterio técnico) se convirtió en el nuevo diferencial de entrada.
+Listo. Dije la parte fea. Ahora la parte que los titulares de pánico convenientemente olvidan.
 
-> La IA no cerró la puerta de la carrera en tech. Subió el escalón de entrada. Quien llega sabiendo usarla como herramienta entra por delante de quien todavía le teme.
+Esa caída no es pareja. Las áreas más especializadas (seguridad, ingeniería de datos, infra de ML) casi no la sintieron. Algunas de las empresas más grandes ya volvieron a contratar júnior. Y la propia IA creó tipos de trabajo que no existían hace tres años: calidad de modelos, ingeniería de prompts, curaduría de datos.
 
-## El mapa de las áreas (con datos de 2026)
+Lo que de verdad cambió fue el tipo de júnior que el mercado quiere. Ya no es el que se memoriza algoritmos para escribir código repetitivo. Eso lo hace la IA, y rápido. Es el que sabe trabajar **junto** con la IA: escribir un buen prompt, desconfiar de lo que ella escupe, tener repertorio para mirar el resultado y decir "esto de aquí está mal". Ese criterio se volvió el nuevo diferencial de entrada.
 
-La buena noticia: "TI" es mucho más grande que "ser programador". Mira dónde está la demanda, y los números que la sostienen.
+> La IA no trancó la puerta. Subió el escalón. El que llega sabiendo usar la herramienta entra delante del que todavía le tiene pavor.
+
+## El mapa: tech es mucho más grande que "ser programador"
+
+Esta es la parte que nadie me contó cuando empecé y que habría cambiado un montón de cosas. Mira dónde está la demanda de verdad.
 
 ### Desarrollo de software
 
-Sigue siendo la mayor puerta de entrada, pero con la vara más alta para júniores puros. La demanda real está en quien combina código con alguna especialidad (datos, nube, seguridad). Según [Robert Half](https://www.roberthalf.com/us/en/insights/salary-hiring-trends/demand-for-skilled-talent/tech-it), la ingeniería de software sigue entre las funciones más buscadas de 2026, y también entre las más afectadas por falta de gente calificada (el 52% de los proyectos atrasados citan esa brecha). Traducción: los puestos existen; lo que falta es gente realmente preparada.
+Sigue siendo la puerta más grande, pero la vara para el júnior puro subió. Lo que pega bien hoy es el que junta código con una especialidad (datos, nube, seguridad). [Robert Half](https://www.roberthalf.com/us/en/insights/salary-hiring-trends/demand-for-skilled-talent/tech-it) pone la ingeniería de software entre las funciones más buscadas de 2026 y, al mismo tiempo, entre las más afectadas por falta de gente calificada: más de la mitad de los proyectos atrasados le echan la culpa a ese hueco. Traducido: vacante hay. Lo que falta es gente realmente lista.
 
 ### Datos, IA y Machine Learning
 
-Es **el área que más crece**, punto. "AI Engineer" fue elegido el puesto que más crece en EE. UU. en el informe LinkedIn Jobs on the Rise, con publicaciones subiendo más de un 140% en un año. Los puestos de IA, ML y ciencia de datos sumaron casi 50.000 publicaciones en 2025, un salto del 163% sobre 2024. La [Oficina de Estadísticas Laborales de EE. UU.](https://www.bls.gov/ooh/computer-and-information-technology/) proyecta un crecimiento del 23% hasta 2033 para la categoría que incluye estos puestos, muy por encima del promedio.
-
-Los salarios acompañan: en EE. UU., los ingenieros de IA promedian cerca de US$ 200 mil/año, e incluso las funciones de entrada parten de niveles altos. En Brasil, los perfiles plenos de datos e IA están entre los mejor pagos del área.
+Si hay que apostar por un área que crece, es esta. "AI Engineer" fue el puesto que más creció en EE. UU. en el ranking de LinkedIn, con vacantes subiendo más de 140% en un solo año. Las posiciones de IA, ML y ciencia de datos sumaron casi 50 mil anuncios en 2025, un salto de 163% sobre 2024. Y el [Bureau of Labor Statistics](https://www.bls.gov/ooh/computer-and-information-technology/) proyecta un 23% de crecimiento hasta 2033 para la categoría que incluye esos puestos. Muy por encima del promedio de cualquier profesión.
 
 ### Ciberseguridad
 
-Si existe un área con escasez gritante, es esta. El estudio de fuerza laboral de [ISC2](https://www.isc2.org/research) apunta a cerca de **4,8 millones de vacantes de ciberseguridad sin cubrir en el mundo**: la fuerza laboral necesitaría crecer un 87% solo para cubrir la demanda actual. Dos de cada tres equipos de seguridad operan con gente de menos.
+Aquí el hueco es tan grande que llega a ser cómico. El estudio de fuerza laboral de [ISC2](https://www.isc2.org/research) apunta a cerca de 4,8 millones de vacantes de seguridad abiertas en el mundo. El área tendría que crecer 87% solo para dar abasto con lo que ya existe hoy.
 
-Una advertencia honesta para quien empieza: 9 de cada 10 gerentes de seguridad prefieren candidatos con alguna experiencia previa en TI. Por eso, la ciberseguridad suele ser una excelente *segunda* parada, entras por soporte, redes o desarrollo y migras a seguridad con una base sólida.
+Solo un aviso honesto, porque me habría gustado que alguien me lo diera: 9 de cada 10 gestores de seguridad prefieren a quien ya tiene experiencia previa en TI. Por eso la ciberseguridad suele ser una excelente **segunda** parada. Entras por soporte, redes o dev, agarras base, y migras.
 
-### Nube, DevOps y Platform Engineering
+### Cloud, DevOps y Platform Engineering
 
-La columna vertebral invisible de todo lo que corre en internet. La demanda de quien sabe construir y automatizar infraestructura sigue fuerte, y el área está evolucionando de "DevOps" hacia **Platform Engineering**: equipos que construyen plataformas internas para que los demás desarrolladores entreguen más rápido. Habilidades como Kubernetes, infraestructura como código (Terraform) y seguridad en la nube empujan los salarios hacia arriba, y las [certificaciones de nube](https://www.coursera.org/articles/devops-engineer-salary) (AWS, Azure) tienen peso real en el currículum, algunas valen un premio salarial de decenas de miles de dólares afuera.
+Es la columna vertebral invisible de todo lo que corre en internet, y casi nadie que entra al área piensa en eso. El que sabe construir y automatizar infraestructura sigue siendo disputado, y el área se está volviendo Platform Engineering: equipos que construyen plataformas internas para que otros devs entreguen más rápido. Kubernetes, infraestructura como código, seguridad en la nube. Todo eso tira el salario para arriba, y una [certificación de nube](https://www.coursera.org/articles/devops-engineer-salary) (AWS, Azure) pesa de verdad en el currículum aquí.
 
-### Las puertas de entrada subestimadas
+### Las puertas que nadie valora (y debería)
 
-No todo camino empieza programando. Para quien está entrando, estas funciones tienen una barrera menor y abren muchas puertas:
+No todo camino empieza programando. Si la vara del dev júnior te asusta, estas funciones tienen entrada más fácil y abren muchas puertas:
 
-- **Soporte de TI / Help Desk**: la puerta clásica. Aprendes cómo funciona la tecnología en la práctica y migras a redes, nube o seguridad.
-- **Analista de datos**: menos "matemática pesada" de lo que parece; SQL más una herramienta de BI ya abre puestos, y es un trampolín natural hacia la ingeniería de datos.
-- **QA / Testing**: entender la calidad del software es valioso, y la IA creó demanda de quien prueba y valida sistemas (incluidos modelos de IA).
-- **UX/UI y Producto**: para quien ama la tecnología pero no necesariamente el código.
+- **Soporte de TI / Help Desk.** La puerta clásica. Aprendes cómo funciona la tecnología en la vida real y migras a redes, nube o seguridad.
+- **Analista de datos.** Menos "matemática pesada" de lo que parece. Con SQL y una herramienta de BI ya entras a una vacante, y es trampolín natural hacia ingeniería de datos.
+- **QA / Testing.** Entender calidad de software vale oro, y la IA creó demanda por quien testea y valida sistemas (incluidos los modelos de IA).
+- **UX/UI y Producto.** Para quien ama la tecnología pero no necesariamente el código.
 
-[Según Coursera](https://www.coursera.org/articles/tech-entry-level-jobs), muchas de estas funciones de entrada no exigen título y pueden conseguirse en meses de estudio enfocado.
+[Según Coursera](https://www.coursera.org/articles/tech-entry-level-jobs), buena parte de estas funciones ni siquiera exige título y se puede conseguir en meses de estudio enfocado.
 
-## ¿Y en Brasil?
+## ¿Y en Brasil? Aquí la historia es buena
 
-Aquí la historia es particularmente alentadora para quien empieza. El [estudio de Brasscom](https://brasscom.org.br/mercado-de-ti-tem-grande-demanda-e-deficit-de-novos-profissionais/) muestra un desfase enorme: el país **forma cerca de 53.000 profesionales de tecnología al año, mientras la demanda supera los 159.000**. Entre 2019 y 2024, el sector necesitó 665.000 personas y formó solo 464.000, una brecha de más del 30%. La proyección es un déficit acumulado de **más de 500.000** profesionales de tecnología.
+Esta parte me deja genuinamente entusiasmada. El [estudio de Brasscom](https://brasscom.org.br/mercado-de-ti-tem-grande-demanda-e-deficit-de-novos-profissionais/) muestra un desfase gigante: el país forma unos 53 mil profesionales de tecnología por año, y necesita más de 159 mil. Entre 2019 y 2024 el sector necesitó 665 mil personas y formó 464 mil. La proyección es un hueco acumulado de más de 500 mil profesionales.
 
-¿Por qué es una buena noticia para ti? Porque gran parte de ese déficit no viene de la falta de gente *estudiando*. Las matrículas en cursos de tecnología crecieron más del 70%. Viene de la **deserción**: en 2023, de 1,8 millones de cupos en carreras superiores de tech, menos del 5% se graduó. En otras palabras: la mayor parte de tu competencia abandona a mitad de camino. **Quien persiste, se forma y construye un portafolio entra a un mercado hambriento de gente.**
+¿Y por qué esto es buena noticia para ti, específicamente? Porque la mayor parte de ese hueco no viene de falta de gente estudiando. Las matrículas en cursos de tech crecieron más de 70%. Viene de la **deserción**: en 2023, de 1,8 millones de vacantes en cursos superiores de tecnología, menos del 5% terminó. Lee de nuevo esa frase. La mayor parte de tu competencia abandona a mitad de camino.
 
-Sobre salarios en Brasil en 2026: un desarrollador júnior suele empezar en la franja de **R$ 3.000 a R$ 5.000** en centros como São Paulo, variando bastante con el tamaño de la empresa, [según relevamientos de Alura](https://www.alura.com.br/artigos/desenvolvedor-junior) y Glassdoor. Los perfiles plenos en áreas especializadas (datos, seguridad, nube) llegan a la franja de R$ 8.000 a R$ 15.000, y el trabajo remoto para el exterior abre franjas en dólares.
+Sobre el salario, porque sé que quieres saber: un dev júnior en Brasil en 2026 suele arrancar en la franja de R$ 3.000 a R$ 5.000 en un centro como São Paulo, variando mucho según el tamaño de la empresa, [según relevamientos de Alura](https://www.alura.com.br/artigos/desenvolvedor-junior) y de Glassdoor. Un perfil pleno en área especializada (datos, seguridad, nube) llega tranquilo a la franja de R$ 8.000 a R$ 15.000. Y el trabajo remoto para afuera abre franja en dólares, que es otro nivel.
 
-## Lo que cambió en *cómo* se contrata
+## El giro que cambió todo, y casi nadie comenta
 
-Quizás el cambio más importante para principiantes no sea sobre qué área elegir, sino sobre **cómo seleccionan las empresas**. La contratación se volvió *skills-first*: cerca del **70% de los empleadores** ya usan prácticas basadas en habilidades, no en el título. La exigencia de una licenciatura en puestos de nivel intermedio cayó cerca de un 33% entre 2019 y 2025.
+Quizás la noticia más importante para quien empieza ahora no sea qué área elegir. Es **cómo** están contratando las empresas.
 
-En la práctica, eso significa tres cosas:
+Se volvió skills-first. Cerca del 70% de los empleadores ya contratan mirando lo que sabes hacer, no dónde estudiaste. La exigencia de título en vacantes de nivel intermedio cayó como un 33% entre 2019 y 2025.
 
-1. **El portafolio pesa más que el currículum.** Proyectos reales que puedas mostrar y explicar valen más que una lista de cursos.
-2. **Las evaluaciones técnicas reemplazan el "filtro del título".** Demuestras lo que sabes haciendo, no por el papel.
-3. **La pregunta dejó de ser "dónde estudiaste" y pasó a ser "qué puedes construir".**
+En la práctica, eso quiere decir tres cosas, y son liberadoras:
 
-Para quien empieza ahora, eso es liberador: el juego recompensa a quien hace.
+1. El portafolio pesa más que el currículum. Un proyecto de verdad, que muestras y explicas, vale más que una lista de cursos.
+2. Prueba técnica en lugar del "filtro del título". Lo demuestras haciéndolo.
+3. La pregunta dejó de ser "dónde te recibiste" y pasó a ser "qué eres capaz de construir".
 
-## Por dónde empezar: un plan que funciona
+Yo misma entré sin título de computación. Estoy terminando ingeniería de software ahora, pero la puerta se abrió por lo que sabía hacer. El juego recompensa al que hace.
 
-Junta todo y el camino se aclara. No es magia, es constancia.
+## Por dónde empezar (el plan que me daría a mí misma en 2023)
 
-1. **Elige UNA área y comprométete con ella.** El error más común de principiante es saltar de tema. Mira el mapa de arriba, encuentra lo que te da curiosidad genuina (vas a pasar horas en eso) y enfócate. Puedes cambiar después; lo que no puedes es avanzar en cinco caminos a la vez.
-2. **Domina los fundamentos antes de correr tras el "framework de moda".** Lógica, un poco de cómo funciona internet, y la base de tu área. El fundamento envejece despacio; la herramienta, rápido.
-3. **Aprende haciendo.** Ver un video no es aprender, es ver a alguien aprender. Construye proyectos pequeños y reales desde la primera semana. De ahí sale tu portafolio.
-4. **Usa la IA como tutor y herramienta, con criterio.** Pídele que te explique, genere ejemplos, revise tu código. Pero valida siempre. La habilidad de trabajar bien *con* IA es hoy un diferencial de contratación.
-5. **Considera una certificación de entrada.** CompTIA, Google, AWS y Microsoft ofrecen certificaciones reconocidas que ayudan a probar tu nivel, especialmente útiles en soporte, nube y datos.
-6. **Ten paciencia con el tiempo.** Para la mayoría, son de **3 a 12 meses** de estudio enfocado hasta el primer empleo de entrada. Va a parecer lento en el medio. Es normal. Quien sigue cuando se pone difícil es justamente quien entra al grupo del 5% que termina.
+Juntas todo y el camino aparece. No hay magia. Hay consistencia.
+
+1. **Elige UNA área y abrázala.** El error número uno del principiante es saltar de tema en tema. Mira el mapa de arriba, fíjate qué te da curiosidad de verdad (vas a pasar horas en eso) y enfócate. Se puede cambiar después. Lo que no se puede es correr atrás de cinco cosas al mismo tiempo.
+2. **Fundamento antes que framework de moda.** Lógica, un poco de cómo funciona internet, la base de tu área. El fundamento envejece despacio. La herramienta envejece rápido.
+3. **Aprende haciendo.** Mirar un video no es aprender. Es mirar a alguien aprender. Construye un proyectito chico y real desde la primera semana. De ahí sale tu portafolio.
+4. **Usa la IA como tutora, con desconfianza.** Pídele que te explique, que genere un ejemplo, que revise tu código. Pero verifica siempre. Saber trabajar bien con IA es, hoy, un diferencial a la hora de contratar.
+5. **Piensa en una certificación de entrada.** CompTIA, Google, AWS, Microsoft. Ayudan a demostrar tu nivel, sobre todo en soporte, nube y datos.
+6. **Ten paciencia con los tiempos.** Para la mayoría, son de 3 a 12 meses de estudio enfocado hasta el primer empleo. En el medio va a parecer lento. Es normal. El que sigue cuando se pone aburrido es justamente el que entra en el equipo del 5% que termina.
 
 > [!TIP]
-> Empieza hoy, no mañana: elige **una** área y, esta misma semana, construye un proyecto real, por más pequeño que sea. Un portafolio con tres proyectos reales le dice más a un reclutador de 2026 que cualquier lista de cursos.
+> Empieza hoy, no mañana. Elige un área y, esta misma semana, haz un proyectito de verdad, por más chico que sea. Un portafolio con tres proyectos reales le dice más a un reclutador de 2026 que cualquier lista de cursos terminados.
 
-## Conclusión
+## Para cerrar
 
-El mercado de tecnología en 2026 no es el paraíso fácil de hace unos años, ni el desierto que pinta el miedo a la IA. Es un mercado **exigente y hambriento al mismo tiempo**: la vara de entrada subió, pero la demanda de gente que realmente sabe hacer nunca fue tan grande. En Brasil, faltan cientos de miles de profesionales.
+El mercado de 2026 no es el paraíso fácil de hace unos años, ni el desierto que pinta el miedo a la IA. Es exigente y hambriento al mismo tiempo. La vara subió, pero el hambre por gente que sabe hacer nunca fue tan grande. En Brasil, faltan cientos de miles de profesionales.
 
-Si pudiera dejarte con una sola idea, sería esta: **la mayor parte de tu competencia va a abandonar a mitad de camino.** La barrera de 2026 no es la IA, ni la falta de puestos. Es la persistencia. Elige un camino, construye cosas de verdad, usa la IA a tu favor y sigue andando cuando se ponga aburrido. El mercado está esperando exactamente eso.
+Si pudiera dejarte con una sola idea, sería esta: la mayor parte de tu competencia va a abandonar a mitad de camino. La barrera de 2026 no es la IA, ni la falta de vacantes. Es la persistencia.
 
-Yo misma hice esa transición (vine de la química y de la mesada del laboratorio al desarrollo full stack. Si yo pude empezar de nuevo, tú también puedes. Si quieres charlar sobre por dónde empezar, escríbeme por [LinkedIn](https://linkedin.com/in/emilybezerra)) me encantará ayudar.
+Yo cambié la mesada del laboratorio por el VS Code a los 20 y pico, desde cero, conciliando trabajo y estudio. Si yo pude recomenzar, tú puedes. Elige un camino, construye cosas de verdad, usa la IA a tu favor y sigue cuando se ponga difícil. El mercado te está esperando exactamente por eso.
+
+Si quieres charlar sobre por dónde empezar, escríbeme por [LinkedIn](https://linkedin.com/in/emilybezerra). En serio, escríbeme.

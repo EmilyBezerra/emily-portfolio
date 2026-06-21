@@ -1,22 +1,22 @@
 El mismo día, en la misma semana, vi los dos titulares. Uno decía que la IA iba a acabar con los programadores. El otro, que faltan más de 500 mil profesionales de tecnología en Brasil. Los dos no pueden tener razón al mismo tiempo... ¿o sí?
 
-Yo hice la transición a tech viniendo de la química, estudiando de noche después de la jornada en el laboratorio. Así que cuando alguien me pregunta "¿todavía vale la pena entrar ahora?", me lo tomo en serio. La respuesta corta es sí. La larga es más interesante, y por eso estás aquí.
+Yo hice la transición a tech viniendo de la química, estudiando de noche después de la jornada en el laboratorio. Así que cuando alguien me pregunta si todavía vale la pena entrar a tech, me lo tomo en serio. La respuesta corta es sí. La larga tiene matices que lo cambian todo, y es en ellos donde está tu oportunidad.
 
 Te voy a dar el mapa honesto: lo que cambió de verdad, dónde están las oportunidades, con números reales y fuentes que puedes verificar. Sin venderte un curso, sin asustarte.
 
-## El elefante en la sala: la IA sí movió cosas
+## La IA cambió el juego, y fingir lo contrario sería mentir
 
-Voy a ser directa, porque fingir que no movió nada sería deshonesto contigo. Movió. Sobre todo en las vacantes de entrada de programación.
+Voy a ser directa, porque ahorrarte la parte incómoda no te ayudaría en nada. La IA sí cambió cosas. Sobre todo en las vacantes de entrada de programación.
 
-El empleo de gente de 22 a 25 años en dev cayó como un 20% desde 2022, según datos del Stanford AI Index comentados por [Stack Overflow](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/). La porción de júnior y recién egresado en el mercado de TI se encogió de un 15% a un 7% en tres años, con equipos chicos entregando más usando herramientas de IA. La [demanda por júnior se ablandó](https://www.cio.com/article/4062024/demand-for-junior-developers-softens-as-ai-takes-over), y no sirve de nada romantizarlo.
+El empleo de gente de 22 a 25 años en dev cayó como un 20% desde 2022, según datos del Stanford AI Index comentados por [Stack Overflow](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/). La porción de júnior y recién egresado en el mercado de TI se encogió de un 15% a un 7% en tres años, con equipos chicos entregando más usando herramientas de IA. La [demanda de júnior se ablandó](https://www.cio.com/article/4062024/demand-for-junior-developers-softens-as-ai-takes-over), y de nada sirve romantizarlo.
 
-Listo. Dije la parte fea. Ahora la parte que los titulares de pánico convenientemente olvidan.
+Listo. Ya dije la parte incómoda. Ahora la parte que los titulares de pánico convenientemente olvidan.
 
 Esa caída no es pareja. Las áreas más especializadas (seguridad, ingeniería de datos, infra de ML) casi no la sintieron. Algunas de las empresas más grandes ya volvieron a contratar júnior. Y la propia IA creó tipos de trabajo que no existían hace tres años: calidad de modelos, ingeniería de prompts, curaduría de datos.
 
-Lo que de verdad cambió fue el tipo de júnior que el mercado quiere. Ya no es el que se memoriza algoritmos para escribir código repetitivo. Eso lo hace la IA, y rápido. Es el que sabe trabajar **junto** con la IA: escribir un buen prompt, desconfiar de lo que ella escupe, tener repertorio para mirar el resultado y decir "esto de aquí está mal". Ese criterio se volvió el nuevo diferencial de entrada.
+Lo que de verdad cambió fue el tipo de júnior que el mercado quiere. Ya no es el que se memoriza algoritmos para escribir código repetitivo. Eso lo hace la IA, y rápido. Es el que sabe trabajar **junto** con la IA: escribir un buen prompt, desconfiar de lo que produce, tener repertorio para evaluar el resultado y decir "esto está mal". Ese criterio se volvió el nuevo diferencial de entrada.
 
-> La IA no trancó la puerta. Subió el escalón. El que llega sabiendo usar la herramienta entra delante del que todavía le tiene pavor.
+> La IA no trancó la puerta. Subió el escalón. El que llega sabiendo usar la herramienta entra antes que el que todavía le tiene pavor.
 
 ## El mapa: tech es mucho más grande que "ser programador"
 
@@ -24,7 +24,7 @@ Esta es la parte que nadie me contó cuando empecé y que habría cambiado un mo
 
 ### Desarrollo de software
 
-Sigue siendo la puerta más grande, pero la vara para el júnior puro subió. Lo que pega bien hoy es el que junta código con una especialidad (datos, nube, seguridad). [Robert Half](https://www.roberthalf.com/us/en/insights/salary-hiring-trends/demand-for-skilled-talent/tech-it) pone la ingeniería de software entre las funciones más buscadas de 2026 y, al mismo tiempo, entre las más afectadas por falta de gente calificada: más de la mitad de los proyectos atrasados le echan la culpa a ese hueco. Traducido: vacante hay. Lo que falta es gente realmente lista.
+Sigue siendo la puerta más grande, pero la vara para el júnior puro subió. Lo que tiene salida hoy es quien junta el código con una especialidad (datos, nube, seguridad). [Robert Half](https://www.roberthalf.com/us/en/insights/salary-hiring-trends/demand-for-skilled-talent/tech-it) pone la ingeniería de software entre las funciones más buscadas de 2026 y, al mismo tiempo, entre las más afectadas por falta de gente calificada: más de la mitad de los proyectos atrasados le echan la culpa a ese hueco. Traducido: vacante hay. Lo que falta es gente realmente lista.
 
 ### Datos, IA y Machine Learning
 
@@ -32,9 +32,9 @@ Si hay que apostar por un área que crece, es esta. "AI Engineer" fue el puesto 
 
 ### Ciberseguridad
 
-Aquí el hueco es tan grande que llega a ser cómico. El estudio de fuerza laboral de [ISC2](https://www.isc2.org/research) apunta a cerca de 4,8 millones de vacantes de seguridad abiertas en el mundo. El área tendría que crecer 87% solo para dar abasto con lo que ya existe hoy.
+Aquí el hueco es tan grande que llega a ser cómico. El estudio de fuerza laboral de [ISC2](https://www.isc2.org/research) apunta a cerca de 4,8 millones de vacantes de seguridad abiertas en el mundo. El área tendría que crecer 87% solo para cubrir lo que ya existe hoy.
 
-Solo un aviso honesto, porque me habría gustado que alguien me lo diera: 9 de cada 10 gestores de seguridad prefieren a quien ya tiene experiencia previa en TI. Por eso la ciberseguridad suele ser una excelente **segunda** parada. Entras por soporte, redes o dev, agarras base, y migras.
+Solo un aviso honesto, porque me habría gustado que alguien me lo diera: 9 de cada 10 gestores de seguridad prefieren a quien ya tiene experiencia previa en TI. Por eso la ciberseguridad suele ser una excelente **segunda** parada. Entras por soporte, redes o dev, agarras una base, y migras.
 
 ### Cloud, DevOps y Platform Engineering
 
@@ -46,7 +46,7 @@ No todo camino empieza programando. Si la vara del dev júnior te asusta, estas 
 
 - **Soporte de TI / Help Desk.** La puerta clásica. Aprendes cómo funciona la tecnología en la vida real y migras a redes, nube o seguridad.
 - **Analista de datos.** Menos "matemática pesada" de lo que parece. Con SQL y una herramienta de BI ya entras a una vacante, y es trampolín natural hacia ingeniería de datos.
-- **QA / Testing.** Entender calidad de software vale oro, y la IA creó demanda por quien testea y valida sistemas (incluidos los modelos de IA).
+- **QA / Testing.** Entender calidad de software vale oro, y la IA creó demanda de quien testea y valida sistemas (incluidos los modelos de IA).
 - **UX/UI y Producto.** Para quien ama la tecnología pero no necesariamente el código.
 
 [Según Coursera](https://www.coursera.org/articles/tech-entry-level-jobs), buena parte de estas funciones ni siquiera exige título y se puede conseguir en meses de estudio enfocado.
@@ -57,7 +57,7 @@ Esta parte me deja genuinamente entusiasmada. El [estudio de Brasscom](https://b
 
 ¿Y por qué esto es buena noticia para ti, específicamente? Porque la mayor parte de ese hueco no viene de falta de gente estudiando. Las matrículas en cursos de tech crecieron más de 70%. Viene de la **deserción**: en 2023, de 1,8 millones de vacantes en cursos superiores de tecnología, menos del 5% terminó. Lee de nuevo esa frase. La mayor parte de tu competencia abandona a mitad de camino.
 
-Sobre el salario, porque sé que quieres saber: un dev júnior en Brasil en 2026 suele arrancar en la franja de R$ 3.000 a R$ 5.000 en un centro como São Paulo, variando mucho según el tamaño de la empresa, [según relevamientos de Alura](https://www.alura.com.br/artigos/desenvolvedor-junior) y de Glassdoor. Un perfil pleno en área especializada (datos, seguridad, nube) llega tranquilo a la franja de R$ 8.000 a R$ 15.000. Y el trabajo remoto para afuera abre franja en dólares, que es otro nivel.
+Sobre el salario, porque sé que quieres saber: un dev júnior en Brasil en 2026 suele arrancar en la franja de R$ 3.000 a R$ 5.000 en un centro como São Paulo, variando mucho según el tamaño de la empresa, [según relevamientos de Alura](https://www.alura.com.br/artigos/desenvolvedor-junior) y de Glassdoor. Un perfil de nivel intermedio en área especializada (datos, seguridad, nube) llega tranquilo a la franja de R$ 8.000 a R$ 15.000. Y el trabajo remoto para el exterior abre un rango en dólares, que es otro nivel.
 
 ## El giro que cambió todo, y casi nadie comenta
 
@@ -93,6 +93,6 @@ El mercado de 2026 no es el paraíso fácil de hace unos años, ni el desierto q
 
 Si pudiera dejarte con una sola idea, sería esta: la mayor parte de tu competencia va a abandonar a mitad de camino. La barrera de 2026 no es la IA, ni la falta de vacantes. Es la persistencia.
 
-Yo cambié la mesada del laboratorio por el VS Code a los 20 y pico, desde cero, conciliando trabajo y estudio. Si yo pude recomenzar, tú puedes. Elige un camino, construye cosas de verdad, usa la IA a tu favor y sigue cuando se ponga difícil. El mercado te está esperando exactamente por eso.
+Yo cambié la mesa del laboratorio por el VS Code a los 20 y pico, desde cero, conciliando trabajo y estudio. Si yo pude recomenzar, tú puedes. Elige un camino, construye cosas de verdad, usa la IA a tu favor y sigue cuando se ponga difícil. El mercado te está esperando exactamente por eso.
 
 Si quieres charlar sobre por dónde empezar, escríbeme por [LinkedIn](https://linkedin.com/in/emilybezerra). En serio, escríbeme.

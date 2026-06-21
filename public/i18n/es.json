@@ -22,7 +22,7 @@
   },
   "manifesto": {
     "label": "Filosofía de trabajo",
-    "quote_p1": "Construyo software como conduje",
+    "quote_p1": "Construyo software como hice",
     "quote_experiments": "experimentos",
     "quote_p2": "durante cinco años en el laboratorio: con",
     "quote_method": "método",
@@ -33,7 +33,7 @@
   },
   "code_preview": {
     "chapter": "En código",
-    "title1": "Dominio en los dos",
+    "title1": "Dominio de los dos",
     "title_em": "frameworks",
     "title2": "principales.",
     "desc": "Programar es más que escribir, es una forma de pensar.",
@@ -48,15 +48,15 @@
     "title_em": "código",
     "title2": "trayectoria y formación.",
     "intro_lead": "Soy Emily, tengo 26 años y vivo en el litoral de São Paulo. Hoy soy desarrolladora full stack y todavía estoy terminando la carrera de Ingeniería de Software en la <strong>Universidad Cesumar</strong>. Pero no empecé en la tecnología. Y esa parte de la historia es la que más explica quién soy.",
-    "intro_p1": "Antes de cualquier línea de código, estuvo la mesada del laboratorio. Todavía adolescente hice el técnico en <strong>Química</strong> y <strong>Medio Ambiente</strong> en la Escola Municipal 1º de Maio. Después fueron cinco años como <strong>Técnica de Laboratorio</strong> en la <strong>Universidad Católica de Santos</strong>, en medio de investigación, pipeta e informe. Fue ahí, medio sin querer, que la tecnología me enganchó. Descubrí que lo que más me gusta en la vida es desarmar un problema para entender cómo funciona por dentro.",
-    "intro_p2": "En 2023 tomé la decisión y salté. Entré a <strong>Cubos Academy</strong> para aprender desarrollo web en serio y empecé la carrera de <strong>Ingeniería de Software</strong> al mismo tiempo. Estudiaba de noche, después de la jornada en el laboratorio. Fue duro, no lo voy a romantizar. En septiembre de 2024 llegó la primera oportunidad: pasantía en <strong>Boneside</strong>. Pocos meses después me volví <strong>Desarrolladora Junior</strong>. Y a principios de 2026, <strong>Semi Senior</strong>.",
-    "intro_p3": "Hoy, como <strong>Desarrolladora Semi Senior</strong> en Boneside, me encargo de la parte técnica de un <strong>ERP SaaS multi-tenant</strong> y además llevo otros proyectos. Voy del boceto de la arquitectura hasta el ajuste fino de la pantalla. El backend es <strong>.NET 10</strong>, C#, Entity Framework Core, SQL Server y PostgreSQL. El frontend, <strong>Angular</strong> y <strong>React</strong> con TypeScript. En el camino, Clean Architecture, Azure, Docker y Tailwind. Uso IA todos los días, pero como herramienta, revisando lo que me entrega. En el fondo, es eso lo que me mueve: la tecnología como forma de cambiar las cosas. Y mirar de la mesada del laboratorio hasta aquí me recuerda que volver a empezar valió cada noche mal dormida.",
+    "intro_p1": "Antes de cualquier línea de código, estuvo la mesa del laboratorio. Todavía adolescente hice el técnico en <strong>Química</strong> y <strong>Medio Ambiente</strong> en la Escola Municipal 1º de Maio. Después fueron cinco años como <strong>Técnica de Laboratorio</strong> en la <strong>Universidad Católica de Santos</strong>, en medio de investigación, pipeta e informe. Fue ahí, medio sin querer, que la tecnología me enganchó. Descubrí que lo que más me gusta en la vida es desarmar un problema para entender cómo funciona por dentro.",
+    "intro_p2": "En 2023 tomé la decisión y di el salto. Entré a <strong>Cubos Academy</strong> para aprender desarrollo web en serio y empecé la carrera de <strong>Ingeniería de Software</strong> al mismo tiempo. Estudiaba de noche, después de la jornada en el laboratorio. Fue duro, no lo voy a romantizar. En septiembre de 2024 llegó la primera oportunidad: pasantía en <strong>Boneside</strong>. Pocos meses después me volví <strong>Desarrolladora Junior</strong>. Y a principios de 2026, <strong>Semi Senior</strong>.",
+    "intro_p3": "Hoy, como <strong>Desarrolladora Semi Senior</strong> en Boneside, me encargo de la parte técnica de un <strong>ERP SaaS multi-tenant</strong> y además llevo otros proyectos. Voy del boceto de la arquitectura hasta el ajuste fino de la pantalla. El backend es <strong>.NET 10</strong>, C#, Entity Framework Core, SQL Server y PostgreSQL. El frontend, <strong>Angular</strong> y <strong>React</strong> con TypeScript. En el camino, Clean Architecture, Azure, Docker y Tailwind. Uso IA todos los días, pero como herramienta, revisando lo que me entrega. En el fondo, es eso lo que me mueve: la tecnología como forma de cambiar las cosas. Y mirar el camino desde la mesa del laboratorio hasta aquí me recuerda que volver a empezar valió cada noche mal dormida.",
     "badges": ["Pensamiento analítico", "Enfoque en producto", "Detalle en UI", "Disciplina diaria"],
     "journey_title": "Mi trayectoria",
     "journey": [
       { "year": "2026", "title": "Desarrolladora Semi Senior · Boneside", "desc": "Me promovieron a Semi Senior. Pasé a liderar la parte técnica del ERP y a llevar otros proyectos de la empresa, de la arquitectura (Clean Architecture, Monolito Modular) hasta el detalle de la pantalla, en .NET y Angular/React." },
-      { "year": "Abr/2025", "title": "Desarrolladora Junior · Boneside", "desc": "Me efectivaron como Junior. Asumí un módulo entero del ERP de punta a punta: la arquitectura de las funcionalidades nuevas y el liderazgo técnico de las entregas." },
-      { "year": "Sep/2024", "title": "Pasante de TI · Boneside", "desc": "Entré a Boneside como pasante. Fue mi primer contacto con un producto real de verdad: un ERP SaaS multi-tenant en .NET y Angular." },
+      { "year": "Abr/2025", "title": "Desarrolladora Junior · Boneside", "desc": "Pasé a ser Junior de forma fija. Asumí un módulo entero del ERP de punta a punta: la arquitectura de las funcionalidades nuevas y el liderazgo técnico de las entregas." },
+      { "year": "Sep/2024", "title": "Pasante de TI · Boneside", "desc": "Entré a Boneside como pasante. Fue mi primer contacto con un producto real: un ERP SaaS multi-tenant en .NET y Angular." },
       { "year": "2023", "title": "Transición de carrera · Cubos Academy + Cesumar", "desc": "Decidí cambiar de área. Entré a Cubos Academy y empecé Ingeniería de Software en Cesumar al mismo tiempo, estudiando de noche después de la jornada en el laboratorio." },
       { "year": "2019–2024", "title": "Técnica de Laboratorio · UNISANTOS / Ipeci", "desc": "Cinco años como Técnica de Laboratorio en la universidad. Fue en ese tiempo que la curiosidad por la tecnología se volvió decisión, con programación que estudié por mi cuenta en paralelo." },
       { "year": "2017–2021", "title": "Lic. en Química Tecnológica · UNISANTOS", "desc": "Bachillerato en Química Tecnológica en la Universidad Católica de Santos. Cuatro años de método científico y análisis, el rigor que todavía llevo al código." },
@@ -82,7 +82,7 @@
           "Estructuración del sistema en módulos de negocio independientes con límites claros para garantizar escalabilidad y mantenibilidad",
           "Modelado, consultas y mantenimiento de datos en SQL Server, dando soporte a la operación y evolución del ERP",
           "Integración con Azure DevOps, Blob Storage y SendGrid para versionado, almacenamiento de archivos y envío de correos",
-          "Desarrollo de funcionalidades para un sistema de e-commerce farmacéutico, con automatización de campañas de email marketing via stored procedures",
+          "Desarrollo de funcionalidades para un sistema de e-commerce farmacéutico, con automatización de campañas de email marketing mediante stored procedures",
           "Análisis y resolución de incidentes, apoyando la mejora continua del producto"
         ]
       },
@@ -98,7 +98,7 @@
           "Desarrollo y mejora de aplicaciones web y sistemas internos",
           "Containerización de entornos de desarrollo con Docker y Docker Compose",
           "Organización y seguimiento de demandas y plazos del equipo en ClickUp",
-          "Transición efectiva de formación técnica en laboratorio al desarrollo profesional de software"
+          "Transición exitosa de la formación técnica en laboratorio al desarrollo profesional de software"
         ]
       },
       {
@@ -139,10 +139,10 @@
     "items": [
       { "title": "Apps Web & SaaS", "desc": "Desarrollo completo de aplicaciones web con .NET en el backend y Angular en el frontend. Arquitectura multi-tenant, autenticación, módulos de negocio e integraciones.", "highlight": true, "tags": [".NET", "Angular", "Azure", "SQL Server"] },
       { "title": "Arquitectura de Software", "desc": "Aplicación de arquitectura limpia, modelado de dominio y separación de responsabilidades. Estructuración de monolitos modulares y definición de límites entre módulos de negocio.", "highlight": false, "tags": ["Clean Arch", "DDD", "SOLID", ".NET"] },
-      { "title": "Dashboards & Paneles", "desc": "Construcción de paneles con gráficos en tiempo real via SignalR, visualización de datos y componentes de BI para sistemas internos de gestión.", "highlight": false, "tags": ["Angular", "PrimeNG", "SignalR", "Charts"] },
+      { "title": "Dashboards & Paneles", "desc": "Construcción de paneles con gráficos en tiempo real mediante SignalR, visualización de datos y componentes de BI para sistemas internos de gestión.", "highlight": false, "tags": ["Angular", "PrimeNG", "SignalR", "Charts"] },
       { "title": "Frontend Avanzado", "desc": "Desarrollo de interfaces modernas, responsivas y accesibles con Angular y TypeScript. Design systems propios, animaciones y componentes reutilizables.", "highlight": false, "tags": ["TypeScript", "SCSS", "Animations", "UI/UX"] },
       { "title": "Landing Pages & Sitios", "desc": "Construcción de páginas e interfaces modernas, con atención cuidadosa a la experiencia visual, del layout a la animación final.", "highlight": false, "tags": ["Angular", "React", "Tailwind", "Animaciones"] },
-      { "title": "APIs & Integraciones", "desc": "Construcción de APIs REST robustas con .NET, documentación con Swagger e integraciones con servicios externos via Azure y APIs de terceros.", "highlight": false, "tags": ["REST API", "Swagger", "JWT", "Azure"] }
+      { "title": "APIs & Integraciones", "desc": "Construcción de APIs REST robustas con .NET, documentación con Swagger e integraciones con servicios externos mediante Azure y APIs de terceros.", "highlight": false, "tags": ["REST API", "Swagger", "JWT", "Azure"] }
     ]
   },
   "contact": {

@@ -1,12 +1,12 @@
-Same day, same week, I saw both headlines. One said AI was about to wipe out programmers. The other said Brazil is short more than 500,000 tech professionals. Both can't be right at the same time... or can they?
+Same day, same week, I saw both headlines. One said AI was about to wipe out programmers. The other said Brazil is short more than 500,000 tech professionals. They can't both be right at the same time... or can they?
 
-I made the switch into tech coming from chemistry, studying at night after my shift at the lab. So when someone asks me "is it still worth getting in now?", I take it seriously. The short answer is yes. The long one is more interesting, and that's why you're here.
+I made the switch into tech coming from chemistry, studying at night after my shift at the lab. So when someone asks me whether it's still worth getting in now, I take it seriously. The short answer is yes. The long one has nuances that change everything, and that's where your shot is.
 
-I'll give you the honest map: what actually changed, where the openings are, with real numbers and sources you can check yourself. No course to sell, no scaring you.
+I'll give you the honest map: what actually changed, where the openings are, with real numbers and sources you can check yourself. No course to sell, no scare tactics.
 
-## The elephant in the room: yeah, AI shook things up
+## AI shook up the game, and pretending otherwise would be a lie
 
-I'll be blunt, because pretending it didn't would be dishonest with you. It did. Mostly in entry-level programming jobs.
+I'll be blunt, because sparing you the unpleasant part wouldn't help at all. AI did shake things up. Mostly in entry-level programming jobs.
 
 Employment for 22 to 25 year olds in dev dropped about 20% since 2022, according to Stanford AI Index data discussed by [Stack Overflow](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/). The junior and recent-grad slice of the IT market shrank from around 15% to 7% in three years, with small teams shipping more using AI tools. [Demand for juniors softened](https://www.cio.com/article/4062024/demand-for-junior-developers-softens-as-ai-takes-over), and there's no point romanticizing it.
 
@@ -79,7 +79,7 @@ Put it all together and the path shows up. There's no magic. There's consistency
 
 1. **Pick ONE area and embrace it.** The number one beginner mistake is jumping from topic to topic. Look at the map up there, see what genuinely makes you curious (you're going to spend hours on it) and focus. You can change later. What you can't do is chase five things at once.
 2. **Fundamentals before the trendy framework.** Logic, a bit of how the internet works, the base of your area. Fundamentals age slowly. Tools age fast.
-3. **Learn by doing.** Watching videos isn't learning. It's watching someone else learn. Build a small, real little project from week one. That's where your portfolio comes from.
+3. **Learn by doing.** Watching videos isn't learning. It's watching someone else learn. Build a small, real project from week one. That's where your portfolio comes from.
 4. **Use AI as a tutor, with suspicion.** Ask it to explain things, generate examples, review your code. But always double-check. Knowing how to work well with AI is, today, a real edge when companies hire.
 5. **Think about an entry-level certification.** CompTIA, Google, AWS, Microsoft. They help prove your level, especially in support, cloud and data.
 6. **Be patient with the timeline.** For most people it's 3 to 12 months of focused study until the first job. In the middle it'll feel slow. That's normal. The person who keeps going when it gets boring is exactly the one who joins the 5% who finish.

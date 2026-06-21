@@ -1,30 +1,30 @@
 Cambias un valor en el código. Revisas. Revisas otra vez. La pantalla sigue mostrando el número viejo, mirándote fijo.
 
-¿Ya te pasó? A mí sí, varias veces. Y te cuento algo sobre mí: no soy capaz de solo arreglarlo a las malas y seguir. Necesito entender de dónde viene. Será una secuela de la época en que trabajaba en un laboratorio, supongo. Veo un engranaje nuevo y quiero abrirlo para ver cómo gira.
+¿Ya te pasó? A mí sí, varias veces. Y hay algo sobre mí que explica este texto: no soy capaz de solo arreglarlo a las malas y seguir. Necesito entender de dónde viene el problema. Es herencia de la época del laboratorio, supongo. Veo un engranaje nuevo y quiero abrirlo para ver cómo gira.
 
-Fue esa curiosidad la que me llevó hasta el fondo de los Signals de Angular. Los probé en el ERP que construyo en el trabajo, leí la documentación oficial, hice algunos experimentos solo para ver qué pasaba. Este texto es el resumen de lo que entendí, con foco en lo que de verdad importa: cuándo y cómo usarlos.
+Fue esa curiosidad la que me llevó hasta el fondo de los Signals de Angular. Los probé en el ERP que construyo en el trabajo, leí la documentación oficial, hice algunos experimentos solo para ver qué pasaba. Lo que viene aquí es el resumen de lo que entendí, con foco en lo que de verdad importa: cuándo y cómo usarlos.
 
 ## De dónde venía aquel bug de la pantalla
 
 Este tipo de cosa rara vez es un descuido tuyo. Casi siempre es el framework que no sabe **qué** cambió.
 
-Durante mucho tiempo Angular resolvió esto a la fuerza bruta, con Zone.js. La idea era ingeniosa. Zone.js se quedaba vigilando todo lo que pudiera tocar el estado (un clic, un timer, una petición) y, cuando algo ocurría, le avisaba a Angular: "oye, puede que algo haya cambiado, mejor revisa".
+Durante mucho tiempo Angular resolvió esto a pulso, con Zone.js. La idea era ingeniosa. Zone.js se quedaba vigilando todo lo que pudiera tocar el estado (un clic, un timer, una petición) y, cuando algo ocurría, le daba un toque a Angular: "oye, puede que algo haya cambiado, mejor revisa".
 
-¿Revisar qué? Todo. El árbol entero de componentes, por las dudas. Funciona, pero es desproporcionado. Es como disparar la alarma de incendios del edificio porque alguien encendió la cocina.
+¿Revisar qué? Todo. El árbol entero de componentes, por las dudas. Funciona, pero es desproporcionado. Es como disparar la alarma de incendios de todo el edificio porque alguien encendió la cocina.
 
-Los Signals dan vuelta esto. En vez de que el framework adivine, es el propio valor el que le avisa a quien depende de él. Aquella información que faltaba pasó a existir. Parece poco. Cambia muchísimo.
+Los Signals le dan la vuelta a este juego. En vez de que el framework adivine, es el propio valor el que le avisa a quien depende de él. Aquella información que faltaba ahora existe. Parece poco. Cambia casi todo.
 
 ## La imagen que destrabó todo: la planilla
 
-Antes de cualquier código, déjame darte la analogía que hizo que el concepto se me quedara pegado en la cabeza.
+Antes de cualquier código, déjame pasarte la analogía que hizo que el concepto se me quedara pegado en la cabeza.
 
-Piensa en una planilla. Pones `10` en la celda A1 y `5` en A2. En A3 escribes `=A1+A2`, y aparece `15`. Ahora cambia A1 a `20`. A3 se vuelve `25` al instante. No apretaste recalcular. La planilla sabía que A3 dependía de A1.
+Piensa en una planilla. Pones `10` en la celda A1 y `5` en A2. En A3 escribes `=A1+A2`, y aparece `15`. Ahora cambia A1 a `20`. A3 se vuelve `25` al instante. No apretaste recalcular. La planilla ya sabía que A3 dependía de A1.
 
-Un Signal es exactamente una de esas celdas. Una cajita que guarda un valor y conoce a quién depende de él. Cambió, y todos los que usan ese valor reciben el aviso. Solo los que lo usan. Nadie más.
+Un Signal es exactamente una de esas celdas. Una cajita que guarda un valor y conoce a quien depende de él. Cambió, y todos los que usan ese valor reciben el aviso. Solo los que lo usan. Nadie más.
 
 > Piensa en un Signal como una celda de planilla para tu código. Describes las relaciones una vez, y el recálculo se las arregla solo, en el momento justo.
 
-Con esa imagen en la cabeza, el resto se vuelve sintaxis.
+Con esa imagen en la cabeza, el resto es pura sintaxis.
 
 ## signal(): crear y leer
 
@@ -82,7 +82,7 @@ Cuando me puse a investigar por qué es tan eficiente, encontré dos detalles qu
 - Es perezoso. Solo calcula cuando alguien lo lee. ¿Nadie está usando `total()` ahora? Ni se mueve.
 - Es memoizado. Si la dependencia no cambió, devuelve el último resultado sin rehacer la cuenta.
 
-El efecto práctico de esto es liberador. Puedes crear cuantos `computed()` quieras para describir estado derivado. Aquello que antes sincronizaba a mano (y a veces me olvidaba de sincronizar, que es donde nacía la mitad de mis bugs) se volvió una relación que solo declaro. Una vez.
+El efecto práctico de esto es liberador. Crea cuantos `computed()` quieras para describir estado derivado. Aquello que antes sincronizaba a mano (y a veces me olvidaba de sincronizar, que era donde nacía la mitad de mis bugs) se volvió una relación que solo declaro. Una vez.
 
 ## effect(): lo primero que quise entender en serio
 
@@ -105,11 +105,11 @@ Cuando empecé a estudiar esto, la pregunta que más me ayudó no fue "cómo uso
 > [!WARNING]
 > No uses `effect()` para calcular estado derivado. Si la frase es "cuando A cambie, actualiza B", lo que quieres es un `computed()`. Casi siempre.
 
-`effect()` es para efecto colateral, para hablar con el mundo de afuera. Usarlo para mantener un valor en sincronía con otro es el atajo más corto hacia los loops raros y los bugs difíciles de rastrear. Por eso lo trato como último recurso, no como primero.
+`effect()` es para efecto colateral, para hablar con el mundo de afuera. Usarlo para mantener un valor en sincronía con otro es el atajo más corto hacia los loops raros y los bugs difíciles de rastrear. Por eso lo trato como último recurso, nunca como primero.
 
 ## ¿Y en el template?
 
-Misma lógica. Llamas al signal, y Angular actualiza solo los pedazos de la pantalla que dependen de ese valor:
+La misma lógica de antes. Llamas al signal, y Angular actualiza solo los pedazos de la pantalla que dependen de ese valor:
 
 ```html
 <button (click)="contador.update(v => v + 1)">
@@ -121,11 +121,11 @@ Misma lógica. Llamas al signal, y Angular actualiza solo los pedazos de la pant
 }
 ```
 
-Con el control flow nuevo (`@if`, `@for`, `@switch`), la pantalla reacciona con precisión de bisturí. Cambió el `contador`, y Angular no reevalúa la página entera. Toca ese texto, y ahí se detiene.
+Con el control flow nuevo (`@if`, `@for`, `@switch`), la pantalla reacciona con precisión de bisturí. ¿Cambió el `contador`? Angular no reevalúa la página entera. Toca ese texto, y ahí se detiene.
 
 ## Hasta la frontera del componente se volvió signal
 
-A medida que iba profundizando, me di cuenta de que la idea se esparció por el framework entero. Hoy hasta la comunicación entre componentes es signal. En lugar del `@Input()`, declaras la entrada así:
+Cuanto más cavaba, más veía que la idea se había esparcido por el framework entero. Hoy hasta la comunicación entre componentes es signal. En lugar del `@Input()`, declaras la entrada así:
 
 ```ts
 import { Component, input, model } from '@angular/core';
@@ -137,11 +137,11 @@ export class CardUsuario {
 }
 ```
 
-Y entonces `nombre()` es un signal como cualquier otro. Lo puedes usar dentro de un `computed()`, reaccionar a él en un `effect()`, leerlo en el template. La frontera del componente dejó de ser la excepción. Pasó a ser todo el mismo modelo, de punta a punta. Esta evolución se fue afianzando de Angular 17 en adelante.
+Y entonces `nombre()` es un signal como cualquier otro. Lo puedes usar dentro de un `computed()`, reaccionar a él en un `effect()`, leerlo en el template. La frontera del componente dejó de ser la excepción. Pasó a ser todo el mismo modelo, de punta a punta. Esa vuelta se fue afianzando de Angular 17 en adelante.
 
 ## Por qué vale la pena aprender esto ahora
 
-Juntando lo que entendí, aparece el cuadro grande:
+Juntando todo, aparece el cuadro grande:
 
 1. Detección de cambios quirúrgica. Cada signal sabe quién depende de él, así que Angular actualiza solo lo necesario.
 2. Es el camino hacia el *zoneless*. Con los Signals cargando el "qué cambió", Angular ya no necesita a Zone.js para adivinar. Una app [sin Zone.js](https://angular.dev/guide/zoneless) queda más liviana, y el stack trace queda mucho más limpio cuando algo se rompe.
@@ -149,10 +149,10 @@ Juntando lo que entendí, aparece el cuadro grande:
 
 ## El camino que te recomiendo
 
-Si te vas a llevar una sola frase de acá, llévate esta: estado es `signal`, lo que deriva de él es `computed`, efecto colateral es `effect`. Esos tres en el lugar correcto resuelven la mayor parte de las dudas.
+Si te vas a llevar una sola frase de aquí, llévate esta: estado es `signal`, lo que deriva de él es `computed`, efecto colateral es `effect`. Esos tres en el lugar correcto resuelven la mayor parte de las dudas.
 
-El resto es ponerse manos a la obra, y es acá donde de verdad cae la ficha. Abre un proyecto vacío, crea un contador, ponle un `computed` encima, y quédate mirando cómo la cosa se actualiza sola. Así fue como lo entendí yo. No fue leyendo (ni siquiera leyendo esto).
+El resto es ponerse manos a la obra, y es ahí donde de verdad cae la ficha. Abre un proyecto vacío, crea un contador, ponle un `computed` encima, y quédate mirando cómo la cosa se actualiza sola. Así fue como funcionó conmigo. No fue leyendo (ni siquiera leyendo esto).
 
-Para ir más allá, la [documentación oficial de Signals](https://angular.dev/guide/signals) es buenísima y tiene ejemplos que editas ahí mismo, al instante. Y si el tema te enganchó, en el próximo texto pienso mostrar cómo conectar Signals con llamadas asíncronas sin chapuza.
+Para ir más allá, la [documentación oficial de Signals](https://angular.dev/guide/signals) es buenísima y tiene ejemplos que editas ahí mismo, al instante. Y si el tema te enganchó, en el próximo texto pienso mostrar cómo conectar Signals con llamadas asíncronas sin enredos.
 
 ¿Te trabaste en algún punto, o tienes un caso curioso que te dejó pensando? Escríbeme por [LinkedIn](https://linkedin.com/in/emilybezerra). Me encanta intercambiar ideas sobre esto.

@@ -12,7 +12,7 @@ Employment for developers aged 22 to 25 dropped nearly 20% from its peak in late
 
 There. I said the ugly part. Now the part the panic headlines conveniently forget.
 
-That drop isn't even. More specialized areas (security, data engineering, ML infra) barely felt it. Some of the biggest companies are already hiring juniors again. And AI itself created kinds of work that didn't exist three years ago: model quality, prompt engineering, data curation.
+That drop wasn't the same for everyone. More specialized areas, like security, data engineering and ML infrastructure, were less affected. And AI itself created kinds of work that didn't exist three years ago: model quality, AI evaluation, data curation and AI governance.
 
 What really changed is the kind of junior the market wants. It's not the person who memorizes algorithms to write repetitive code anymore. AI does that, and it does it fast. It's the person who knows how to work **with** AI: write a good prompt, be suspicious of what it spits out, have enough background to look at the result and say "this part here is wrong." That judgment became the new entry-level edge.
 
@@ -28,7 +28,7 @@ Still the biggest door, but the bar for a pure junior went up. What works well t
 
 ### Data, AI and Machine Learning
 
-If you're going to bet on a growing area, this is the one. AI-related jobs have grown sharply over the past few years, and "AI Engineer" showed up among the fastest-growing roles on LinkedIn's [Jobs on the Rise](https://www.cbsnews.com/news/artificial-intelligence-entry-level-role-linkedin-study/) ranking. And the [Bureau of Labor Statistics](https://www.bls.gov/ooh/math/data-scientists.htm) projects around 34% growth for data scientists from 2024 to 2034 (the closest role to AI and ML in the BLS), way above the average for any profession.
+If you're going to bet on a growing area, this is the one. AI-related jobs have grown sharply over the past few years, and "AI Engineer" showed up among the fastest-growing roles in a LinkedIn study on hiring trends, [reported by CBS News](https://www.cbsnews.com/news/artificial-intelligence-entry-level-role-linkedin-study/). And the [Bureau of Labor Statistics](https://www.bls.gov/ooh/math/data-scientists.htm) projects around 34% growth for data scientists from 2024 to 2034 (the closest role to AI and ML in the BLS), way above the average for any profession.
 
 ### Cybersecurity
 
@@ -55,7 +55,7 @@ Not every path starts with coding. If the junior dev bar scares you, these roles
 
 This part genuinely gets me excited. The [Brasscom report](https://brasscom.org.br/inteligencia/relatorio-setorial/) shows a mismatch that doesn't add up: between 2019 and 2024, the tech sector needed around 665,000 professionals, but the country trained only about 464,000, a 30% shortfall. And the projection points to a cumulative deficit in the hundreds of thousands in the coming years.
 
-And why is that good news for you, specifically? Because most of that gap doesn't come from a lack of people studying. Enrollment in tech courses grew more than 70% between 2019 and 2023, [according to Brasscom](https://brasscom.org.br/inteligencia/relatorio-setorial/). But the number of graduates stays far below demand: most of your competition drops out halfway.
+And why is that good news for you, specifically? Because most of that gap doesn't come from a lack of people studying. Enrollment in tech courses grew more than 70% between 2019 and 2023, [according to Brasscom](https://brasscom.org.br/inteligencia/relatorio-setorial/). But the number of graduates stays far below demand. In practice, a lot of people start the path and never finish it.
 
 About salary, because I know you want to know: the numbers vary a lot (city, company, seniority), so treat them as a ballpark, not a rule. In hubs like São Paulo, a junior dev usually starts in the R$ 3,000 to R$ 5,000 range, [according to surveys by Alura](https://www.alura.com.br/artigos/desenvolvedor-junior) and Glassdoor. In more specialized areas like data, cloud and DevOps, a mid-level profile can reach the R$ 8,000 to R$ 15,000 range. And remote work for companies abroad opens up a dollar range, which is a whole other level.
 

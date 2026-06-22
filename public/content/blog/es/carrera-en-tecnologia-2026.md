@@ -12,7 +12,7 @@ El empleo de devs de 22 a 25 años cayó casi 20% desde su pico, a fines de 2022
 
 Listo. Ya dije la parte incómoda. Ahora la parte que los titulares de pánico convenientemente olvidan.
 
-Esa caída no es pareja. Las áreas más especializadas (seguridad, ingeniería de datos, infra de ML) casi no la sintieron. Algunas de las empresas más grandes ya volvieron a contratar júnior. Y la propia IA creó tipos de trabajo que no existían hace tres años: calidad de modelos, ingeniería de prompts, curaduría de datos.
+Esa caída no fue igual para todos. Las áreas más especializadas, como seguridad, ingeniería de datos e infraestructura de ML, fueron menos afectadas. Y la propia IA creó tipos de trabajo que no existían hace tres años: calidad de modelos, evaluación de IA, curaduría de datos y gobernanza de IA.
 
 Lo que de verdad cambió fue el tipo de júnior que el mercado quiere. Ya no es el que se memoriza algoritmos para escribir código repetitivo. Eso lo hace la IA, y rápido. Es el que sabe trabajar **junto** con la IA: escribir un buen prompt, desconfiar de lo que produce, tener repertorio para evaluar el resultado y decir "esto está mal". Ese criterio se volvió el nuevo diferencial de entrada.
 
@@ -28,7 +28,7 @@ Sigue siendo la puerta más grande, pero la vara para el júnior puro subió. Lo
 
 ### Datos, IA y Machine Learning
 
-Si hay que apostar por un área que crece, es esta. Las vacantes ligadas a IA crecieron fuerte en los últimos años, y "AI Engineer" apareció entre los puestos que más crecieron en el ranking [Jobs on the Rise](https://www.cbsnews.com/news/artificial-intelligence-entry-level-role-linkedin-study/) de LinkedIn. Y el [Bureau of Labor Statistics](https://www.bls.gov/ooh/math/data-scientists.htm) proyecta alrededor de 34% de crecimiento para científicos de datos entre 2024 y 2034 (el puesto más cercano a IA y ML en el BLS), muy por encima del promedio de cualquier profesión.
+Si hay que apostar por un área que crece, es esta. Las vacantes ligadas a IA crecieron fuerte en los últimos años, y "AI Engineer" apareció entre los puestos en alza en un estudio de LinkedIn sobre tendencias de contratación, [citado por CBS News](https://www.cbsnews.com/news/artificial-intelligence-entry-level-role-linkedin-study/). Y el [Bureau of Labor Statistics](https://www.bls.gov/ooh/math/data-scientists.htm) proyecta alrededor de 34% de crecimiento para científicos de datos entre 2024 y 2034 (el puesto más cercano a IA y ML en el BLS), muy por encima del promedio de cualquier profesión.
 
 ### Ciberseguridad
 
@@ -55,7 +55,7 @@ No todo camino empieza programando. Si la vara del dev júnior te asusta, estas 
 
 Esta parte me deja genuinamente entusiasmada. El [informe de Brasscom](https://brasscom.org.br/inteligencia/relatorio-setorial/) muestra una cuenta que no cierra: entre 2019 y 2024, el sector de tecnología necesitó cerca de 665 mil profesionales, pero el país formó solo unos 464 mil, un desfase del 30%. Y la proyección apunta a un déficit acumulado de cientos de miles en los próximos años.
 
-¿Y por qué esto es buena noticia para ti, específicamente? Porque la mayor parte de ese hueco no viene de falta de gente estudiando. Las matrículas en cursos de tecnología crecieron más de 70% entre 2019 y 2023, [según Brasscom](https://brasscom.org.br/inteligencia/relatorio-setorial/). Pero el número de egresados sigue muy por debajo de la demanda: la mayor parte de tu competencia abandona a mitad de camino.
+¿Y por qué esto es buena noticia para ti, específicamente? Porque la mayor parte de ese hueco no viene de falta de gente estudiando. Las matrículas en cursos de tecnología crecieron más de 70% entre 2019 y 2023, [según Brasscom](https://brasscom.org.br/inteligencia/relatorio-setorial/). Pero el número de egresados sigue muy por debajo de la demanda. En la práctica, mucha gente empieza el camino y no llega hasta el final.
 
 Sobre el salario, porque sé que quieres saber: los números varían mucho (ciudad, empresa, seniority), así que tómalos como orden de magnitud, no como regla. En centros como São Paulo, un dev júnior suele arrancar en la franja de R$ 3.000 a R$ 5.000, [según relevamientos de Alura](https://www.alura.com.br/artigos/desenvolvedor-junior) y de Glassdoor. En áreas más especializadas, como datos, nube y DevOps, un perfil de nivel intermedio puede llegar a la franja de R$ 8.000 a R$ 15.000. Y el trabajo remoto para el exterior abre un rango en dólares, que es otro nivel.
 

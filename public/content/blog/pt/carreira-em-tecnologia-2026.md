@@ -28,7 +28,7 @@ Continua sendo a maior porta, mas a régua pro júnior puro subiu. O que pega be
 
 ### Dados, IA e Machine Learning
 
-Se é pra apostar numa área que cresce, é essa. As vagas ligadas à IA cresceram fortemente nos últimos anos, e "AI Engineer" apareceu entre os cargos que mais cresceram no ranking [Jobs on the Rise do LinkedIn](https://www.cbsnews.com/news/artificial-intelligence-entry-level-role-linkedin-study/). E o [Bureau of Labor Statistics](https://www.bls.gov/ooh/math/data-scientists.htm) projeta cerca de 34% de crescimento para cientistas de dados entre 2024 e 2034 (o cargo mais próximo de IA e ML no BLS), muito acima da média de qualquer profissão.
+Se é pra apostar numa área que cresce, é essa. As vagas ligadas à IA cresceram fortemente nos últimos anos, e "AI Engineer" apareceu entre os cargos que mais crescem em um estudo do LinkedIn sobre tendências de contratação, [citado pela CBS News](https://www.cbsnews.com/news/artificial-intelligence-entry-level-role-linkedin-study/). E o [Bureau of Labor Statistics](https://www.bls.gov/ooh/math/data-scientists.htm) projeta cerca de 34% de crescimento para cientistas de dados entre 2024 e 2034 (o cargo mais próximo de IA e ML no BLS), muito acima da média de qualquer profissão.
 
 ### Cibersegurança
 

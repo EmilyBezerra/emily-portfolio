@@ -1,12 +1,12 @@
 Você troca um valor no código. Confere. Confere de novo. A tela continua mostrando o número velho, te encarando.
 
-Já passou por isso? Eu já, várias vezes. E tem uma coisa sobre mim que explica este texto: eu não consigo só dar um jeito e seguir. Preciso entender de onde vem o problema. É herança da época de laboratório, acho. Vejo uma engrenagem nova e quero abrir pra ver como gira.
+Já passou por isso? Eu já, várias vezes. E tem uma coisa sobre mim que explica este texto: eu não consigo só dar um jeito e seguir. Preciso entender de onde vem o problema. É herança da época de laboratório, acho. Vejo uma ferramenta nova e já quero saber como ela funciona por dentro.
 
-Foi essa curiosidade que me jogou fundo nos Signals do Angular. Testei no ERP que construo no trabalho, li a documentação oficial, fiz uns experimentos só pra ver no que dava. O que vem aqui é o resumo do que entendi, focado no que pega de verdade: quando e como usar.
+Foi essa curiosidade que me jogou fundo nos Signals do Angular. Testei no ERP que construo no trabalho, li a documentação oficial, fiz uns testes só pra ver no que dava. O que vem aqui é o resumo do que entendi, focado em quem não tem muito conhecimento sobre o assunto.
 
 ## De onde vinha aquele bug da tela
 
-Esse tipo de coisa quase nunca é descuido seu. Quase sempre é o framework sem saber **o que** mudou.
+Esse tipo de coisa nem sempre é descuido seu. Muitas vezes é o framework sem saber **o que** mudou.
 
 Por muito tempo o Angular resolveu isso no braço, com o Zone.js. A ideia era engenhosa. O Zone.js ficava de olho em tudo que pudesse mexer no estado (clique, timer, requisição) e, quando algo acontecia, cutucava o Angular: "olha, pode ter mudado alguma coisa, melhor conferir".
 
@@ -20,7 +20,7 @@ Antes de qualquer código, deixa eu te passar a analogia que fez o conceito grud
 
 Pense numa planilha. Você põe `10` na célula A1 e `5` na A2. Na A3 escreve `=A1+A2`, e aparece `15`. Agora troque o A1 pra `20`. O A3 vira `25` na hora. Você não apertou recalcular. A planilha já sabia que o A3 dependia do A1.
 
-Um Signal é exatamente uma célula dessas. Uma caixinha que guarda um valor e conhece quem depende dele. Mudou, todo mundo que usa aquele valor recebe o aviso. Só quem usa. Mais ninguém.
+Um Signal funciona como uma dessas células. Uma caixinha que guarda um valor e conhece quem depende dele. Mudou, todo mundo que usa aquele valor recebe o aviso. Só quem usa. Mais ninguém.
 
 > Pense em Signal como uma célula de planilha pro seu código. Você descreve as relações uma vez, e o recálculo se vira sozinho, na hora certa.
 
@@ -121,7 +121,7 @@ Mesma lógica de antes. Você chama o signal, e o Angular atualiza só os pedaç
 }
 ```
 
-Com o control flow novo (`@if`, `@for`, `@switch`), a tela reage com precisão de bisturi. Mudou o `contador`? O Angular não reavalia a página toda. Mexe naquele texto, e para por aí.
+Com o control flow novo (`@if`, `@for`, `@switch`), a tela reage com precisão de bisturi. Mudou o `contador`? Com signals, o Angular não precisa reavaliar a página toda. Mexe naquele texto, e para por aí.
 
 ## Até a fronteira do componente virou signal
 
@@ -145,7 +145,7 @@ Juntando tudo, o panorama fica claro:
 
 1. Detecção de mudança cirúrgica. Cada signal sabe quem depende dele, então o Angular atualiza só o necessário.
 2. É o caminho pro *zoneless*. Com os Signals carregando o "o que mudou", o Angular não precisa mais do Zone.js pra adivinhar. App [sem Zone.js](https://angular.dev/guide/zoneless) fica mais leve, e o stack trace fica bem mais limpo quando algo quebra.
-3. Aquele bug da tela some. Estado derivado com `computed()` está sempre em dia, por construção.
+3. Aquele tipo de bug da tela fica muito mais raro. Estado derivado com `computed()` está sempre em dia, por construção.
 
 ## O caminho que eu recomendo
 

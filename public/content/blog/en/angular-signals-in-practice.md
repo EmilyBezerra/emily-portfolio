@@ -1,12 +1,12 @@
 You change a value in your code. You check. You check again. The screen keeps showing the old number, staring right back at you.
 
-Sound familiar? It's happened to me more times than I'd like to admit. And there's one thing about me that explains why this post exists: I can't just slap a fix on it and move on. I need to understand where the problem comes from. A leftover habit from my lab days, I figure. I see a new gear and I want to pry it open and watch it turn.
+Sound familiar? It's happened to me more times than I'd like to admit. And there's one thing about me that explains why this post exists: I can't just slap a fix on it and move on. I need to understand where the problem comes from. A leftover habit from my lab days, I figure. I see a new tool and I want to know how it works under the hood.
 
-That curiosity is what pulled me deep into Angular Signals. I tried them out in the ERP I build at work, read the official docs, ran a few experiments just to see where they'd lead. What follows is the gist of what I came to understand, focused on what actually matters in practice: when and how to use them.
+That curiosity is what pulled me deep into Angular Signals. I tried them out in the ERP I build at work, read the official docs, ran a few tests just to see where they'd lead. What follows is the gist of what I came to understand, written for people who don't know much about the subject yet.
 
 ## Where that screen bug was coming from
 
-This kind of thing is rarely you being careless. Almost always, it's the framework not knowing **what** changed.
+This kind of thing isn't always your fault. A lot of the time, it's the framework not knowing **what** changed.
 
 For a long time Angular handled this by brute force, with Zone.js. The idea was clever. Zone.js kept an eye on anything that might touch state (a click, a timer, a request) and, whenever something happened, it gave Angular a nudge: "heads up, something might have changed, better go check."
 
@@ -20,7 +20,7 @@ Before any code, let me hand you the analogy that made the concept stick in my h
 
 Picture a spreadsheet. You put `10` in cell A1 and `5` in A2. In A3 you write `=A1+A2`, and `15` shows up. Now change A1 to `20`. A3 turns into `25` instantly. You didn't hit recalculate. The spreadsheet already knew A3 depended on A1.
 
-A Signal is exactly one of those cells. A little box that holds a value and knows who depends on it. It changes, and everyone who uses that value gets the heads-up. Only the ones who use it. Nobody else.
+A Signal works like one of those cells. A little box that holds a value and knows who depends on it. It changes, and everyone who uses that value gets the heads-up. Only the ones who use it. Nobody else.
 
 > Think of a Signal as a spreadsheet cell for your code. You describe the relationships once, and the recalculation takes care of itself, at the right moment.
 
@@ -121,7 +121,7 @@ Same logic as before. You call the signal, and Angular updates only the pieces o
 }
 ```
 
-With the new control flow (`@if`, `@for`, `@switch`), the screen reacts with surgical precision. Change `counter`? Angular doesn't re-evaluate the whole page. It touches that one bit of text, and stops there.
+With the new control flow (`@if`, `@for`, `@switch`), the screen reacts with surgical precision. Change `counter`? With signals, Angular doesn't need to re-evaluate the whole page. It touches that one bit of text, and stops there.
 
 ## Even the component boundary became a signal
 
@@ -145,7 +145,7 @@ Putting it all together, the big picture comes into focus:
 
 1. Surgical change detection. Each signal knows who depends on it, so Angular updates only what's needed.
 2. It's the road to *zoneless*. With Signals carrying the "what changed," Angular no longer needs Zone.js to guess. An app [without Zone.js](https://angular.dev/guide/zoneless) gets lighter, and the stack trace gets a lot cleaner when something breaks.
-3. That screen bug disappears. Derived state with `computed()` is always up to date, by construction.
+3. That kind of screen bug gets much rarer. Derived state with `computed()` is always up to date, by construction.
 
 ## The path I'd recommend
 

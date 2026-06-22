@@ -1,12 +1,12 @@
 Cambias un valor en el código. Revisas. Revisas otra vez. La pantalla sigue mostrando el número viejo, mirándote fijo.
 
-¿Ya te pasó? A mí sí, varias veces. Y hay algo sobre mí que explica este texto: no soy capaz de solo arreglarlo a las malas y seguir. Necesito entender de dónde viene el problema. Es herencia de la época del laboratorio, supongo. Veo un engranaje nuevo y quiero abrirlo para ver cómo gira.
+¿Ya te pasó? A mí sí, varias veces. Y hay algo sobre mí que explica este texto: no soy capaz de solo arreglarlo a las malas y seguir. Necesito entender de dónde viene el problema. Es herencia de la época del laboratorio, supongo. Veo una herramienta nueva y enseguida quiero saber cómo funciona por dentro.
 
-Fue esa curiosidad la que me llevó hasta el fondo de los Signals de Angular. Los probé en el ERP que construyo en el trabajo, leí la documentación oficial, hice algunos experimentos solo para ver qué pasaba. Lo que viene aquí es el resumen de lo que entendí, con foco en lo que de verdad importa: cuándo y cómo usarlos.
+Fue esa curiosidad la que me llevó hasta el fondo de los Signals de Angular. Los probé en el ERP que construyo en el trabajo, leí la documentación oficial, hice algunas pruebas solo para ver qué pasaba. Lo que viene aquí es el resumen de lo que entendí, pensado para quien todavía no conoce mucho del tema.
 
 ## De dónde venía aquel bug de la pantalla
 
-Este tipo de cosa rara vez es un descuido tuyo. Casi siempre es el framework que no sabe **qué** cambió.
+Este tipo de cosa no siempre es un descuido tuyo. Muchas veces es el framework que no sabe **qué** cambió.
 
 Durante mucho tiempo Angular resolvió esto a pulso, con Zone.js. La idea era ingeniosa. Zone.js se quedaba vigilando todo lo que pudiera tocar el estado (un clic, un timer, una petición) y, cuando algo ocurría, le daba un toque a Angular: "oye, puede que algo haya cambiado, mejor revisa".
 
@@ -20,7 +20,7 @@ Antes de cualquier código, déjame pasarte la analogía que hizo que el concept
 
 Piensa en una planilla. Pones `10` en la celda A1 y `5` en A2. En A3 escribes `=A1+A2`, y aparece `15`. Ahora cambia A1 a `20`. A3 se vuelve `25` al instante. No apretaste recalcular. La planilla ya sabía que A3 dependía de A1.
 
-Un Signal es exactamente una de esas celdas. Una cajita que guarda un valor y conoce a quien depende de él. Cambió, y todos los que usan ese valor reciben el aviso. Solo los que lo usan. Nadie más.
+Un Signal funciona como una de esas celdas. Una cajita que guarda un valor y conoce a quien depende de él. Cambió, y todos los que usan ese valor reciben el aviso. Solo los que lo usan. Nadie más.
 
 > Piensa en un Signal como una celda de planilla para tu código. Describes las relaciones una vez, y el recálculo se las arregla solo, en el momento justo.
 
@@ -121,7 +121,7 @@ La misma lógica de antes. Llamas al signal, y Angular actualiza solo los pedazo
 }
 ```
 
-Con el control flow nuevo (`@if`, `@for`, `@switch`), la pantalla reacciona con precisión de bisturí. ¿Cambió el `contador`? Angular no reevalúa la página entera. Toca ese texto, y ahí se detiene.
+Con el control flow nuevo (`@if`, `@for`, `@switch`), la pantalla reacciona con precisión de bisturí. ¿Cambió el `contador`? Con signals, Angular no necesita reevaluar la página entera. Toca ese texto, y ahí se detiene.
 
 ## Hasta la frontera del componente se volvió signal
 
@@ -145,7 +145,7 @@ Juntando todo, el panorama queda claro:
 
 1. Detección de cambios quirúrgica. Cada signal sabe quién depende de él, así que Angular actualiza solo lo necesario.
 2. Es el camino hacia el *zoneless*. Con los Signals cargando el "qué cambió", Angular ya no necesita a Zone.js para adivinar. Una app [sin Zone.js](https://angular.dev/guide/zoneless) queda más liviana, y el stack trace queda mucho más limpio cuando algo se rompe.
-3. Aquel bug de la pantalla desaparece. El estado derivado con `computed()` está siempre al día, por construcción.
+3. Ese tipo de bug de la pantalla se vuelve mucho más raro. El estado derivado con `computed()` está siempre al día, por construcción.
 
 ## El camino que te recomiendo
 

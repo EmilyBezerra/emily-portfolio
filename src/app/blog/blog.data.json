@@ -76,5 +76,44 @@
     "cover": "/blog-assets/carreira-tech-2026/cover.jpg",
     "coverAlt": "Mapa de carreras en tecnología: caminos ramificándose en distintas áreas de TI",
     "readingMinutes": 12
+  },
+  {
+    "group": "responsividade",
+    "lang": "pt",
+    "slug": "responsividade-de-telas",
+    "title": "Responsividade na prática: como fazer um site funcionar em qualquer tela",
+    "description": "Um guia direto de responsividade com CSS: viewport, mobile-first, media queries, breakpoints por conteúdo, unidades relativas, Flexbox, Grid e container queries, com a experiência real de quem aprendeu na marra.",
+    "date": "2026-06-22",
+    "category": "CSS",
+    "tags": ["CSS", "Responsividade", "Front-end", "Web"],
+    "cover": "/blog-assets/responsividade/cover.jpg",
+    "coverAlt": "Notebook, tablet e celular lado a lado numa mesa, representando telas de tamanhos diferentes",
+    "readingMinutes": 7
+  },
+  {
+    "group": "responsividade",
+    "lang": "en",
+    "slug": "responsive-design",
+    "title": "Responsive design in practice: making a site work on any screen",
+    "description": "A practical guide to responsive design with CSS: viewport, mobile-first, media queries, content-based breakpoints, relative units, Flexbox, Grid and container queries, from someone who learned it the hard way.",
+    "date": "2026-06-22",
+    "category": "CSS",
+    "tags": ["CSS", "Responsive Design", "Frontend", "Web"],
+    "cover": "/blog-assets/responsividade/cover.jpg",
+    "coverAlt": "A laptop, tablet and phone side by side on a desk, representing different screen sizes",
+    "readingMinutes": 7
+  },
+  {
+    "group": "responsividade",
+    "lang": "es",
+    "slug": "diseno-responsivo",
+    "title": "Diseño responsivo en la práctica: que tu sitio funcione en cualquier pantalla",
+    "description": "Una guía práctica de diseño responsivo con CSS: viewport, mobile-first, media queries, breakpoints por contenido, unidades relativas, Flexbox, Grid y container queries, contada por quien lo aprendió a base de golpes.",
+    "date": "2026-06-22",
+    "category": "CSS",
+    "tags": ["CSS", "Diseño Responsivo", "Frontend", "Web"],
+    "cover": "/blog-assets/responsividade/cover.jpg",
+    "coverAlt": "Una laptop, una tablet y un teléfono uno al lado del otro en un escritorio, representando distintos tamaños de pantalla",
+    "readingMinutes": 7
   }
 ]

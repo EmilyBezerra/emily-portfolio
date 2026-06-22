@@ -82,7 +82,7 @@ When I dug into why it's so efficient, I found two details that change things da
 - It's lazy. It only computes when someone reads it. Nobody using `total()` right now? It doesn't lift a finger.
 - It's memoized. If the dependencies haven't changed, it hands back the last result without redoing the math.
 
-The practical payoff here is liberating. Create as many `computed()` as you want to describe derived state. The stuff I used to sync by hand (and sometimes forgot to sync, which is where half my bugs came from) became a relationship I just declare. Once.
+In practice, this takes a huge weight off your shoulders. Create as many `computed()` as you want to describe derived state. The stuff I used to sync by hand (and sometimes forgot to sync, which is where half my bugs came from) became a relationship I just declare. Once.
 
 ## effect(): the first thing I wanted to really understand
 

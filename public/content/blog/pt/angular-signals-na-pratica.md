@@ -6,11 +6,11 @@ Foi essa curiosidade que me jogou fundo nos Signals do Angular. Testei no ERP qu
 
 ## De onde vinha aquele bug da tela
 
-Esse tipo de coisa raramente é distração sua. Quase sempre é o framework sem saber **o que** mudou.
+Esse tipo de coisa quase nunca é descuido seu. Quase sempre é o framework sem saber **o que** mudou.
 
 Por muito tempo o Angular resolveu isso no braço, com o Zone.js. A ideia era engenhosa. O Zone.js ficava de olho em tudo que pudesse mexer no estado (clique, timer, requisição) e, quando algo acontecia, cutucava o Angular: "olha, pode ter mudado alguma coisa, melhor conferir".
 
-Conferir o quê? Tudo. A árvore inteira de componentes, por garantia. Funciona, mas é desproporcional. É tipo disparar o alarme de incêndio do prédio inteiro porque alguém acendeu o fogão.
+Conferir o quê? Tudo. A árvore inteira de componentes, por garantia. Funciona, mas é um exagero. É tipo disparar o alarme de incêndio do prédio inteiro porque alguém acendeu o fogão.
 
 Os Signals viram esse jogo do avesso. Em vez de o framework adivinhar, o próprio valor avisa quem depende dele. Aquela informação que faltava agora existe. Parece pouco. Muda quase tudo.
 
@@ -82,7 +82,7 @@ Quando fui atrás do porquê de ser tão eficiente, achei dois detalhes que muda
 - Ele é preguiçoso. Só calcula quando alguém lê. Ninguém usando `total()` agora? Ele nem se mexe.
 - Ele é memoizado. Se a dependência não mudou, devolve o último resultado sem refazer a conta.
 
-O efeito prático disso é libertador. Crie quantos `computed()` quiser pra descrever estado derivado. Aquilo que antes eu sincronizava na mão (e às vezes esquecia de sincronizar, que era onde nascia metade dos meus bugs) virou uma relação que eu só declaro. Uma vez.
+Na prática, isso tira um peso enorme das costas. Crie quantos `computed()` quiser pra descrever estado derivado. Aquilo que antes eu sincronizava na mão (e às vezes esquecia de sincronizar, que era onde nascia metade dos meus bugs) virou uma relação que eu só declaro. Uma vez.
 
 ## effect(): a primeira coisa que eu quis entender direito
 
@@ -141,7 +141,7 @@ E aí `nome()` é um signal como outro qualquer. Dá pra usar dentro de `compute
 
 ## Por que vale a pena aprender isso agora
 
-Juntando tudo, o quadro grande aparece:
+Juntando tudo, o panorama fica claro:
 
 1. Detecção de mudança cirúrgica. Cada signal sabe quem depende dele, então o Angular atualiza só o necessário.
 2. É o caminho pro *zoneless*. Com os Signals carregando o "o que mudou", o Angular não precisa mais do Zone.js pra adivinhar. App [sem Zone.js](https://angular.dev/guide/zoneless) fica mais leve, e o stack trace fica bem mais limpo quando algo quebra.
@@ -151,8 +151,8 @@ Juntando tudo, o quadro grande aparece:
 
 Se for levar uma frase só daqui, leve esta: estado é `signal`, o que deriva dele é `computed`, efeito colateral é `effect`. Esses três no lugar certo resolvem a maior parte das dúvidas.
 
-O resto é mão na massa, e é aqui que a ficha cai de verdade. Abra um projeto vazio, crie um contador, ponha um `computed` em cima e fique olhando o negócio se atualizar sozinho. Foi assim que funcionou comigo. Não foi lendo (nem mesmo lendo isto aqui).
+O resto é mão na massa, e é aqui que a ficha cai de verdade. Abra um projeto vazio, crie um contador, ponha um `computed` em cima e fique olhando o negócio se atualizar sozinho. Foi assim que funcionou comigo.
 
-Pra ir além, a [documentação oficial de Signals](https://angular.dev/guide/signals) é ótima e tem exemplos que você edita ali na hora. E se o assunto te pegou, no próximo texto pretendo mostrar como conectar Signals com chamada assíncrona sem gambiarra.
+Pra ir além, a [documentação oficial de Signals](https://angular.dev/guide/signals) é ótima e tem exemplos que você edita ali na hora.
 
 Travou em algum ponto, ou tem um caso curioso que te deixou pensando? Me chame no [LinkedIn](https://linkedin.com/in/emilybezerra). Curto demais trocar ideia sobre isso.

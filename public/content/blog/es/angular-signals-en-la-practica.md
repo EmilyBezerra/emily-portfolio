@@ -82,7 +82,7 @@ Cuando me puse a investigar por qué es tan eficiente, encontré dos detalles qu
 - Es perezoso. Solo calcula cuando alguien lo lee. ¿Nadie está usando `total()` ahora? Ni se mueve.
 - Es memoizado. Si la dependencia no cambió, devuelve el último resultado sin rehacer la cuenta.
 
-El efecto práctico de esto es liberador. Crea cuantos `computed()` quieras para describir estado derivado. Aquello que antes sincronizaba a mano (y a veces me olvidaba de sincronizar, que era donde nacía la mitad de mis bugs) se volvió una relación que solo declaro. Una vez.
+En la práctica, esto te quita un peso enorme de encima. Crea cuantos `computed()` quieras para describir estado derivado. Aquello que antes sincronizaba a mano (y a veces me olvidaba de sincronizar, que era donde nacía la mitad de mis bugs) se volvió una relación que solo declaro. Una vez.
 
 ## effect(): lo primero que quise entender en serio
 
@@ -141,7 +141,7 @@ Y entonces `nombre()` es un signal como cualquier otro. Lo puedes usar dentro de
 
 ## Por qué vale la pena aprender esto ahora
 
-Juntando todo, aparece el cuadro grande:
+Juntando todo, el panorama queda claro:
 
 1. Detección de cambios quirúrgica. Cada signal sabe quién depende de él, así que Angular actualiza solo lo necesario.
 2. Es el camino hacia el *zoneless*. Con los Signals cargando el "qué cambió", Angular ya no necesita a Zone.js para adivinar. Una app [sin Zone.js](https://angular.dev/guide/zoneless) queda más liviana, y el stack trace queda mucho más limpio cuando algo se rompe.

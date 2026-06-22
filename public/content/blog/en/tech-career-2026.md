@@ -1,6 +1,6 @@
 Same day, same week, I saw both headlines. One said AI was about to wipe out programmers. The other said Brazil is short more than 500,000 tech professionals. They can't both be right at the same time... or can they?
 
-I made the switch into tech coming from chemistry, studying at night after my shift at the lab. So when someone asks me whether it's still worth getting in now, I take it seriously. The short answer is yes. The long one has nuances that change everything, and that's where your shot is.
+I made the switch into tech coming from chemistry, studying at night after my shift at the lab. So when someone asks me whether it's still worth getting in now, I take it seriously. Yes, it's worth it. That said, there are a few catches that make all the difference.
 
 I'll give you the honest map: what actually changed, where the openings are, with real numbers and sources you can check yourself. No course to sell, no scare tactics.
 
@@ -8,7 +8,7 @@ I'll give you the honest map: what actually changed, where the openings are, wit
 
 I'll be blunt, because sparing you the unpleasant part wouldn't help at all. AI did shake things up. Mostly in entry-level programming jobs.
 
-Employment for 22 to 25 year olds in dev dropped about 20% since 2022, according to Stanford AI Index data discussed by [Stack Overflow](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/). The junior and recent-grad slice of the IT market shrank from around 15% to 7% in three years, with small teams shipping more using AI tools. [Demand for juniors softened](https://www.cio.com/article/4062024/demand-for-junior-developers-softens-as-ai-takes-over), and there's no point romanticizing it.
+Employment for developers aged 22 to 25 dropped nearly 20% from its peak in late 2022, according to [Stack Overflow](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/), citing data from the Stanford Digital Economy Lab. And the share of recent grads in hiring at the largest tech companies fell from around 15% before the pandemic to 7%, per the [SignalFire State of Tech Talent Report 2025](https://www.signalfire.com/blog/signalfire-state-of-talent-report-2025). [Demand for juniors softened](https://www.cio.com/article/4062024/demand-for-junior-developers-softens-as-ai-takes-over), and there's no point romanticizing it.
 
 There. I said the ugly part. Now the part the panic headlines conveniently forget.
 
@@ -24,17 +24,17 @@ This is the part nobody told me when I started, and it would've changed a lot. L
 
 ### Software development
 
-Still the biggest door, but the bar for a pure junior went up. What works well today is someone who pairs code with a specialty (data, cloud, security). [Robert Half](https://www.roberthalf.com/us/en/insights/salary-hiring-trends/demand-for-skilled-talent/tech-it) puts software engineering among the most sought-after roles of 2026 and, at the same time, among the ones hit hardest by a shortage of qualified people: more than half of the delayed projects blame that gap. Translation: the jobs exist. What's missing is people who are actually ready.
+Still the biggest door, but the bar for a pure junior went up. What works well today is someone who pairs code with a specialty (data, cloud, security). [Robert Half](https://www.roberthalf.com/us/en/insights/salary-hiring-trends/demand-for-skilled-talent/tech-it) puts software engineering among the most sought-after roles of 2026 and, at the same time, among the ones hit hardest by a shortage of qualified people: 71% of tech leaders say that gap has delayed projects in the past year. Translation: the jobs exist. What's missing is people who are actually ready.
 
 ### Data, AI and Machine Learning
 
-If you're going to bet on a growing area, this is the one. "AI Engineer" was the fastest-growing job in the US on LinkedIn's ranking, with postings up more than 140% in a single year. AI, ML and data science positions added up to almost 50,000 listings in 2025, a 163% jump over 2024. And the [Bureau of Labor Statistics](https://www.bls.gov/ooh/computer-and-information-technology/) projects 23% growth through 2033 for the category that includes these roles. Way above the average for any profession.
+If you're going to bet on a growing area, this is the one. AI-related jobs have grown sharply over the past few years, and "AI Engineer" showed up among the fastest-growing roles on LinkedIn's [Jobs on the Rise](https://www.cbsnews.com/news/artificial-intelligence-entry-level-role-linkedin-study/) ranking. And the [Bureau of Labor Statistics](https://www.bls.gov/ooh/math/data-scientists.htm) projects around 34% growth for data scientists from 2024 to 2034 (the closest role to AI and ML in the BLS), way above the average for any profession.
 
 ### Cybersecurity
 
-Here the hole is so big it's almost funny. The [ISC2](https://www.isc2.org/research) workforce study points to roughly 4.8 million open security jobs around the world. The field would need to grow 87% just to cover what already exists today.
+Here the hole is so big it's almost funny. The [2024 ISC2 workforce study](https://www.isc2.org/Insights/2024/10/ISC2-2024-Cybersecurity-Workforce-Study) estimated a gap of roughly 4.8 million security professionals worldwide, the difference between what companies need and who's actually in the field. To close it, the workforce at the time would have to nearly double.
 
-Just one honest heads-up, because I wish someone had given it to me: 9 out of 10 security managers prefer people who already have some prior IT experience. That's why cybersecurity is usually a great **second** stop. You get in through support, networking or dev, build a base, and move over.
+Just one honest heads-up, because I wish someone had given it to me: according to [ISC2](https://www.isc2.org/Insights/2025/06/cybersecurity-hiring-trends-study), many security managers will consider candidates coming from areas like support, networking and development, even without prior security experience. That's why cybersecurity is usually a great **second** stop. You get in through support, networking or dev, build a base, and move over.
 
 ### Cloud, DevOps and Platform Engineering
 
@@ -53,19 +53,19 @@ Not every path starts with coding. If the junior dev bar scares you, these roles
 
 ## And in Brazil? Here the story is good
 
-This part genuinely gets me excited. The [Brasscom study](https://brasscom.org.br/mercado-de-ti-tem-grande-demanda-e-deficit-de-novos-profissionais/) shows a giant mismatch: the country trains around 53,000 tech professionals a year, and it needs more than 159,000. Between 2019 and 2024 the sector needed 665,000 people and trained 464,000. The projection is a cumulative gap of more than 500,000 professionals.
+This part genuinely gets me excited. The [Brasscom report](https://brasscom.org.br/inteligencia/relatorio-setorial/) shows a mismatch that doesn't add up: between 2019 and 2024, the tech sector needed around 665,000 professionals, but the country trained only about 464,000, a 30% shortfall. And the projection points to a cumulative deficit in the hundreds of thousands in the coming years.
 
-And why is that good news for you, specifically? Because most of that gap doesn't come from a lack of people studying. Enrollment in tech courses grew more than 70%. It comes from **dropout**: in 2023, out of 1.8 million spots in higher-ed tech programs, fewer than 5% finished. Read that sentence again. Most of your competition quits halfway.
+And why is that good news for you, specifically? Because most of that gap doesn't come from a lack of people studying. Enrollment in tech courses grew more than 70% between 2019 and 2023, [according to Brasscom](https://brasscom.org.br/inteligencia/relatorio-setorial/). But the number of graduates stays far below demand: most of your competition drops out halfway.
 
-About salary, because I know you want to know: a junior dev in Brazil in 2026 usually starts in the R$ 3,000 to R$ 5,000 range in a hub like São Paulo, varying a lot with company size, [according to surveys by Alura](https://www.alura.com.br/artigos/desenvolvedor-junior) and Glassdoor. A mid-level profile in a specialized area (data, security, cloud) easily reaches the R$ 8,000 to R$ 15,000 range. And remote work for companies abroad opens up a dollar range, which is a whole other level.
+About salary, because I know you want to know: the numbers vary a lot (city, company, seniority), so treat them as a ballpark, not a rule. In hubs like São Paulo, a junior dev usually starts in the R$ 3,000 to R$ 5,000 range, [according to surveys by Alura](https://www.alura.com.br/artigos/desenvolvedor-junior) and Glassdoor. In more specialized areas like data, cloud and DevOps, a mid-level profile can reach the R$ 8,000 to R$ 15,000 range. And remote work for companies abroad opens up a dollar range, which is a whole other level.
 
 ## The shift that changed everything, and almost nobody talks about it
 
 Maybe the most important news for someone starting now isn't which area to pick. It's **how** companies are hiring.
 
-It went skills-first. Around 70% of employers already hire based on what you can do, not where you studied. The degree requirement for mid-level roles dropped about 33% between 2019 and 2025.
+It went skills-first. According to [TestGorilla](https://www.testgorilla.com/skills-based-hiring/state-of-skills-based-hiring-2025/), around 85% of companies already use skills-based hiring and more than half have dropped the degree requirement. More and more, what counts is what you can do, not where you studied.
 
-In practice, that means three things, and they're freeing:
+In practice, that means three things, and they all work in your favor:
 
 1. Portfolio matters more than résumé. A real project, one you show and explain, is worth more than a list of courses.
 2. Technical tests instead of the "degree filter." You prove it by doing.
@@ -82,14 +82,14 @@ Put it all together and the path shows up. There's no magic. There's consistency
 3. **Learn by doing.** Watching videos isn't learning. It's watching someone else learn. Build a small, real project from week one. That's where your portfolio comes from.
 4. **Use AI as a tutor, with suspicion.** Ask it to explain things, generate examples, review your code. But always double-check. Knowing how to work well with AI is, today, a real edge when companies hire.
 5. **Think about an entry-level certification.** CompTIA, Google, AWS, Microsoft. They help prove your level, especially in support, cloud and data.
-6. **Be patient with the timeline.** For most people it's 3 to 12 months of focused study until the first job. In the middle it'll feel slow. That's normal. The person who keeps going when it gets boring is exactly the one who joins the 5% who finish.
+6. **Be patient with the timeline.** It's not weeks: it's months of focused study until the first job, and the timeline varies a lot from person to person (your background, your pace, the market). In the middle it'll feel slow. That's normal. The person who keeps going when it gets boring is exactly the one who joins the 5% who finish.
 
 > [!TIP]
 > Start today, not tomorrow. Pick an area and, this very week, build a real little project, however small it is. A portfolio with three real projects says more to a 2026 recruiter than any list of finished courses.
 
 ## To wrap up
 
-The 2026 market isn't the easy paradise of a few years ago, and it isn't the desert that AI fear paints either. It's demanding and hungry at the same time. The bar went up, but the hunger for people who know how to do the work has never been bigger. In Brazil, hundreds of thousands of professionals are missing.
+The 2026 market isn't the easy paradise of a few years ago, and it isn't the desert that AI fear paints either. It's demanding and short on people at the same time. The bar went up, but the demand for people who know how to do the work has never been bigger. In Brazil, hundreds of thousands of professionals are missing.
 
 If I could leave you with one single idea, it'd be this: most of your competition will quit halfway. The 2026 barrier isn't AI, and it isn't a lack of jobs. It's persistence.
 

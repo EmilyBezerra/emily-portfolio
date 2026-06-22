@@ -46,8 +46,10 @@ Nem todo caminho começa programando. Se a régua do dev júnior te assusta, ess
 
 - **Suporte de TI / Help Desk.** A porta clássica. Você aprende como a tecnologia funciona na vida real e migra pra redes, nuvem ou segurança.
 - **Analista de dados.** Menos "matemática pesada" do que parece. SQL e uma ferramenta de BI já te colocam numa vaga, e é trampolim natural pra engenharia de dados.
-- **QA / Testes.** Entender qualidade de software vale ouro, e a IA criou demanda por quem testa e valida sistemas (inclusive modelos de IA).
+- **QA / Testes.** Saber olhar qualidade de software conta muito, e a IA criou demanda por quem testa e valida sistemas (inclusive modelos de IA).
 - **UX/UI e Produto.** Pra quem ama tecnologia mas não necessariamente código.
+
+[Segundo a Coursera](https://www.coursera.org/articles/tech-entry-level-jobs), boa parte dessas funções nem exige diploma e dá pra chegar nelas com meses de estudo focado.
 
 ## E no Brasil? Aqui a história é boa
 
@@ -69,6 +71,8 @@ Na prática, isso quer dizer três coisas, e todas jogam a seu favor:
 2. Teste técnico no lugar do "filtro do diploma". Você prova fazendo.
 3. A pergunta deixou de ser "onde você se formou" e virou "o que você consegue construir".
 
+Só não vou te vender que virou um mar de rosas. Na prática, o skills-first ainda é desigual: muita empresa fala que olha competência, mas o currículo passa antes por um filtro automático que corta por palavra-chave, e vaga de júnior continua recebendo uma enxurrada de candidatos. Quando eu estava tentando entrar, mandei bastante candidatura que morreu no silêncio antes de alguém olhar um projeto meu. Faz parte, e quase ninguém comenta.
+
 Eu mesma entrei sem diploma de computação. Estou terminando engenharia de software agora, mas a porta abriu pelo que eu sabia fazer. O jogo recompensa quem faz.
 
 ## Por onde começar (o plano que eu daria pra mim mesma em 2023)
@@ -76,7 +80,7 @@ Eu mesma entrei sem diploma de computação. Estou terminando engenharia de soft
 Junte tudo e o caminho aparece. Não tem mágica. Tem consistência.
 
 1. **Escolha UMA área e abrace ela.** O erro número um de iniciante é pular de assunto. Olhe o mapa lá em cima, veja o que te dá curiosidade de verdade (você vai passar horas nisso) e foque. Dá pra mudar depois. O que não dá é correr atrás de cinco coisas ao mesmo tempo.
-2. **Fundamento antes de framework da moda.** Lógica, um pouco de como a internet funciona, a base da sua área. Fundamento envelhece devagar. Ferramenta envelhece rápido.
+2. **Fundamento antes de framework da moda.** Lógica, um pouco de como a internet funciona, a base da sua área. Fundamento dura; a ferramenta da moda você troca em dois anos.
 3. **Aprenda fazendo.** Assistir vídeo não é aprender. É assistir alguém aprender. Construa um projetinho pequeno e real desde a primeira semana. É dele que sai o seu portfólio.
 4. **Use a IA como tutora, com desconfiança.** Peça pra ela te explicar, gerar um exemplo, revisar o seu código. Mas confira sempre. Saber trabalhar bem com IA é, hoje, um diferencial na hora de contratar.
 5. **Pense numa certificação de entrada.** CompTIA, Google, AWS, Microsoft. Ajudam a provar o seu nível, principalmente em suporte, nuvem e dados.

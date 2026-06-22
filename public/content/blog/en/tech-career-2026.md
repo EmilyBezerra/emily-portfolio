@@ -46,7 +46,7 @@ Not every path starts with coding. If the junior dev bar scares you, these roles
 
 - **IT support / Help Desk.** The classic door. You learn how technology actually works in real life and move into networking, cloud or security.
 - **Data analyst.** Less "heavy math" than it sounds. SQL and one BI tool already get you into a job, and it's a natural springboard into data engineering.
-- **QA / Testing.** Understanding software quality is worth gold, and AI created demand for people who test and validate systems (AI models included).
+- **QA / Testing.** Knowing how to look at software quality counts for a lot, and AI created demand for people who test and validate systems (AI models included).
 - **UX/UI and Product.** For people who love tech but not necessarily code.
 
 [According to Coursera](https://www.coursera.org/articles/tech-entry-level-jobs), a good chunk of these roles don't even require a degree and can be reached in months of focused study.
@@ -71,6 +71,8 @@ In practice, that means three things, and they all work in your favor:
 2. Technical tests instead of the "degree filter." You prove it by doing.
 3. The question stopped being "where did you graduate" and became "what can you build."
 
+I'm not going to sell you that it turned into a walk in the park, though. In practice skills-first is still uneven: plenty of companies say they look at skills, but your résumé goes through an automated filter that cuts by keyword first, and junior openings still get flooded with applicants. When I was trying to break in, I sent plenty of applications that died in silence before anyone looked at a project of mine. It's part of it, and almost nobody talks about it.
+
 I got in myself without a CS degree. I'm finishing software engineering now, but the door opened because of what I knew how to do. The game rewards the people who build.
 
 ## Where to start (the plan I'd give my 2023 self)
@@ -78,7 +80,7 @@ I got in myself without a CS degree. I'm finishing software engineering now, but
 Put it all together and the path shows up. There's no magic. There's consistency.
 
 1. **Pick ONE area and embrace it.** The number one beginner mistake is jumping from topic to topic. Look at the map up there, see what genuinely makes you curious (you're going to spend hours on it) and focus. You can change later. What you can't do is chase five things at once.
-2. **Fundamentals before the trendy framework.** Logic, a bit of how the internet works, the base of your area. Fundamentals age slowly. Tools age fast.
+2. **Fundamentals before the trendy framework.** Logic, a bit of how the internet works, the base of your area. Fundamentals stick around; the trendy tool you'll swap out in a couple of years.
 3. **Learn by doing.** Watching videos isn't learning. It's watching someone else learn. Build a small, real project from week one. That's where your portfolio comes from.
 4. **Use AI as a tutor, with suspicion.** Ask it to explain things, generate examples, review your code. But always double-check. Knowing how to work well with AI is, today, a real edge when companies hire.
 5. **Think about an entry-level certification.** CompTIA, Google, AWS, Microsoft. They help prove your level, especially in support, cloud and data.

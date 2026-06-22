@@ -46,7 +46,7 @@ No todo camino empieza programando. Si la vara del dev júnior te asusta, estas 
 
 - **Soporte de TI / Help Desk.** La puerta clásica. Aprendes cómo funciona la tecnología en la vida real y migras a redes, nube o seguridad.
 - **Analista de datos.** Menos "matemática pesada" de lo que parece. Con SQL y una herramienta de BI ya entras a una vacante, y es trampolín natural hacia ingeniería de datos.
-- **QA / Testing.** Entender calidad de software vale oro, y la IA creó demanda de quien testea y valida sistemas (incluidos los modelos de IA).
+- **QA / Testing.** Saber mirar la calidad del software cuenta un montón, y la IA creó demanda de quien testea y valida sistemas (incluidos los modelos de IA).
 - **UX/UI y Producto.** Para quien ama la tecnología pero no necesariamente el código.
 
 [Según Coursera](https://www.coursera.org/articles/tech-entry-level-jobs), buena parte de estas funciones ni siquiera exige título y se puede conseguir en meses de estudio enfocado.
@@ -71,6 +71,8 @@ En la práctica, eso quiere decir tres cosas, y todas juegan a tu favor:
 2. Prueba técnica en lugar del "filtro del título". Lo demuestras haciéndolo.
 3. La pregunta dejó de ser "dónde te recibiste" y pasó a ser "qué eres capaz de construir".
 
+Eso sí, no te voy a vender que se volvió un mar de rosas. En la práctica el skills-first todavía es desigual: muchas empresas dicen que miran las competencias, pero el currículum pasa antes por un filtro automático que corta por palabra clave, y una vacante de júnior sigue recibiendo una avalancha de candidatos. Cuando yo estaba tratando de entrar, mandé bastantes postulaciones que murieron en el silencio antes de que alguien mirara un proyecto mío. Es parte del juego, y casi nadie lo comenta.
+
 Yo misma entré sin título de computación. Estoy terminando ingeniería de software ahora, pero la puerta se abrió por lo que sabía hacer. El juego recompensa al que hace.
 
 ## Por dónde empezar (el plan que me daría a mí misma en 2023)
@@ -78,7 +80,7 @@ Yo misma entré sin título de computación. Estoy terminando ingeniería de sof
 Juntas todo y el camino aparece. No hay magia. Hay consistencia.
 
 1. **Elige UNA área y abrázala.** El error número uno del principiante es saltar de tema en tema. Mira el mapa de arriba, fíjate qué te da curiosidad de verdad (vas a pasar horas en eso) y enfócate. Se puede cambiar después. Lo que no se puede es correr atrás de cinco cosas al mismo tiempo.
-2. **Fundamento antes que framework de moda.** Lógica, un poco de cómo funciona internet, la base de tu área. El fundamento envejece despacio. La herramienta envejece rápido.
+2. **Fundamento antes que framework de moda.** Lógica, un poco de cómo funciona internet, la base de tu área. El fundamento perdura; la herramienta de moda la cambias en un par de años.
 3. **Aprende haciendo.** Mirar un video no es aprender. Es mirar a alguien aprender. Construye un proyectito chico y real desde la primera semana. De ahí sale tu portafolio.
 4. **Usa la IA como tutora, con desconfianza.** Pídele que te explique, que genere un ejemplo, que revise tu código. Pero verifica siempre. Saber trabajar bien con IA es, hoy, un diferencial a la hora de contratar.
 5. **Piensa en una certificación de entrada.** CompTIA, Google, AWS, Microsoft. Ayudan a demostrar tu nivel, sobre todo en soporte, nube y datos.

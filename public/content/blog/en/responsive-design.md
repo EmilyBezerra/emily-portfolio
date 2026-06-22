@@ -74,7 +74,7 @@ There are a few common ranges that work as a starting point:
 - Tablet: around 600px to 1024px
 - Desktop: above 1024px
 
-But the advice that flipped a switch for me (and that both [MDN](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) and [Google's web.dev](https://web.dev/articles/responsive-web-design-basics) keep repeating) is this: the best breakpoint isn't the size of some device, it's the point where **your** layout starts to look bad. Slowly shrink your browser window; when something breaks, that's a breakpoint. A new device comes out every year. Your content doesn't.
+But the advice that flipped a switch for me (and that both [MDN](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) and [Google's web.dev](https://web.dev/articles/responsive-web-design-basics) keep repeating) is this: the best breakpoint isn't the size of some device, it's the point where **your** layout starts to look bad. Slowly shrink your browser window; when something breaks, that's a breakpoint. A new device with a new resolution shows up every year, and you're not going to chase each one; your content, though, stays the same.
 
 ## Before you cram everything full of media queries
 
@@ -101,6 +101,20 @@ Flexbox and Grid were also built for fluid layout. A grid that rearranges itself
 ```
 
 This fits as many columns as will go and drops to a single one on a phone, without you writing a single breakpoint. [MDN](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) itself treats Flexbox, Grid, and fluid typography as the heart of responsive design today.
+
+## The 100vh that lies on mobile
+
+This one ate an afternoon before I figured out what was going on. You give a section `height: 100vh` so it fills the screen, test it on desktop, looks great. Open it on a phone and the footer hides behind the browser's address bar, or a chunk of empty space shows up when the bar disappears as you scroll.
+
+The reason is annoying: on mobile, `100vh` counts the screen height *without* the browser bar, which shows and hides as you scroll. The newer fix is to swap it for `100dvh` (the *dynamic* version, which follows the bar):
+
+```css
+.hero {
+  min-height: 100dvh;
+}
+```
+
+It works well in current browsers. It took me a while to realize it wasn't my mistake: it was `vh` behaving exactly as specified, and nobody warns you about that when you first learn `vh`.
 
 ## The next step: container queries
 

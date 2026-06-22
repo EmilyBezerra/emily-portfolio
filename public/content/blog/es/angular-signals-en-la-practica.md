@@ -12,7 +12,7 @@ Durante mucho tiempo Angular resolvió esto a pulso, con Zone.js. La idea era in
 
 ¿Revisar qué? Todo. El árbol entero de componentes, por las dudas. Funciona, pero es desproporcionado. Es como disparar la alarma de incendios de todo el edificio porque alguien encendió la cocina.
 
-Los Signals le dan la vuelta a este juego. En vez de que el framework adivine, es el propio valor el que le avisa a quien depende de él. Aquella información que faltaba ahora existe. Parece poco. Cambia casi todo.
+Los Signals le dan la vuelta a este juego. En vez de que el framework adivine, es el propio valor el que le avisa a quien depende de él. Aquella información que faltaba ahora existe. Parece una tontería, pero es el tipo de detalle que cambia casi todo en lo que viene después.
 
 ## La imagen que destrabó todo: la planilla
 
@@ -20,7 +20,7 @@ Antes de cualquier código, déjame pasarte la analogía que hizo que el concept
 
 Piensa en una planilla. Pones `10` en la celda A1 y `5` en A2. En A3 escribes `=A1+A2`, y aparece `15`. Ahora cambia A1 a `20`. A3 se vuelve `25` al instante. No apretaste recalcular. La planilla ya sabía que A3 dependía de A1.
 
-Un Signal funciona como una de esas celdas. Una cajita que guarda un valor y conoce a quien depende de él. Cambió, y todos los que usan ese valor reciben el aviso. Solo los que lo usan. Nadie más.
+Un Signal funciona como una de esas celdas. Una cajita que guarda un valor y conoce a quien depende de él. Cambió, y quien depende de ese valor recibe el aviso. Y solo quien depende de verdad — el resto de la app ni se entera.
 
 > Piensa en un Signal como una celda de planilla para tu código. Describes las relaciones una vez, y el recálculo se las arregla solo, en el momento justo.
 
@@ -58,6 +58,8 @@ contador.update(valor => valor + 1); // pasó a 11
 
 `set` cuando ya sabes el resultado. `update` cuando necesitas el valor anterior para llegar al siguiente: incrementar, invertir un booleano, agregar un ítem a una lista. Un detalle mínimo, pero deja tu intención legible para quien abra el código después.
 
+Y aquí va una trampa que me costó una tarde entera: el signal compara el valor nuevo con el viejo por referencia (`Object.is`). Si guardas un array en un signal y haces `lista.update(l => { l.push(item); return l; })`, la pantalla no se mueve. Es el mismo array, así que para Angular no cambió nada. Lo correcto es devolver un array nuevo: `lista.update(l => [...l, item])`. Escrito así parece obvio, pero en medio del código real me pasé un buen rato buscando el bug en el lugar equivocado.
+
 ## computed(): la parte que me pareció más elegante
 
 ¿Te acuerdas del `=A1+A2` de la celda A3? En Angular, eso es un `computed()`:
@@ -82,7 +84,7 @@ Cuando me puse a investigar por qué es tan eficiente, encontré dos detalles qu
 - Es perezoso. Solo calcula cuando alguien lo lee. ¿Nadie está usando `total()` ahora? Ni se mueve.
 - Es memoizado. Si la dependencia no cambió, devuelve el último resultado sin rehacer la cuenta.
 
-En la práctica, esto te quita un peso enorme de encima. Crea cuantos `computed()` quieras para describir estado derivado. Aquello que antes sincronizaba a mano (y a veces me olvidaba de sincronizar, que era donde nacía la mitad de mis bugs) se volvió una relación que solo declaro. Una vez.
+En la práctica, esto te facilita muchísimo la vida. Crea cuantos `computed()` quieras para describir estado derivado. Aquello que antes sincronizaba a mano (y a veces me olvidaba de sincronizar, que era donde nacía la mitad de mis bugs) se volvió una relación que declaro una vez y de la que ya no me vuelvo a acordar.
 
 ## effect(): lo primero que quise entender en serio
 
@@ -100,7 +102,7 @@ effect(() => {
 
 Corre una vez al nacer y después siempre que algún signal leído ahí dentro cambie. Las dependencias las rastrea solo, sin que tengas que declarar ninguna lista.
 
-Cuando empecé a estudiar esto, la pregunta que más me ayudó no fue "cómo uso effect", sino "cuándo NO usarlo". La respuesta vale oro:
+Cuando empecé a estudiar esto, la pregunta que más me ayudó no fue "cómo uso effect", sino "cuándo NO usarlo". La respuesta me ahorró muchos dolores de cabeza después:
 
 > [!WARNING]
 > No uses `effect()` para calcular estado derivado. Si la frase es "cuando A cambie, actualiza B", lo que quieres es un `computed()`. Casi siempre.
@@ -121,7 +123,7 @@ La misma lógica de antes. Llamas al signal, y Angular actualiza solo los pedazo
 }
 ```
 
-Con el control flow nuevo (`@if`, `@for`, `@switch`), la pantalla reacciona con precisión de bisturí. ¿Cambió el `contador`? Con signals, Angular no necesita reevaluar la página entera. Toca ese texto, y ahí se detiene.
+Con el control flow nuevo (`@if`, `@for`, `@switch`), la pantalla reacciona solo en el pedazo que cambió. ¿Cambió el `contador`? Con signals, Angular no necesita reevaluar la página entera. Toca ese texto, y ahí se detiene.
 
 ## Hasta la frontera del componente se volvió signal
 
@@ -143,7 +145,7 @@ Y entonces `nombre()` es un signal como cualquier otro. Lo puedes usar dentro de
 
 Juntando todo, el panorama queda claro:
 
-1. Detección de cambios quirúrgica. Cada signal sabe quién depende de él, así que Angular actualiza solo lo necesario.
+1. Detección de cambios bien localizada. Cada signal sabe quién depende de él, así que Angular actualiza solo lo necesario.
 2. Es el camino hacia el *zoneless*. Con los Signals cargando el "qué cambió", Angular ya no necesita a Zone.js para adivinar. Una app [sin Zone.js](https://angular.dev/guide/zoneless) queda más liviana, y el stack trace queda mucho más limpio cuando algo se rompe.
 3. Ese tipo de bug de la pantalla se vuelve mucho más raro. El estado derivado con `computed()` está siempre al día, por construcción.
 
@@ -153,6 +155,6 @@ Si te vas a llevar una sola frase de aquí, llévate esta: estado es `signal`, l
 
 El resto es ponerse manos a la obra, y es ahí donde de verdad cae la ficha. Abre un proyecto vacío, crea un contador, ponle un `computed` encima, y quédate mirando cómo la cosa se actualiza sola. Así fue como funcionó conmigo. No fue leyendo (ni siquiera leyendo esto).
 
-Para ir más allá, la [documentación oficial de Signals](https://angular.dev/guide/signals) es buenísima y tiene ejemplos que editas ahí mismo, al instante. Y si el tema te enganchó, en el próximo texto pienso mostrar cómo conectar Signals con llamadas asíncronas sin enredos.
+Para ir más allá, la [documentación oficial de Signals](https://angular.dev/guide/signals) es buenísima y tiene ejemplos que editas ahí mismo, al instante.
 
 ¿Te trabaste en algún punto, o tienes un caso curioso que te dejó pensando? Escríbeme por [LinkedIn](https://linkedin.com/in/emilybezerra). Me encanta intercambiar ideas sobre esto.

@@ -1,10 +1,10 @@
-Já tentou abrir um site no celular e ele veio todo quebrado? Texto saindo pela lateral, botão que some, uma barra de rolagem horizontal que não devia existir. Ou então você dividiu a tela do computador em duas pra acompanhar um tutorial, e o site do lado simplesmente parou de funcionar.
+Já tentou abrir um site no celular e ele veio todo quebrado? Texto saindo pela lateral, botão que some, uma barra de rolagem horizontal que não devia existir. Ou então você dividiu a tela do computador em duas pra acompanhar um tutorial, e o site do lado simplesmente parou de funcionar como deveria.
 
-Acontece com todo mundo. E foi exatamente isso que eu encontrei no meu estágio, em 2024: algumas telas não se ajustavam nos aparelhos menores, e nos monitores grandes o layout ficava espalhado, sem sentido. Eu não sabia resolver, então fui atrás: li documentação, vasculhei uns fóruns, testei muita coisa, até as telas se comportarem em qualquer tamanho. De lá pra cá virou rotina, toda tela que eu entrego já nasce responsiva. Resolvi juntar aqui o que aprendi, o texto que eu queria ter lido naquela época.
+Acontece com todo mundo. E foi exatamente isso que eu encontrei no meu estágio, em 2024: a maioria das telas não se ajustavam nos aparelhos menores e monitores maiores ela não conseguia se ajustar para usar todo o espaço da tela. Eu não sabia resolver, então fui atrás: li documentação, vasculhei uns fóruns, testei muita coisa, até as telas se comportarem em qualquer tamanho. De lá pra cá virou rotina, toda tela que eu entrego já nasce responsiva. Resolvi juntar aqui o que aprendi, o texto que eu queria ter lido naquela época.
 
 ## O que é responsividade, de verdade
 
-Responsividade é o site conseguir se adaptar a qualquer tamanho de tela, do celular ao monitor gigante, sem ficar ruim de usar. O layout se reorganiza sozinho: os elementos mudam de tamanho, as imagens encolhem, as colunas viram linhas. Às vezes você até redesenha um pedaço da tela pra fazer sentido naquele espaço.
+Responsividade é o site conseguir se adaptar a qualquer tamanho de tela, do celular aos grandes monitores, sem ficar ruim de usar e sem perder o seu design. O layout se reorganiza sozinho: os elementos mudam de tamanho, as imagens encolhem, as colunas viram linhas. Às vezes você até redesenha um pedaço da tela pra fazer sentido naquele espaço, isso é muito comum quando vamos configurar para o mobile (celulares), as vezes precisamos esconder alguns elementos ou redesenhar ele.
 
 A ideia não é nova, e tem até data de nascimento. Em 2010, o Ethan Marcotte publicou ["Responsive Web Design"](https://alistapart.com/article/responsive-web-design/) na A List Apart e batizou o conceito juntando três peças: grid fluido, imagens flexíveis e media queries. Quinze anos depois, ainda é essa a base.
 
@@ -16,13 +16,17 @@ Antes de qualquer media query, tem uma linha de HTML que, sem ela, nada funciona
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-Sem ela, o celular finge que tem a largura de um desktop e encolhe a página inteira (aquele site minúsculo que te obriga a dar zoom pra ler). Com ela, o navegador usa a largura real do aparelho. É o ponto de partida da responsividade, como explica a [documentação da MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport). Eu já perdi um tempão caçando um bug que era só essa linha faltando.
+Sem ela, o celular finge que tem a largura de um desktop e encolhe a página inteira, aquele site minúsculo que te obriga a dar zoom pra ler e muitas vezes os botões deixam de funcionar. Com ela, o navegador usa a largura real do aparelho. É o ponto de partida da responsividade, como é explicado na [documentação da MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport). Eu já perdi um tempão caçando um bug que era só essa linha faltando.
 
 ## Comece pensando no celular, não no desktop
 
-Um erro que eu cometia: desenhar tudo pro monitor grande e depois tentar espremer pro celular. O caminho mais tranquilo é o contrário, o que o pessoal chama de mobile-first. Você escreve o estilo base pensando na tela pequena e vai somando ajustes conforme a tela cresce.
+Um erro que eu cometia: desenhar tudo pensando no monitor grande e depois tentar espremer aquilo no celular. Quase sempre virava retrabalho.
 
-Dá menos retrabalho, e o site fica mais leve onde a maioria das pessoas acessa, que é o celular.
+Mas caminho que costuma ser mais tranquilo é o contrário, o que chamam de mobile-first. Você escreve o estilo base pensando na tela pequena e vai somando ajustes (com min-width) conforme a tela cresce, em vez de ficar removendo coisa conforme ela encolhe. De brinde a tela pequena te obriga a decidir logo o que é essencial: não cabe tudo, então você prioriza o que importa.
+
+Só que mobile-first não é uma regra universal, é um bom padrão, mas não pode ser a regra simplementes por ser o caminho mais tranquilo. A pergunta certa não é "mobile ou desktop primeiro?", e sim "onde meus usuários realmente acessam isso?". Site público, landing page, produto pro consumidor final? Quase sempre o acesso é pelo celular. Já ERP, painel administrativo, ferramenta interna cheia de tabela e dado denso, como alguns sistemas que eu desenvolvo, são mais acessado no desktop, e aí faz mais sentido pensar nele primeiro.
+
+Em qualquer um dos casos eu tento não esquecer o outro lado: mesmo desenhando primeiro pro desktop, vale imaginar e testar como aquela tela se comporta se alguém abrir no celular, nem que seja pra garantir que ela funcione e seja fácil de usar.
 
 ## Media queries: estilo diferente por tamanho de tela
 
@@ -140,4 +144,3 @@ Responsividade não é decorar três breakpoints. É partir do celular, usar uni
 
 Pra ir além, dá pra ler a [base da MDN sobre design responsivo](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design), o [guia do web.dev](https://web.dev/articles/responsive-web-design-basics) e, pra entender de onde tudo veio, o [artigo original do Marcotte](https://alistapart.com/article/responsive-web-design/). Se você curte ler a fonte de tudo, a especificação atual está na [W3C](https://www.w3.org/TR/mediaqueries-5/).
 
-Tem alguma tela teimando em não se ajustar? Me chame no [LinkedIn](https://linkedin.com/in/emilybezerra). Curto demais esse assunto.

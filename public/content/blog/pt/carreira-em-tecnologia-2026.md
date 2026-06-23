@@ -1,8 +1,8 @@
-No mesmo dia, na mesma semana, eu vi as duas manchetes. Uma dizia que a IA ia acabar com os programadores. A outra, que faltam mais de 500 mil profissionais de tecnologia no Brasil. As duas não podem estar certas ao mesmo tempo... ou podem?
+No na mesma semana, eu vi as duas manchetes. Uma dizia que a IA ia acabar com os programadores. A outra, que faltam mais de 500 mil profissionais de tecnologia no Brasil. As duas não podem estar certas ao mesmo tempo... ou podem?
 
-Eu fiz a transição pra tech vindo da química, estudando de noite depois do expediente no laboratório. Então quando alguém me pergunta se ainda vale a pena entrar em tech, eu levo a sério. Vale a pena, sim. Só que tem uns poréns que fazem toda a diferença.
+Eu fiz a transição pra tech cerca de 2 anos vindo da química, estudando de noite depois do meu expediente e aos finais de semana. Então quando alguém me pergunta se ainda vale a pena migrar de carreira, eu levo a sério. Vale a pena? sim. Só que tem uns poréns que fazem toda a diferença.
 
-Vou te dar o mapa honesto: o que mudou de verdade, onde estão as oportunidades, com números reais e fontes que você pode conferir. Sem vender curso, sem te assustar.
+Vou ser honesta: o que mudou de verdade, onde estão as oportunidades, com números reais e fontes que você pode conferir. Sem vender curso, sem te assustar.
 
 ## A IA mexeu no jogo, e fingir o contrário seria mentira
 
@@ -10,21 +10,21 @@ Vou ser direta, porque te poupar da parte chata não ajudaria em nada. A IA mexe
 
 O emprego de devs de 22 a 25 anos caiu quase 20% desde o pico, no fim de 2022, segundo a [Stack Overflow](https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/), com base em dados do Stanford Digital Economy Lab. E a fatia de recém-formados nas contratações das grandes empresas de tecnologia caiu de cerca de 15% antes da pandemia para 7%, segundo o [SignalFire State of Tech Talent Report 2025](https://www.signalfire.com/blog/signalfire-state-of-talent-report-2025). A [demanda por júnior esfriou](https://www.cio.com/article/4062024/demand-for-junior-developers-softens-as-ai-takes-over), e não adianta romantizar.
 
-Pronto. Falei a parte chata. Agora a parte que as manchetes de pânico convenientemente esquecem.
+Pronto, falei a parte chata. Agora a parte que as manchetes de pânico convenientemente esquecem.
 
 Essa queda não foi igual pra todo mundo. Áreas mais especializadas, como segurança, engenharia de dados e infraestrutura de ML, foram menos afetadas. E a própria IA criou tipos de trabalho que não existiam três anos atrás: qualidade de modelos, avaliação de IA, curadoria de dados e governança de IA.
 
-O que mudou mesmo foi o tipo de júnior que o mercado quer. Não é mais quem decora algoritmo pra escrever código repetitivo. Isso a IA faz, e faz rápido. É quem sabe trabalhar **junto** com a IA: escrever um bom prompt, desconfiar do que ela cospe, ter repertório pra olhar o resultado e dizer "isso aqui está errado". Esse julgamento virou o novo diferencial de entrada.
+O que mudou mesmo foi o tipo de júnior que o mercado quer. Não é mais quem decora algoritmo pra escrever código repetitivo. Isso a IA faz, e faz rápido. É quem sabe trabalhar **junto** com a IA: escrever um bom prompt, desconfiar do que ela cospe, tem repertório pra olhar o resultado e dizer "isso aqui está errado". Esse julgamento virou o novo diferencial de entrada.
 
 > A IA não trancou a porta. Ela subiu o degrau. Quem chega sabendo usar a ferramenta entra na frente de quem ainda morre de medo dela.
 
 ## O mapa: tech é muito maior que "ser programador"
 
-Essa é a parte que ninguém me contou quando eu comecei e que mudaria muita coisa. Veja onde está a demanda de verdade.
+Essa é a parte que ninguém me contou quando eu comecei e que mudaria muita coisa.
 
 ### Desenvolvimento de software
 
-Continua sendo a maior porta, mas a régua pro júnior puro subiu. O que pega bem hoje é quem junta código com uma especialidade (dados, nuvem, segurança). A [Robert Half](https://www.roberthalf.com/us/en/insights/salary-hiring-trends/demand-for-skilled-talent/tech-it) coloca engenharia de software entre as funções mais procuradas de 2026 e, ao mesmo tempo, entre as mais afetadas pela falta de gente qualificada: 71% dos líderes de tecnologia dizem que essa lacuna já atrasou projetos no último ano. Traduzindo: vaga existe. O que falta é gente realmente pronta.
+Continua sendo a maior porta de entrada, mas a régua pro júnior puro subiu. O que pega bem hoje é quem junta código com uma especialidade (dados, nuvem, segurança). A [Robert Half](https://www.roberthalf.com/us/en/insights/salary-hiring-trends/demand-for-skilled-talent/tech-it) coloca engenharia de software entre as funções mais procuradas de 2026 e, ao mesmo tempo, entre as mais afetadas pela falta de gente qualificada: 71% dos líderes de tecnologia dizem que essa lacuna já atrasou projetos no último ano. Traduzindo: vaga existe. O que falta é gente realmente pronta e que consiga entender que o mercado mudou.
 
 ### Dados, IA e Machine Learning
 
@@ -63,7 +63,7 @@ Sobre salário, porque eu sei que você quer saber: os números variam muito (ci
 
 Talvez a notícia mais importante pra quem começa agora não seja qual área escolher. É **como** as empresas estão contratando.
 
-Virou skills-first. Segundo a [TestGorilla](https://www.testgorilla.com/skills-based-hiring/state-of-skills-based-hiring-2025/), cerca de 85% das empresas já usam contratação baseada em competências e mais da metade derrubou a exigência de diploma. Cada vez mais, o que pesa é o que você sabe fazer, não onde você estudou.
+Virou skills-first. Segundo a [TestGorilla](https://www.testgorilla.com/skills-based-hiring/state-of-skills-based-hiring-2025/), cerca de 85% das empresas já usam contratação baseada em competências. Cada vez mais, o que pesa é o que você sabe fazer, não onde você estudou.
 
 Na prática, isso quer dizer três coisas, e todas jogam a seu favor:
 
@@ -84,17 +84,13 @@ Junte tudo e o caminho aparece. Não tem mágica. Tem consistência.
 3. **Aprenda fazendo.** Assistir vídeo não é aprender. É assistir alguém aprender. Construa um projetinho pequeno e real desde a primeira semana. É dele que sai o seu portfólio.
 4. **Use a IA como tutora, com desconfiança.** Peça pra ela te explicar, gerar um exemplo, revisar o seu código. Mas confira sempre. Saber trabalhar bem com IA é, hoje, um diferencial na hora de contratar.
 5. **Pense numa certificação de entrada.** CompTIA, Google, AWS, Microsoft. Ajudam a provar o seu nível, principalmente em suporte, nuvem e dados.
-6. **Tenha paciência com o tempo.** Não são semanas: são meses de estudo focado até o primeiro emprego, e o prazo varia bastante de pessoa pra pessoa (da sua base, do seu ritmo, do mercado). No meio vai parecer lento. É normal. Quem continua quando fica chato é justamente quem entra no time dos 5% que terminam.
+6. **Tenha paciência com o tempo.** Não são semanas: são meses e as vezes anos de estudo focado até o primeiro emprego, e o prazo varia bastante de pessoa pra pessoa, da sua base, dos seus privilegios, do seu ritmo, do mercado, então não fique se comparando.
 
 > [!TIP]
 > Comece hoje, não amanhã. Escolha uma área e, ainda essa semana, faça um projetinho de verdade, por menor que seja. Um portfólio com três projetos reais diz mais pra um recrutador de 2026 do que qualquer lista de cursos concluídos.
 
 ## Pra fechar
 
-O mercado de 2026 não é o paraíso fácil de uns anos atrás, nem o deserto que o medo da IA pinta. É exigente e, ao mesmo tempo, está faltando gente. A régua subiu, mas a procura por quem sabe fazer nunca foi tão grande. No Brasil, faltam centenas de milhares de profissionais.
+O mercado de 2026 não é o paraíso fácil que vendem por ai, nem o deserto que o medo da IA pinta. É exigente e, ao mesmo tempo, está faltando gente. A régua subiu, mas a procura por quem sabe fazer é grande.
 
-Se você for levar uma coisa só daqui, que seja essa: a maior parte da sua concorrência vai desistir no meio. A barreira de 2026 não é a IA, nem a falta de vaga. É a persistência.
 
-Eu troquei a bancada do laboratório pelo VS Code aos 20 e poucos, do zero, conciliando trabalho e estudo. Se eu consegui recomeçar, você consegue. Escolha um caminho, construa coisas de verdade, use a IA a seu favor e continue quando ficar difícil. O mercado está te esperando exatamente por isso.
-
-Se quiser trocar uma ideia sobre por onde começar, me chame no [LinkedIn](https://linkedin.com/in/emilybezerra). Pode chamar mesmo.
